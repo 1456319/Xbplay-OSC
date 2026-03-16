@@ -1,0 +1,27 @@
+{
+  "project_info": {
+    "project_number": "123456789012",
+    "project_id": "xbplay-recovery-placeholder"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123456789012:android:0000000000000000000000",
+        "android_client_info": {
+          "package_name": "com.studio08.xbgamestream"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "placeholder_api_key"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_instructions": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
