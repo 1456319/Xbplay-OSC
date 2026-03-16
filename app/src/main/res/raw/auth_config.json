@@ -1,0 +1,16 @@
+{
+  "client_id" : "YOUR_PLACEHOLDER_CLIENT_ID",
+  "authorization_user_agent" : "DEFAULT",
+  "redirect_uri" : "msauth://com.studio08.xbgamestream/YOUR_BASE64_SIGNATURE_HASH",
+  "account_mode" : "SINGLE",
+  "broker_redirect_uri_registered": true,
+  "authorities" : [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADandPersonalMicrosoftAccount",
+        "tenant_id": "consumers"
+      }
+    }
+  ]
+}

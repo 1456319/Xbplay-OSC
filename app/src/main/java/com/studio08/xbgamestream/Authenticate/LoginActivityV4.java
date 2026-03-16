@@ -129,7 +129,7 @@ public class LoginActivityV4 extends AppCompatActivity {
 
     // show webpage prompting user to login. Attempt to use cache
     public void doLogin(StreamWebview loginWebview) {
-        this.loginClient = new LoginClientV4(getApplicationContext(), loginWebview);
+        this.loginClient = new LoginClientV4(this, loginWebview);
         loginClient.setCustomObjectListener(this.loginReadyListener);
         loginClient.loginButtonClicked();
     }

@@ -117,6 +117,20 @@
             android:exported="true"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.MyApplication2.NoActionBar" />
+
+        <!-- MSAL Auth Activity -->
+        <activity
+            android:name="com.microsoft.identity.client.BrowserTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="com.studio08.xbgamestream"
+                    android:scheme="msauth" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Authenticate.LoginActivityV4"
             android:exported="true"
