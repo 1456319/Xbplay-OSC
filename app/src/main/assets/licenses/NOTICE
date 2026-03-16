@@ -1,0 +1,116 @@
+This product includes the following third-party software.
+
+Full text of the Apache License 2.0, MPL 2.0, MIT, and BSD 3-Clause
+licenses is in this directory (source distribution) or in the
+application assets (distributed app).
+
+-----------------------------------------------------------------------------
+Connect SDK for Android
+Copyright (c) 2014 LG Electronics.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+android-dlna (SSDP-related code in Connect SDK)
+Copyright (c) 2011 stonker.lee@gmail.com
+https://code.google.com/p/android-dlna/
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+ShieldControllerExtensions
+Copyright (c) Charles Gutman
+https://github.com/cgutman/ShieldControllerExtensions
+Licensed under the MIT License.
+-----------------------------------------------------------------------------
+
+NanoHttpd
+Copyright (c) NanoHttpd contributors.
+Licensed under the BSD 3-Clause License.
+-----------------------------------------------------------------------------
+
+GeckoView (library)
+Copyright (c) Mozilla Foundation.
+Licensed under the Mozilla Public License 2.0.
+https://www.mozilla.org/en-US/MPL/2.0/
+Source: https://github.com/mozilla/geckoview
+-----------------------------------------------------------------------------
+
+ZXing Android Embedded
+Copyright (c) ZXing authors / JourneyApps.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Android Browser Helper (Trusted Web Activity)
+Copyright (c) Google LLC.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Volley
+Copyright (c) Google LLC.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Apache HttpComponents HttpClient
+Copyright (c) The Apache Software Foundation.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Java-WebSocket
+Copyright (c) Nathan Rajlich and contributors.
+Licensed under the MIT License.
+-----------------------------------------------------------------------------
+
+jmdns
+Copyright (c) JmDNS contributors.
+Licensed under the Apache License, Version 2.0 / BSD.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Guava
+Copyright (c) Google LLC.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+AndroidX libraries (activity, core, navigation, preference, security, etc.)
+Copyright (c) The Android Open Source Project.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Android Support Library (support-annotations)
+Copyright (c) The Android Open Source Project.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Material Components for Android (com.google.android.material)
+Copyright (c) Google LLC.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Google Play Billing Library (com.android.billingclient)
+Copyright (c) The Android Open Source Project / Google LLC.
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+SimpleStorage (com.anggrayudi:storage)
+Copyright (c) Anggrayudi.
+https://github.com/anggrayudi/SimpleStorage
+Licensed under the Apache License, Version 2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+-----------------------------------------------------------------------------
+
+Google Play and Firebase libraries are subject to their respective terms of
+service and are not open source. Ad network SDKs (IronSource, AdColony,
+AppLovin, Facebook, Vungle, Tapjoy, AdMob) are proprietary; see each
+vendor's license and policies.
+
+Google Cast is a trademark of Google LLC.
