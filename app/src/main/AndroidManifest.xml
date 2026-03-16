@@ -180,6 +180,22 @@
         </activity>
 
         <activity
+            android:name="com.microsoft.identity.client.BrowserTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.studio08.xbgamestream"
+                    android:path="/6tY2Sqe5bXWSAFHtzy1MFsFMCMA="
+                    android:scheme="msauth" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".PWAMainMenuActivity"
             android:exported="true"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"

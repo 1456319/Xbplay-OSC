@@ -164,4 +164,5 @@ dependencies {
 
     // QR Code
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation "com.microsoft.identity.client:msal:6.0.1"
 }
