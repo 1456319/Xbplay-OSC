@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:title="Cast"
+        app:actionProviderClass="androidx.mediarouter.app.MediaRouteActionProvider"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_full_version"
+        android:orderInCategory="1"
+        android:title="Unlock"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="2"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_rate"
+        android:orderInCategory="3"
+        android:title="Rate"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_reddit"
+        android:orderInCategory="4"
+        android:title="Reddit Help"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_discord"
+        android:orderInCategory="5"
+        android:title="Discord Help"
+        app:showAsAction="never" />
+</menu>

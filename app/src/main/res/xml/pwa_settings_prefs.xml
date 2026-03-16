@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General">
+
+        <Preference
+            android:title="Rate App"
+            android:key="rate_app_key"
+            android:summary="Thanks! I appreciate feedback and feature requests" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="use_notch_key"
+            android:summary="Makes full screen mode larger by occupying the space around camera notches"
+            android:title="Enable Full Screen Notch Mode" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="lock_orientation_key"
+            android:summary="Enable to lock orientation to recommended value."
+            android:title="Use Recommended Orientation" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Troubleshooting">
+
+        <Preference
+            android:title="Clear Cache"
+            android:key="clear_cache_key"
+            android:summary="Deletes all cached data" />
+
+        <ListPreference
+            android:defaultValue="empty"
+            android:dialogTitle="Select a render engine"
+            android:entries="@array/render_engine_entries"
+            android:entryValues="@array/render_engine_values"
+            android:key="render_engine_key"
+            android:summary="Change the render engine if you are having video play issues. Fixes: Stuck on black/white screen, video won't update unless the screen is touched, excess lag, etc. "
+            android:title="Render Engine" />
+
+        <Preference
+            android:title="Join Reddit for Help"
+            android:key="join_reddit_key"
+            android:summary="Click here to open the subreddit where you can ask for help, report bugs, or request features!" />
+
+        <Preference
+            android:title="Join Discord Server for Help"
+            android:key="join_discord_key"
+            android:summary="Click here to join a discord server where you can ask for help, report bugs, or request features. This is the quickest way to get in contact with the app developer!" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Performance">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="use_audio_low_latency_mode_key"
+            android:summary="Reduce audio latency for a smoother experience."
+            android:title="Enable Audio Low Latency Mode" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="use_wifi_low_latency_mode_key"
+            android:summary="Optimize Wi-Fi for low-latency connections."
+            android:title="Enable Wi-Fi Low Latency Mode" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="Vibration/Rumble">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="vibrate_key"
+            android:summary="Enable vibration for button clicks on the on-screen gamepad"
+            android:title="On-Screen Gamepad Vibration" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="rumble_device_key"
+            android:summary="Rumble your device if there isn't a controller attached that supports rumble"
+            android:title="Rumble Device" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="rumble_controller_key"
+            android:summary="Rumble any controllers attached to your device. Requires Android 12+ and a wired connection normally. Try with the different render engines if you have issues."
+            android:title="Rumble Controller" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Physical Controller Settings">
+        <Preference
+            android:key="create_physical_controller_button_mappings"
+            android:summary="Click to create a new button mapping configuration template for a physical controller"
+            android:title="Create New Layout" />
+
+        <ListPreference
+            android:defaultValue="null"
+            android:dialogTitle="Select Controller Config"
+            android:key="physical_controller_button_mappings"
+            android:summary="Click to select what button mapping config to use (created above) when a physical controller is connected. "
+            android:title="Select Controller Layout" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Tilt Joystick Settings">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="tilt_invert_x_key"
+            android:summary="Invert the tilt direction on the X axis."
+            android:title="Invert Horizontal Tilt" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="tilt_invert_y_key"
+            android:summary="Invert the tilt direction on the Y axis."
+            android:title="Invert Vertical Tilt" />
+
+        <SeekBarPreference
+            app:showSeekBarValue="true"
+            android:key="tilt_deadzone_key"
+            android:title="Tilt Joystick Deadzone"
+            android:summary="Select how big the deadzone should be for the tilt joystick."
+            android:defaultValue="3"
+            android:max="5" />
+
+        <SeekBarPreference
+            app:showSeekBarValue="true"
+            android:key="tilt_sensitivity_key"
+            android:title="Tilt Joystick Sensitivity"
+            android:summary="Select how sensitive the tilt joystick should be"
+            android:defaultValue="2"
+            android:max="5" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Xbox 360 Video Cast">
+        <ListPreference
+            android:defaultValue="ask"
+            android:dialogTitle="Video Convert Prompt"
+            android:entries="@array/video_convert_prompt_entries"
+            android:entryValues="@array/video_convert_prompt_values"
+            android:key="video_convert_prompt_key"
+            android:summary="Choose what happens when casting Xbox 360 videos"
+            android:title="Video Convert Prompt" />
+
+        <ListPreference
+            android:defaultValue="29"
+            android:dialogTitle="Video Convert Quality"
+            android:entries="@array/video_convert_quality_entries"
+            android:entryValues="@array/video_convert_quality_values"
+            android:key="video_convert_quality_key"
+            android:summary="Choose the quality of converted Xbox 360 videos. The higher the quality the longer it will take to convert"
+            android:title="Video Convert Quality" />
+
+        <ListPreference
+            android:defaultValue="1280x720"
+            android:dialogTitle="Video Convert Size"
+            android:entries="@array/video_convert_size_entries"
+            android:entryValues="@array/video_convert_size_values"
+            android:key="video_convert_size_key"
+            android:summary="Choose the size of converted Xbox 360 videos"
+            android:title="Video Convert Size" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Appearance">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pwa_use_legacy_theme_key"
+            android:summary="Use the legacy theme. Requires app restart."
+            android:title="Use Legacy Theme" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

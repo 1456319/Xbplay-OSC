@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_remote">
+
+    <fragment
+        android:id="@+id/nav_remote"
+        android:name="com.studio08.xbgamestream.ui.remote.RemoteFragment"
+        android:label="Media Remote"
+        tools:layout="@layout/fragment_remote" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.studio08.xbgamestream.ui.home.HomeFragment"
+        android:label="@string/menu_consoles"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gamestream"
+        android:name="com.studio08.xbgamestream.ui.gamestream.GamestreamFragment"
+        android:label="xHome"
+        tools:layout="@layout/fragment_gamestream" />
+
+    <fragment
+        android:id="@+id/nav_stream"
+        android:name="com.studio08.xbgamestream.ui.stream.StreamFragment"
+        android:label="@string/menu_stream"
+        tools:layout="@layout/fragment_stream" />
+
+    <fragment
+        android:id="@+id/nav_controller_builder"
+        android:name="com.studio08.xbgamestream.ui.builder.ControllerBuilderFragment"
+        android:label="Gamepad Builder"
+        tools:layout="@layout/fragment_controller_builder" />
+
+    <fragment
+        android:id="@+id/nav_controller"
+        android:name="com.studio08.xbgamestream.ui.controller.ControllerFragment"
+        android:label="Game Controller"
+        tools:layout="@layout/fragment_controller" />
+
+    <fragment
+        android:id="@+id/nav_mirrorcast"
+        android:name="com.studio08.xbgamestream.ui.mirrorcast.MirrorCastFragment"
+        android:label="MirrorCast"
+        tools:layout="@layout/fragment_mirrorcast" />
+
+    <fragment
+        android:id="@+id/nav_filecast"
+        android:name="com.studio08.xbgamestream.ui.filecast.FileCastFragment"
+        android:label="Video Cast"
+        tools:layout="@layout/fragment_filecast" />
+
+    <fragment
+        android:id="@+id/nav_audiocast"
+        android:name="com.studio08.xbgamestream.ui.filecast.AudioCastFragment"
+        android:label="Audio Cast"
+        tools:layout="@layout/fragment_audiocast" />
+
+    <fragment
+        android:id="@+id/nav_cast_remote"
+        android:name="com.studio08.xbgamestream.ui.filecast.CastMediaRemoteFragment"
+        android:label="Cast Media Remote"
+        tools:layout="@layout/fragment_filecast" />
+
+    <fragment
+        android:id="@+id/nav_tvcast"
+        android:name="com.studio08.xbgamestream.ui.tvcast.TVCastFragment"
+        android:label="TV Cast"
+        tools:layout="@layout/fragment_tvcast_remote" />
+
+    <fragment
+        android:id="@+id/nav_more_features"
+        android:name="com.studio08.xbgamestream.ui.extras.MoreFeaturesFragment"
+        android:label="Extras"
+        tools:layout="@layout/fragment_more_features" />
+
+    <fragment
+        android:id="@+id/nav_android_tv"
+        android:name="com.studio08.xbgamestream.ui.androidtv.AndroidTvFragment"
+        android:label="Android TV"
+        tools:layout="@layout/fragment_android_tv" />
+
+    <fragment
+        android:id="@+id/nav_xcloud"
+        android:name="com.studio08.xbgamestream.ui.xcloud.XcloudFragment"
+        android:label="XCloud"
+        tools:layout="@layout/fragment_xcloud" />
+
+    <fragment
+        android:id="@+id/nav_widgets"
+        android:name="com.studio08.xbgamestream.ui.widgets.WidgetsFragment"
+        android:label="Widgets"
+        tools:layout="@layout/fragment_widgets" />
+
+    <fragment
+        android:id="@+id/nav_voiceremote"
+        android:name="com.studio08.xbgamestream.ui.remote.RemoteFragment"
+        android:label="Voice Remote"
+        tools:layout="@layout/fragment_voiceremote" />
+
+</navigation>

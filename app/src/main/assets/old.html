@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<head> fake
+    <title>Sample Site</title>
+</head>
+<div id="videoHolder" style="height: 400px; width: 400px;"></div>
+</html>
+
+<script>
+
+const video = document.querySelector("video");
+
+console.log("STARTING GAMESTREAM JS");
+    const webrtcDataChannels = {};
+
+     let webrtcStates = {
+        iceGathering: 'open',
+        iceConnection: 'open',
+        iceCandidates: [],
+        streamConnection: 'open',
+     };
+
+    const webrtcDataChannelsConfig = {
+        'video': {
+            id: 1,
+            ordered: true,
+            protocol: '1.0'
+        },
+        'audio': {
+            id: 2,
+            maxRetransmits: 0,
+            ordered: true,
+            protocol: 'audioV1'
+        },
+        'input': {
+            id: 3,
+            ordered: true,
+            protocol: '1.0'
+        },
+        'control': {
+            id: 4,
+            protocol: 'controlV1'
+        },
+        'message': {
+            id: 5,
+            protocol: 'messageV1'
+        },
+        'chat': {
+            id: 6,
+            protocol: "chatV1"
+        }
+    }
+
+    function test(){
+        console.log("HERE called test");
+        alert("alert");
+    }
+
+    async function startStream(sessionId, token) {
+        console.log("sessionId", sessionId);
+        console.log("token", token);
+
+        const webrtcClient = new RTCPeerConnection({});
+        console.log("here1", webrtcClient);
+
+        // Open Data channels
+        for (let channel in webrtcDataChannelsConfig) {
+            openDataChannel(channel, webrtcDataChannelsConfig[channel], webrtcClient)
+        }
+
+        setListeners(webrtcClient);
+
+        // create offer
+        const offer = await createOffer(webrtcClient);
+        console.log("here2", offer);
+
+
+        // send sdp data
+        await isExchangeReady('configuration', sessionId, token);
+        console.log("here4", offer.sdp);
+
+        const sdpResponse = await sendSdp(offer.sdp, sessionId, token);
+        const sdpReadyResponse = await isExchangeReady('sdp', sessionId, token);
+        console.log("here6", sdpReadyResponse);
+        console.log("here7", sdpReadyResponse.exchangeResponse);
+        const sdpDetails = JSON.parse(sdpReadyResponse.exchangeResponse);
+        console.log('xSDK client.js - setRemoteDescription:', sdpDetails.sdpType, sdpDetails.sdp)
+        await webrtcClient.setRemoteDescription({
+            type: sdpDetails.sdpType,
+            sdp: sdpDetails.sdp
+        })
+
+        // send ice data
+        const ice = webrtcStates.iceCandidates[0];
+        const iceResponse = await sendIce(ice, sessionId, token);
+        const iceReadyResponse = await isExchangeReady('ice', sessionId, token);
+        const iceDetails = JSON.parse(iceReadyResponse.candidates);
+        console.log('xSDK client.js - ICE Candidates:', JSON.stringify(iceDetails))
+        for (let candidate in iceDetails) {
+            if (iceDetails[candidate].candidate === 'a=end-of-candidates'){
+                iceDetails[candidate].candidate = ""
+            }
+
+            await webrtcClient.addIceCandidate({
+                candidate: iceDetails[candidate].candidate,
+                sdpMid: iceDetails[candidate].sdpMid,
+                sdpMLineIndex: iceDetails[candidate].sdpMLineIndex
+            })
+        }
+    }
+
+    function setListeners(webrtcClient){
+        // Handle ICE events
+        webrtcClient.addEventListener('icecandidate', event => {
+            if (event.candidate) {
+                console.log('xSDK client.js - ICE candidate found:', event.candidate)
+                webrtcStates.iceCandidates.push(event.candidate)
+            }
+        });
+        webrtcClient.addEventListener('icegatheringstatechange', event => {
+            webrtcStates.iceGathering = event.currentTarget.iceGatheringState
+            if(event.currentTarget.iceGatheringState === 'complete'){
+                console.log('xSDK client.js - ICE candidates gathering completed. Found candidates:', webrtcStates.iceCandidates)
+            }
+        });
+        webrtcClient.addEventListener('iceconnectionstatechange', event => {
+            webrtcStates.iceConnection = event.currentTarget.iceConnectionState
+            if (event.currentTarget.iceConnectionState === 'connected') {
+                console.log('xSDK client.js - ICE connected')
+            }
+        });
+        webrtcClient.addEventListener('ontrack', event => {
+            console.log("HEREHEHER", "ontrack", event);
+        });
+
+        webrtcClient.addEventListener('connectionstatechange', event => {
+            webrtcStates.streamConnection = event.currentTarget.connectionState
+            if (event.currentTarget.connectionState === 'connected') {
+                console.log('xSDK client.js - Client has been connected to stream. Lets create the videosource..')
+                console.log(event);
+
+console.log("HERE3");
+var streams = webrtcClient.getReceivers();
+for (var stream of streams) {
+  console.log("Remote streams: " + stream.id);
+}
+
+                //const mediaSource = new MediaSource();
+                //const videoSourceUrl = window.URL.createObjectURL(mediaSource);
+                //const video = document.createElement('video');
+                //video.src = videoSourceUrl;
+
+                // this.createMediaSources();
+                //this.emitEvent('openstream', { event: event })
+            }
+        });
+    }
+    function createMediaSources() {
+        const mediaSource = new MediaSource();
+        const videoSourceUrl = URL.createObjectURL(mediaSource);
+        console.log(videoSourceUrl);
+
+        mediaSource.addEventListener('sourceopen', () => {
+            // Add VideoSource
+            {
+                console.log('xSDK client.js - MediaSource opened. Attaching videoSourceBuffer...');
+
+                let videoSourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42c020"');
+                videoSourceBuffer.mode = 'sequence'
+
+                videoSourceBuffer.addEventListener('updated', (event) => {
+                    console.log('xSDK - Updateend video...', event);
+                });
+
+                videoSourceBuffer.addEventListener('update', (event) => {
+                    console.log('xSDK - Updateend video...', event);
+                });
+
+                videoSourceBuffer.addEventListener('error', (event) => {
+                    console.log('xSDK - Error video...', event);
+                });
+
+               // this.#renderClient.video.videoSource = videoSourceBuffer
+            }
+        });
+
+        var videoHolder = document.getElementById('videoHolder');
+        var videoRender = document.createElement('video');
+        videoRender.id = 'videoRender';
+        videoRender.src = videoSourceUrl;
+        videoRender.width = videoHolder.clientWidth;
+        videoRender.height = videoHolder.clientHeight;
+        videoRender.play()
+
+        //this.#renderClient.video.mediaSource = mediaSource
+        //this.#renderClient.video.videoRender = videoRender
+
+        videoHolder.appendChild(videoRender);
+    }
+    function sendIce(ice, sessionId, token){
+        return new Promise((resolve, reject) => {
+            const postData = {
+                "messageType": "iceCandidate",
+                "candidate": ice
+            }
+
+            fetch('https://uks.gssv-play-prodxhome.xboxlive.com/v4/sessions/home/'+ sessionId + '/ice', {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token,
+                },
+                body: JSON.stringify(postData)
+            }).then((response) => {
+                if(response.status !== 202){
+                    console.log('StreamClient.js: Error sending ICE candidates. Status:', response.status, 'Body:', response.body)
+                } else {
+                    resolve('ok')
+                }
+            }).catch((error) => {
+                reject(error)
+            });
+        })
+    }
+
+    async function sendSdp(sdp, sessionId, token) {
+        return new Promise((resolve, reject) => {
+            const postData = {
+                "messageType":"offer",
+                "sdp": sdp,
+                "configuration":{
+                    "containerizeVideo":true,
+                    "requestedH264Profile":2,
+                    "chatConfiguration":{
+                        "bytesPerSample":2,
+                        "expectedClipDurationMs":100,
+                        "format":{
+                            "codec":"opus",
+                            "container":"webm"
+                        },
+                        "numChannels":1,
+                        "sampleFrequencyHz":24000
+                    },
+                    "audio":{
+                        "minVersion":1,
+                        "maxVersion":1
+                    },
+                    "chat":{
+                        "minVersion":1,
+                        "maxVersion":1
+                    },
+                    "control":{
+                        "minVersion":1,
+                        "maxVersion":1
+                    },
+                    "input":{
+                        "minVersion":1,
+                        "maxVersion":4
+                    },
+                    "message":{
+                        "minVersion":1,
+                        "maxVersion":1
+                    },
+                    "video":{
+                        "minVersion":1,
+                        "maxVersion":2
+                    }
+                }
+            }
+
+            // const streamClient = this
+
+            fetch('https://uks.gssv-play-prodxhome.xboxlive.com/v4/sessions/home/'+ sessionId +'/sdp', {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token,
+                },
+                body: JSON.stringify(postData)
+            }).then((response) => {
+                if(response.status !== 202){
+                    console.log('StreamClient.js: Error sending SDP state. Status:', response.status, 'Body:', JSON.stringify(response.body))
+                } else {
+                    resolve('ok')
+                }
+            }).catch((error) => {
+                reject(error)
+            });
+        })
+    }
+
+    // functions
+    async function isExchangeReady(path, sessionId, token, retries = 5) {
+        if (retries < 1) {
+            throw new Error("Exchange not ready" + path)
+        }
+        return new Promise((resolve, reject) => {
+
+            const url = "https://uks.gssv-play-prodxhome.xboxlive.com/v4/sessions/home/"+sessionId+'/'+path
+            const init = {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Authorization': 'Bearer ' + token,
+                }
+            }
+            console.log(JSON.stringify(init));
+            fetch(url, init).then(response => {
+                if(response.status !== 200){
+                    console.log('StreamClient.js: '+url+' - Waiting...');
+                    console.log('Response', response.status);
+
+                    setTimeout(() => {
+                        this.isExchangeReady(path, sessionId, token, retries - 1).then((data) => {
+                            resolve(data)
+                        }).catch((error)  => {
+                            reject(error)
+                        })
+                    }, 5000)
+                } else {
+                    if(path == 'state'){
+                        response.json().then(data => {
+                            if(data.state === 'Provisioning'){
+                                console.log('StreamClient.js: '+url+' - Waiting... State:', data.state)
+                                setTimeout(() => {
+                                    this.isExchangeReady(path, sessionId, token, retries - 1).then((data) => {
+                                        resolve(data)
+                                    }).catch((error)  => {
+                                        reject(error)
+                                    })
+                                }, 1000)
+                            } else if(data.state === 'Provisioned') {
+                                resolve(data)
+                            } else {
+                                reject(data)
+                            }
+                        })
+                    } else {
+                        response.json().then(data => {
+                            console.log('StreamClient.js: '+url+' - Ready! Got data:', data)
+                            resolve(data)
+                        })
+                    }
+                }
+            })
+        })
+    }
+
+    function openDataChannel(name, config, webrtcClient) {
+        webrtcDataChannels[name] = webrtcClient.createDataChannel(name, config);
+
+        webrtcDataChannels[name].addEventListener("open", event => {
+            // const message = event.data;
+            if(webrtcDataChannels[name] !== undefined && webrtcDataChannels[name].onOpen !== undefined){
+                console.log("OPEN data channel event", event.data);
+            }
+            console.log('xSDK client.js - ['+name+'] Got open channel:', event.data)
+        });
+
+        webrtcDataChannels[name].addEventListener("message", event => {
+            // const message = event.data;
+            if(webrtcDataChannels[name] !== undefined && webrtcDataChannels[name].onMessage !== undefined){
+                console.log("MESSAGE data channel event", event.data);
+            }
+            console.log('xSDK client.js - ['+name+'] Got open channel:', event.data)
+        });
+    }
+
+    async function createOffer(webrtcClient) {
+        const offer = await webrtcClient.createOffer();
+        console.log("here3",offer);
+        await webrtcClient.setLocalDescription(offer);
+        console.log("here3.5", webrtcClient.localDescription)
+        return offer;
+    }
+
+</script>
+<!-- <script type='text/javascript' src="jsHelpers.js"></script> -->

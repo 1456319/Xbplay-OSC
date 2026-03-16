@@ -1,0 +1,27 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        // according to ironsource for admob medation
+        flatDir {
+            dirs 'libs'
+        }
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            url "https://maven.mozilla.org/maven2/" // for firefox client
+        }
+        maven {
+            url 'https://android-sdk.is.com/' // ads I think - def admob
+        }
+        maven {
+            url "https://jitpack.io" // one of the ads networks
+        }
+        maven {
+            name "Tapjoy's maven repo"
+            url "https://sdk.tapjoy.com/" // tapjoy
+        }
+    }
+}
+rootProject.name = "My Application2"
+include ':app'

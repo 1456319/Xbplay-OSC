@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General">
+
+        <Preference
+            android:title="Rate App"
+            android:key="rate_app_key"
+            android:summary="Thanks! I appreciate feedback and feature requests" />
+
+        <Preference
+            android:title="Show Tutorial"
+            android:key="show_tutorial_key"
+            android:summary="Show the startup tutorial" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="use_notch_key"
+            android:summary="Makes full screen mode larger by occupying the space around camera notches"
+            android:title="Enable Full Screen Notch Mode" />
+
+<!--        <SwitchPreference-->
+<!--            android:defaultValue="true"-->
+<!--            android:key="lock_orientation_key"-->
+<!--            android:summary="Enable to lock orientation which is best for most phones. Disable to unlock orientation which is useful for dual screen devices."-->
+<!--            android:title="Lock Orientation" />-->
+
+        <ListPreference
+            android:defaultValue="auto"
+            android:dialogTitle="Select an Orientation"
+            android:entries="@array/orientation_entries"
+            android:entryValues="@array/orientation_values"
+            android:key="orientation_key"
+            android:summary="Set the orientation to landscape, portrait, etc"
+            android:title="Orientation" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Purchases">
+        <Preference
+            android:title="Unlock Full Version"
+            android:key="unlock_full_version_main_app_key"
+            android:summary="Purchase the full version of the app to play without a trial period" />
+
+        <Preference
+            android:title="Restore Purchase"
+            android:key="restore_purchase_main_app_key"
+            android:summary="Restore a purchase you already made. Must login for cross restore to work" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Login Settings">
+        <Preference
+            android:title="Clear Cache"
+            android:key="clear_cache_key"
+            android:summary="Deletes all cached data including saved controllers" />
+
+        <Preference
+            android:title="Forget Saved Console"
+            android:key="forget_saved_console_key"
+            android:summary="Forget your saved console so that a prompt will appear the next time you login asking you to select a new default console." />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="skip_xcloud_login_key"
+            android:summary="Enable this if you don't have GamePass and don't want to wait for the login page to check for a GamePass subscription. This will speedup login by 50% but will disable the xCloud feature."
+            android:title="Skip xCloud Check" />
+
+        <Preference
+            android:title="Email for Help"
+            android:key="ask_for_help_key"
+            android:summary="Click here to send an email to the developer for help." />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="capture_debug_logs_key"
+            android:summary="Enable to capture login debug logs. They will be attached when sending a help email (above)."
+            android:title="Capture Login Debug Logs" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="capture_debug_logs_gameplay_key"
+            android:summary="Enable to capture gameplay debug logs. They will be attached when sending a help email (above)."
+            android:title="Capture Gameplay Debug Logs" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="Troubleshooting">
+
+        <ListPreference
+            android:defaultValue="empty"
+            android:dialogTitle="Select a render engine"
+            android:entries="@array/render_engine_entries"
+            android:entryValues="@array/render_engine_values"
+            android:key="render_engine_key"
+            android:summary="Change the render engine if you are having video play issues. Fixes: Stuck on black/white screen, video won't update unless the screen is touched, excess lag, etc. "
+            android:title="Render Engine" />
+
+        <Preference
+            android:title="Join Reddit for Help"
+            android:key="join_reddit_key"
+            android:summary="Click here to open the subreddit where you can ask for help, report bugs, or request features!" />
+
+        <Preference
+            android:title="Join Discord Server for Help"
+            android:key="join_discord_key"
+            android:summary="Click here to join a discord server where you can ask for help, report bugs, or request features. This is the quickest way to get in contact with the app developer!" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Vibration/Rumble">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="vibrate_key"
+            android:summary="Enable vibration for button clicks on the on-screen gamepad"
+            android:title="On-Screen Gamepad Vibration" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="rumble_device_key"
+            android:summary="Rumble your device if there isn't a controller attached that supports rumble"
+            android:title="Rumble Device" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="rumble_controller_key"
+            android:summary="Rumble any controllers attached to your device. Requires Android 12+ and a wired connection normally. Try with the different render engines if you have issues."
+            android:title="Rumble Controller" />
+
+        <SeekBarPreference
+            app:showSeekBarValue="false"
+            android:key="rumble_intensity_key"
+            android:title="Rumble Intensity"
+            android:summary="Adjust the rumble/vibration intensity"
+            android:defaultValue="1"
+            android:max="5" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Remote Play Settings">
+        <ListPreference
+            android:defaultValue="30"
+            android:dialogTitle="Mini Gamepad Size"
+            android:entries="@array/mini_gamepad_size_entries"
+            android:entryValues="@array/mini_gamepad_size_values"
+            android:key="mini_gamepad_size_key"
+            android:summary="Choose how much of the screen the mini gamepad should use in the xHome/xCloud mode"
+            android:title="Mini Gamepad Size" />
+
+        <ListPreference
+            android:defaultValue="cover"
+            android:dialogTitle="Video Fit"
+            android:entries="@array/video_fit_entries"
+            android:entryValues="@array/video_fit_values"
+            android:key="video_fit_key"
+            android:summary="Choose how the video is scaled on your screen"
+            android:title="Video Fit" />
+
+        <SeekBarPreference
+            app:showSeekBarValue="true"
+            android:key="video_vertical_offset_key"
+            android:title="Video Vertical Offset"
+            android:summary="Slide to offset video from the center of the screen (50=center, 0=top, 100=bottom). Useful for dual-screen devices (only compatible with some 'Video Fit' types)"
+            android:defaultValue="50"
+            android:max="100" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="enable_audio_default_key"
+            android:summary="Enable Audio in GameStream and MirrorCast modes"
+            android:title="Enable Audio" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Performance Settings (XHome/XCloud)">
+
+        <ListPreference
+            android:defaultValue="windows"
+            android:dialogTitle="Choose to appear as"
+            android:entries="@array/emulate_client_entries"
+            android:entryValues="@array/emulate_client_values"
+            android:key="emulate_client_key"
+            android:summary="Choose to appear as a windows user (high quality and play 360 games) or an android user (less lag but lower quality)"
+            android:title="Emulate Windows or Android Client" />
+
+        <ListPreference
+            android:defaultValue=""
+            android:dialogTitle="Choose a max bitrate"
+            android:entries="@array/max_bitrate_entries"
+            android:entryValues="@array/max_bitrate_values"
+            android:key="max_bitrate_key"
+            android:summary="Choose the max allowed bitrate. Lower this value on lower performing devices if you consistently see dropped/choppy frames."
+            android:title="Max Bitrate" />
+
+<!--        <ListPreference-->
+<!--            android:defaultValue=""-->
+<!--            android:dialogTitle="Choose how much lag should trigger a soft refresh"-->
+<!--            android:entries="@array/soft_reset_on_lag_entries"-->
+<!--            android:entryValues="@array/soft_reset_on_lag_values"-->
+<!--            android:key="soft_reset_on_lag_key"-->
+<!--            android:summary="Enable if video starts to accumulate lag. When video lag is detected, this will attempt to soft refresh the video to fix it. If you set this value too aggressively you will notice dropped frames / choppy video."-->
+<!--            android:title="Soft Refresh Video on Lag" />-->
+
+<!--        <ListPreference-->
+<!--            android:defaultValue=""-->
+<!--            android:dialogTitle="Choose how often to trigger a soft refresh"-->
+<!--            android:entries="@array/soft_reset_on_interval_entries"-->
+<!--            android:entryValues="@array/soft_reset_on_interval_values"-->
+<!--            android:key="soft_reset_on_interval_key"-->
+<!--            android:summary="Enable if video starts to accumulate lag. Preemptively refresh the video every X seconds to avoid accumulating lag. Can be used with the above lag detection setting. If you set this value too aggressively you may notice dropped frames / choppy video."-->
+<!--            android:title="Soft Refresh Video on Interval" />-->
+
+<!--        <SwitchPreference-->
+<!--            android:defaultValue="false"-->
+<!--            android:key="flash_screen_on_soft_reset"-->
+<!--            android:summary="Flash the screen red when the video is soft reset. Useful to see how often the video is reset to determine if the lag policy is too aggressive (will be annoying if you leave on during real gameplay)."-->
+<!--            android:title="Flash Screen on Soft Refresh" />-->
+
+<!--        <ListPreference-->
+<!--            android:defaultValue=""-->
+<!--            android:dialogTitle="Choose how often to clear buffers"-->
+<!--            android:entries="@array/clear_buffer_on_interval_entries"-->
+<!--            android:entryValues="@array/clear_buffer_on_interval_values"-->
+<!--            android:key="clear_buffer_on_interval_key"-->
+<!--            android:summary="Enable this if the app crashes every 15-30 minutes during streaming. Preemptively clear video buffers every X minutes to avoid running out of memory on some devices. This will drop a single frame that might be disruptive during gameplay."-->
+<!--            android:title="Clear Video Buffers" />-->
+
+        <ListPreference
+            android:defaultValue="32"
+            android:dialogTitle="Pick a refresh rate"
+            android:entries="@array/controller_refresh_entries"
+            android:entryValues="@array/controller_refresh_values"
+            android:key="controller_refresh_key"
+            android:summary="Choose how frequently to pull data from a connected controller."
+            android:title="Physical Controller Refresh Rate" />
+
+        <ListPreference
+            android:defaultValue="default"
+            android:dialogTitle="Choose a region"
+            android:entries="@array/region_entries"
+            android:entryValues="@array/region_values"
+            android:key="region_key"
+            android:summary="Choose a location/region to connect to the XCloud servers in. Default will use the closest region available. Useful if XCloud is not available in your area. Does not impact XHome."
+            android:title="Choose a region for XCloud" />
+
+        <ListPreference
+            android:defaultValue="en-US"
+            android:dialogTitle="Choose a Location/Language"
+            android:entries="@array/custom_local_entries"
+            android:entryValues="@array/custom_local_values"
+            android:key="custom_local_key"
+            android:summary="Choose a language to use while playing xCloud."
+            android:title="Choose an xCloud Language" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Physical Controller Settings">
+        <Preference
+            android:key="create_physical_controller_button_mappings"
+            android:summary="Click to create a new button mapping configuration template for a physical controller"
+            android:title="Create New Layout" />
+
+        <ListPreference
+            android:defaultValue="null"
+            android:dialogTitle="Select Controller Config"
+            android:key="physical_controller_button_mappings"
+            android:summary="Click to select what button mapping config to use (created above) when a physical controller is connected. "
+            android:title="Select Controller Layout" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Media Remote Settings">
+        <ListPreference
+            android:defaultValue="close_on_exit"
+            android:dialogTitle="Notification Tray Remote"
+            android:entries="@array/notification_remote_entries"
+            android:entryValues="@array/notification_remote_values"
+            android:key="notification_remote_key"
+            android:summary="Configure how the notification tray remote is shown (requires app restart to apply changes)"
+            android:title="Notification Tray Remote" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="Keyboard Type Speed"
+            android:entries="@array/keyboard_speed_entries"
+            android:entryValues="@array/keyboard_speed_values"
+            android:key="keyboard_speed_key"
+            android:summary="Configure how quickly the keyboard feature should move to type keys. Reduce the speed if you consistently get bad key presses."
+            android:title="Keyboard Type Speed" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Tilt Joystick Settings">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="tilt_invert_x_key"
+            android:summary="Invert the tilt direction on the X axis."
+            android:title="Invert Horizontal Tilt" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="tilt_invert_y_key"
+            android:summary="Invert the tilt direction on the Y axis."
+            android:title="Invert Vertical Tilt" />
+
+        <SeekBarPreference
+            app:showSeekBarValue="true"
+            android:key="tilt_deadzone_key"
+            android:title="Tilt Joystick Deadzone"
+            android:summary="Select how big the deadzone should be for the tilt joystick."
+            android:defaultValue="3"
+            android:max="5" />
+
+        <SeekBarPreference
+            app:showSeekBarValue="true"
+            android:key="tilt_sensitivity_key"
+            android:title="Tilt Joystick Sensitivity"
+            android:summary="Select how sensitive the tilt joystick should be"
+            android:defaultValue="2"
+            android:max="5" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="TV Cast Settings">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="audio_cast_key"
+            android:summary="Enable audio by default while casting console to a smart TV"
+            android:title="TV Cast - Enable Audio" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="info_cast_key"
+            android:summary="Enable info bar by default while casting console to a smart TV"
+            android:title="TV Cast - Enable Info Bar" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Xbox 360 Video Cast">
+        <ListPreference
+            android:defaultValue="ask"
+            android:dialogTitle="Video Convert Prompt"
+            android:entries="@array/video_convert_prompt_entries"
+            android:entryValues="@array/video_convert_prompt_values"
+            android:key="video_convert_prompt_key"
+            android:summary="Choose what happens when casting Xbox 360 videos"
+            android:title="Video Convert Prompt" />
+
+        <ListPreference
+            android:defaultValue="29"
+            android:dialogTitle="Video Convert Quality"
+            android:entries="@array/video_convert_quality_entries"
+            android:entryValues="@array/video_convert_quality_values"
+            android:key="video_convert_quality_key"
+            android:summary="Choose the quality of converted Xbox 360 videos. The higher the quality the longer it will take to convert"
+            android:title="Video Convert Quality" />
+
+        <ListPreference
+            android:defaultValue="1280x720"
+            android:dialogTitle="Video Convert Size"
+            android:entries="@array/video_convert_size_entries"
+            android:entryValues="@array/video_convert_size_values"
+            android:key="video_convert_size_key"
+            android:summary="Choose the size of converted Xbox 360 videos"
+            android:title="Video Convert Size" />
+    </PreferenceCategory>
+
+<!--    <PreferenceCategory android:title="Gamepad Builder Settings">-->
+<!--        <SwitchPreference-->
+<!--            android:defaultValue="false"-->
+<!--            android:key="build_snap_grid_key"-->
+<!--            android:summary="Determines if buttons should snap to a grid while dragging them for easy placement"-->
+<!--            android:title="Snap Buttons to Grid" />-->
+
+<!--        <SeekBarPreference-->
+<!--            android:key="build_grid_size_key"-->
+<!--            android:title="Gamepad Build Grid Size"-->
+<!--            android:summary="Determines how many grids the Gamepad Build will snap to (if grid snap is enabled)"-->
+<!--            android:defaultValue="30"-->
+<!--            android:max="100" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory android:title="Ads Settings">-->
+<!--        <ListPreference-->
+<!--            android:defaultValue="on_connect"-->
+<!--            android:dialogTitle="Choose when to show ads :)"-->
+<!--            android:entries="@array/ad_frequency_entries"-->
+<!--            android:entryValues="@array/ad_frequency_values"-->
+<!--            android:key="ad_frequency_key"-->
+<!--            android:summary="Choose how often to show ads :)"-->
+<!--            android:title="Ads Frequency" />-->
+<!--    </PreferenceCategory>-->
+
+    <PreferenceCategory android:title="Appearance">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pwa_use_legacy_theme_key"
+            android:summary="Use the legacy theme. Requires app restart."
+            android:title="Use Legacy Theme" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

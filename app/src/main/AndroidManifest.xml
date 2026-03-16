@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.studio08.xbgamestream">
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+<!--    for android 13-->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+<!--    delete these once we have audio picker available in photo picker-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <!-- MAKE EXTRA SURE THIS IS REMOVED -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" tools:node="remove" />
+
+    <!--    ad colony/ironsource requires this-->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+<!--    enable for geckoview android:extractNativeLibs="true"-->
+
+<!--    For android 14-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        android:icon="${appIcon}"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication2"
+        android:usesCleartextTraffic="true" >
+
+        <!-- my ADMOB id! -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="${admob_app_id}"/>
+
+        <!-- admob mediation via ironsource -->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent" />
+
+        <!-- adcolony-->
+        <activity
+            android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"/>
+
+        <!-- applovin-->
+        <activity
+            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+            android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"/>
+        <activity
+            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|uiMode"/>
+
+        <!-- tapjoy-->
+        <activity
+            android:name="com.tapjoy.TJAdUnitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.tapjoy.TJContentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:hardwareAccelerated="true"/>
+
+        <!-- Ironsource-->
+        <activity
+            android:name="com.ironsource.sdk.controller.ControllerActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.ironsource.sdk.controller.InterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <provider
+            android:authorities="${applicationId}.IronsourceLifecycleProvider"
+            android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" />
+
+        <activity
+            android:name=".ScreenCastActivity"
+            android:exported="true"
+            android:label="@string/title_activity_screen_cast"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.MyApplication2.NoActionBar" />
+        <activity
+            android:name=".Authenticate.LoginActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.MyApplication2.NoActionBar" />
+        <activity
+            android:name=".Authenticate.LoginActivityV4"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.MyApplication2.NoActionBar" />
+        <activity
+            android:name=".ControllerSetup.ControllerConfigActivity"
+            android:exported="true"
+            android:label="Controller Config"
+            android:theme="@style/Theme.MyApplication2.NoActionBar" />
+        <activity
+            android:name=".Helpers.TutorialActivity"
+            android:exported="true"
+            android:label="Tutorial"
+            android:theme="@style/Theme.MyApplication2.NoActionBar" />
+        <activity
+            android:name=".Helpers.SettingsActivity"
+            android:exported="true"
+            android:label="Settings" />
+        <activity
+            android:name=".Helpers.PWASettingsActivity"
+            android:exported="true"
+            android:label="Settings" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.MyApplication2.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.studio08.xbgamestream" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="true">
+
+            <!-- Edit android:value to change the url opened by the Trusted Web Activity -->
+            <meta-data
+                android:name="android.support.customtabs.trusted.DEFAULT_URL"
+                android:value="${twaDefaultUrl}" />
+
+            <meta-data android:name="android.support.customtabs.trusted.DISPLAY_MODE"
+                android:value="immersive"/>
+
+            <intent-filter
+                android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!-- Edit android:host to handle links to the target URL-->
+                <data
+                    android:scheme="https"
+                    android:host="${twaHost}"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PWAMainMenuActivity"
+            android:exported="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="@string/app_name"
+            android:supportsPictureInPicture="true"
+            android:resizeableActivity="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.MyApplication2.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.studio08.xbgamestream" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="xbplay" android:host="launch" />
+                <!-- note that the leading "/" is required for pathPrefix-->
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+
+        <service
+            android:name=".Converter.ConvertForegroundService"
+            android:enabled="true"
+            android:foregroundServiceType="mediaPlayback"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".CastToConsole.CastToConsoleForegroundService"
+            android:foregroundServiceType="mediaPlayback"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.contentprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+
+        <service
+            android:name=".Controller.LocalService"
+            android:foregroundServiceType="mediaPlayback"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <!-- Trigger Google Play services to install the backported photo picker module. -->
+        <service android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+            </intent-filter>
+            <meta-data android:name="photopicker_activity:0:required" android:value="" />
+        </service>
+
+        <!-- Cast expanded controls -->
+        <activity
+            android:exported="true"
+            android:name=".Cast.MyExpandedControls"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.MyApplication2.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.studio08.xbgamestream.Cast.CastOptionsProvider" />
+
+        <!-- Widgets -->
+        <receiver
+            android:exported="false"
+            android:name=".Widgets.RemoteWidgetProvider"
+            android:label="Xbox Remote Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <receiver
+            android:exported="false"
+            android:name=".Widgets.PowerWidgetProvider"
+            android:label="Xbox Power Toggle">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_power" />
+        </receiver>
+
+    </application>
+
+</manifest>

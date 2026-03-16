@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/simpleNavigationMenuHeader"
+        android:title="Control Console">
+
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:id="@+id/group1" >
+                <item
+                    android:id="@+id/nav_remote"
+                    android:icon="@mipmap/remote"
+                    android:title="Media Remote" />
+
+                <item
+                    android:id="@+id/nav_controller"
+                    android:icon="@mipmap/controller2_icon"
+                    android:title="Game Controller" />
+
+                <item
+                    android:id="@+id/nav_voiceremote"
+                    android:icon="@drawable/audio"
+                    android:title="Voice Remote" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/streamMenuHeader"
+        android:title="Remote Play Console to Phone">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:id="@+id/group2" >
+                <item
+                    android:id="@+id/nav_gamestream"
+                    android:icon="@mipmap/gamestream_icon"
+                    android:title="Remote Play" />
+<!--                <item-->
+<!--                    android:id="@+id/nav_stream"-->
+<!--                    android:icon="@mipmap/stream2_icon"-->
+<!--                    android:title="Stream" />-->
+
+                <item
+                    android:id="@+id/nav_xcloud"
+                    android:icon="@drawable/servers"
+                    android:title="Cloud Play" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/tvCastMenuHeader"
+        android:title="Cast Console to Smart Device">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:id="@+id/group3" >
+                <item
+                    android:id="@+id/nav_android_tv"
+                    android:icon="@drawable/tv"
+                    android:title="Android/LG/Fire TV" />
+                <item
+                    android:id="@+id/nav_tvcast"
+                    android:icon="@drawable/google_cast_logo"
+                    android:title="TV Cast" />
+                <item
+                    android:id="@+id/nav_mirrorcast"
+                    android:icon="@drawable/mirror_cast"
+                    android:title="MirrorCast" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/fileCastMenuHeader"
+        android:title="Cast Phone to Console">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:id="@+id/group4" >
+                <item
+                    android:id="@+id/nav_filecast"
+                    android:icon="@mipmap/film_2"
+                    android:title="Video Cast" />
+
+                <item
+                    android:id="@+id/nav_audiocast"
+                    android:icon="@mipmap/speaker"
+                    android:title="Music Cast" />
+
+                <item
+                    android:id="@+id/nav_cast_remote"
+                    android:icon="@drawable/tv"
+                    android:title="Cast Remote" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/configMenuHeader"
+        android:title="Setup and Customization">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:id="@+id/group8" >
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@mipmap/connect_icon"
+                    android:title="@string/menu_consoles" />
+                <item
+                    android:id="@+id/nav_controller_builder"
+                    android:icon="@mipmap/builder_icon"
+                    android:title="Gamepad Builder" />
+
+                <item
+                    android:id="@+id/nav_widgets"
+                    android:icon="@drawable/widget2"
+                    android:title="Widgets" />
+
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/settings_icon"
+                    android:title="Settings" />
+             </group>
+        </menu>
+    </item>
+</menu>
