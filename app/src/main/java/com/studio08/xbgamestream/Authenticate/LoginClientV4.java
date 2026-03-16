@@ -1,32 +1,32 @@
 package com.studio08.xbgamestream.Authenticate;
 
+import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.util.Log;
-import android.webkit.CookieManager;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.microsoft.identity.client.AuthenticationCallback;
+import com.microsoft.identity.client.IAuthenticationResult;
+import com.microsoft.identity.client.IPublicClientApplication;
+import com.microsoft.identity.client.ISingleAccountPublicClientApplication;
+import com.microsoft.identity.client.PublicClientApplication;
+import com.microsoft.identity.client.exception.MsalException;
 import com.studio08.xbgamestream.Helpers.EncryptClient;
-import com.studio08.xbgamestream.Helpers.Helper;
-import com.studio08.xbgamestream.Web.ApiClient;
+import com.studio08.xbgamestream.R;
 import com.studio08.xbgamestream.Web.StreamWebview;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.Map;
 
 public class LoginClientV4 {
@@ -42,295 +42,211 @@ public class LoginClientV4 {
             DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
     );
     private Context context;
-    private StreamWebview loginWebview = null;
     LoginClientV4.LoginClientListener listener = null;
     private EncryptClient encryptClient = null;
-
-    // tmp redirect values
-    private JSONObject redirectTmpData;
-    private String redirectTmpUri;
-    private String headerTmpRedirectLocation;
-    private int retryAttempts = 0;
+    private ISingleAccountPublicClientApplication mSingleAccountApp;
 
     public LoginClientV4(Context context, StreamWebview webview) {
         this.context = context;
         this.listener = null;
-        this.loginWebview = webview;
         this.encryptClient = new EncryptClient(this.context);
-        setupWebviewListeners();
+
+        PublicClientApplication.createSingleAccountPublicClientApplication(context,
+                R.raw.auth_config_single_account,
+                new IPublicClientApplication.ISingleAccountApplicationCreatedListener() {
+                    @Override
+                    public void onCreated(ISingleAccountPublicClientApplication application) {
+                        mSingleAccountApp = application;
+                        appendLogs("MSAL initialized");
+                    }
+
+                    @Override
+                    public void onError(MsalException exception) {
+                        appendLogs("MSAL initialization failed: " + exception.toString());
+                        showError(listener, "Failed to initialize MSAL.");
+                    }
+                });
     }
 
-    // Assign the listener implementing events interface that will receive the events
     public void setCustomObjectListener(LoginClientV4.LoginClientListener listener) {
         this.listener = listener;
     }
 
     public void loginButtonClicked() {
         appendLogs("Starting loginButtonClicked");
-        JSONObject existingXal = getSavedXalToken();
-        if (existingXal == null){
-            getRedirectUriFromApi();
-        } else {
-            updateExistingXalTokens(existingXal);
-        }
-    }
-
-    private void updateExistingXalTokens(JSONObject xalTokens){
-        appendLogs("updateExistingXalTokens: " + xalTokens.toString());
-        if (listener != null){
-            listener.showDialog();
-        }
-
-        RequestQueue queue = Volley.newRequestQueue(context);
-        JSONObject postData = new JSONObject();
-
-        try {
-            JSONObject xalTokensData = new JSONObject();
-            xalTokensData.put("xalTokens", xalTokens);
-
-            // put login region data
-            String loginRegionIp = this.encryptClient.getValue("loginRegionIp");
-            if (loginRegionIp != null){
-                xalTokensData.put("loginRegionIp", loginRegionIp);
-            }
-
-            postData.put("data", xalTokensData);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            showError(listener, "Error Logging In. Try Clearing Cache. Failed to extract Xal Tokens.");
+        if (mSingleAccountApp == null) {
+            showError(listener, "MSAL not initialized yet.");
             return;
         }
 
-        appendLogs("Data: " + postData.toString());
-
-        // Create a JsonObjectRequest with a custom StringRequest body
-        JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.POST, ApiClient.TOKEN_DATA_ENDPOINT, postData,
-                response -> {
-                    handleXalTokenResponse(response);
-                },
-                error -> {
-                    appendLogs("updateExistingXalTokens failed:" + error.getLocalizedMessage());
-                    showError(listener, "Error Logging In. Try Clearing Cache. Failed to update Xal Tokens.");
-                });
-
-        stringRequest.setRetryPolicy(volleyPolicy);
-        queue.add(stringRequest);
-    }
-
-    private void getRedirectUriFromApi(){
-        appendLogs("getRedirectUriFromApi");
-        RequestQueue queue = Volley.newRequestQueue(context);
-        JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.POST, ApiClient.TOKEN_DATA_ENDPOINT, null,
-                response -> {
-                    handleRedirectUriResponse(response);
-                },
-                error -> {
-                    appendLogs("getRedirectUriFromApi failed: " + error.networkResponse);
-                    showError(listener, "Failed getting redirect url from API.");
+        mSingleAccountApp.signIn((Activity) context, null, new String[]{"Xboxlive.signin", "Xboxlive.offline_access"}, new AuthenticationCallback() {
+            @Override
+            public void onSuccess(IAuthenticationResult authenticationResult) {
+                appendLogs("MSAL SignIn Success");
+                if (listener != null) {
+                    listener.showDialog();
                 }
-        );
-        stringRequest.setRetryPolicy(volleyPolicy);
-        queue.add(stringRequest);
-    }
-
-    private void exchangeRedirectUriForTokens(String redirectUriString) {
-        appendLogs("exchangeRedirectUriForTokens");
-        if(listener != null){
-            listener.showDialog();
-        }
-
-        RequestQueue queue = Volley.newRequestQueue(context);
-        JSONObject postData = new JSONObject();
-
-        try {
-            // Copy data to new object
-            JSONObject dataRedirectTmpData = new JSONObject(redirectTmpData.toString());
-
-            // append region data to new object
-            String loginRegionIp = this.encryptClient.getValue("loginRegionIp");
-            if (loginRegionIp != null){
-                dataRedirectTmpData.put("loginRegionIp", loginRegionIp);
-            }
-
-            // pass new object to postData
-            postData.put("data", dataRedirectTmpData);
-            postData.put("redirectURI", redirectUriString);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            showError(listener, "Error exchanging redirect uri for tokens. Try clearing cache and logging in again.");
-            return;
-        }
-
-        appendLogs("Data: " + postData.toString());
-
-        // Create a JsonObjectRequest with a custom StringRequest body
-        JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.POST, ApiClient.TOKEN_DATA_ENDPOINT, postData,
-                response -> {
-                    handleXalTokenResponse(response);
-                },
-                error -> {
-                    appendLogs("exchangeRedirectUriForTokens failed:" + error.getLocalizedMessage());
-                    showError(listener, "Error Logging In. Try Clearing Cache. Failed retrieving tokens from redirect url.");
-                });
-
-        stringRequest.setRetryPolicy(volleyPolicy);
-        queue.add(stringRequest);
-    }
-
-    private JSONObject getSavedXalToken() {
-        return encryptClient.getJSONObject("xalTokens");
-    }
-
-    private void setupWebviewListeners() {
-        loginWebview.setWebViewClient(new WebViewClient(){
-
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                String url = request.getUrl().toString();
-                Log.e("LoginClientV4", "shouldOverrideUrlLoading: " + url + ". headerTmpRedirectLocation:" + headerTmpRedirectLocation);
-
-                if (url.contains(headerTmpRedirectLocation)) {
-                    appendLogs("Found redirect: " + url);
-                    String error = request.getUrl().getQueryParameter("error");
-                    String errorDesc = request.getUrl().getQueryParameter("error_description");
-
-                    if (error != null) { // back button pressed or failure
-                        Toast.makeText(context, "Error: " + error + " - " + errorDesc, Toast.LENGTH_LONG).show();
-                        listener.errorMessage("Failed: " + error + " - " +  errorDesc);
-                    } else {
-                        exchangeRedirectUriForTokens(url);
-                    }
-                    return true;
-                }
-
-
-                // handle proxy redirect logic
-                String urlWithoutDomain = url.replace("https://xbgamestreamproxy.com/a/", "");
-                String decodedURLWithoutDomain = Helper.xorDecode(urlWithoutDomain);
-                Log.e("LoginClientV4", "rawUrl: " + decodedURLWithoutDomain + ". headerTmpRedirectLocation:" + headerTmpRedirectLocation);
-                if (decodedURLWithoutDomain.contains(headerTmpRedirectLocation)) {
-                    appendLogs("Found proxy redirect: " + decodedURLWithoutDomain);
-                    exchangeRedirectUriForTokens(decodedURLWithoutDomain);
-                    return true; // Return true to block the URL from loading
-                }
-
-                return false; // Return false to allow the WebView to load the URL
+                exchangeMsalTokenForXboxLive(authenticationResult.getAccessToken());
             }
 
             @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                super.onPageStarted(view, url, favicon);
-                Log.e("HERE", "Page started:" + url);
+            public void onError(MsalException exception) {
+                appendLogs("MSAL SignIn Error: " + exception.toString());
+                showError(listener, "MSAL SignIn Error: " + exception.getMessage());
             }
 
             @Override
-            public void onPageFinished(WebView view, String url) {
-                // Here you can check your new URL.
-                super.onPageFinished(view, url);
-                Log.e("HERE", "Page Finished:" + url);
-
-            }
-            @Override
-            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error){
-                appendLogs( "Error: " + request.getUrl());
-                appendLogs( "Error: " +  loginWebview.getUrl());
+            public void onCancel() {
+                appendLogs("MSAL SignIn Cancelled");
+                showError(listener, "Sign in cancelled");
             }
         });
+    }
+
+    private void exchangeMsalTokenForXboxLive(String msalToken) {
+        appendLogs("exchangeMsalTokenForXboxLive");
+        RequestQueue queue = Volley.newRequestQueue(context);
+
+        JSONObject postData = new JSONObject();
+        try {
+            JSONObject properties = new JSONObject();
+            properties.put("AuthMethod", "RPS");
+            properties.put("SiteName", "user.auth.xboxlive.com");
+            properties.put("RpsTicket", "d=" + msalToken);
+
+            postData.put("RelyingParty", "http://auth.xboxlive.com");
+            postData.put("TokenType", "JWT");
+            postData.put("Properties", properties);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            showError(listener, "Error building Xbox Live auth request.");
+            return;
+        }
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, "https://user.auth.xboxlive.com/user.authenticate", postData,
+                response -> {
+                    try {
+                        String xboxLiveToken = response.getString("Token");
+                        exchangeXboxLiveTokenForXSTS(xboxLiveToken);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        showError(listener, "Error parsing Xbox Live token.");
+                    }
+                },
+                error -> {
+                    appendLogs("exchangeMsalTokenForXboxLive failed: " + error.toString());
+                    showError(listener, "Failed to get Xbox Live token.");
+                }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Content-Type", "application/json");
+                headers.put("Accept", "application/json");
+                headers.put("x-xbl-contract-version", "1");
+                return headers;
+            }
+        };
+
+        request.setRetryPolicy(volleyPolicy);
+        queue.add(request);
+    }
+
+    private void exchangeXboxLiveTokenForXSTS(String xboxLiveToken) {
+        appendLogs("exchangeXboxLiveTokenForXSTS");
+        RequestQueue queue = Volley.newRequestQueue(context);
+
+        JSONObject postData = new JSONObject();
+        try {
+            JSONObject properties = new JSONObject();
+            properties.put("SandboxId", "RETAIL");
+            JSONArray userTokens = new JSONArray();
+            userTokens.put(xboxLiveToken);
+            properties.put("UserTokens", userTokens);
+
+            postData.put("RelyingParty", "http://gssv.xboxlive.com/");
+            postData.put("TokenType", "JWT");
+            postData.put("Properties", properties);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            showError(listener, "Error building XSTS auth request.");
+            return;
+        }
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, "https://xsts.auth.xboxlive.com/xsts.authorize", postData,
+                response -> {
+                    handleXSTSResponse(response);
+                },
+                error -> {
+                    appendLogs("exchangeXboxLiveTokenForXSTS failed: " + error.toString());
+                    showError(listener, "Failed to get XSTS token.");
+                }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Content-Type", "application/json");
+                headers.put("Accept", "application/json");
+                headers.put("x-xbl-contract-version", "1");
+                return headers;
+            }
+        };
+
+        request.setRetryPolicy(volleyPolicy);
+        queue.add(request);
+    }
+
+    private void handleXSTSResponse(JSONObject xstsResponse) {
+        appendLogs("handleXSTSResponse");
+        try {
+            JSONObject displayClaims = xstsResponse.getJSONObject("DisplayClaims");
+            JSONArray xui = displayClaims.getJSONArray("xui");
+            JSONObject uhsObject = xui.getJSONObject(0);
+            String uhs = uhsObject.getString("uhs");
+
+            JSONObject webTokenData = new JSONObject();
+            webTokenData.put("Token", xstsResponse.getString("Token"));
+            webTokenData.put("DisplayClaims", displayClaims);
+
+            JSONObject webToken = new JSONObject();
+            webToken.put("data", webTokenData);
+
+            JSONObject xalData = new JSONObject();
+            xalData.put("webToken", webToken);
+
+            JSONObject xalTokens = new JSONObject();
+            xalTokens.put("uhs", uhs);
+            xalTokens.put("webTokenFinal", xstsResponse.getString("Token"));
+
+            JSONObject data = new JSONObject();
+            data.put("xalData", xalData);
+            data.put("xalTokens", xalTokens);
+
+            saveXalTokenData(data, this.context, this.listener);
+
+            if(listener != null){
+                listener.onLoginComplete();
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+            showError(listener, "Error parsing XSTS response.");
+        }
     }
 
     private static void appendLogs(String data){
         Log.e("LoginV4", data);
     }
 
-    public void handleXalTokenResponse(JSONObject response){
-        try {
-            appendLogs("handleXalTokenResponse" + response.toString());
-
-            String type = response.getString("type");
-            String error = response.getString("error");
-            JSONObject data = response.getJSONObject("data");
-
-            if (type.equals("error")) {
-                showError(listener, "Error Logging In. Try again or clear cache. Error: " + error);
-            } else if (type.equals("tokens")){
-                saveXalTokenData(data, this.context, this.listener);
-                if(listener != null){
-                    listener.onLoginComplete();
-                }
-            } else if (type.equals("redirect")) {
-                clearTokens();
-                handleRedirectUriResponse(response);
-            } else {
-                showError(listener, "Error Logging In. Try again or clear cache. Invalid login token response.");
-            }
-        } catch (Exception e){
-            e.printStackTrace();
-            showError(listener, "Error extracting token response");
-        }
-
-    }
-
     public static void saveXalTokenData(JSONObject data, Context ctx, LoginClientV4.LoginClientListener listener){
         try {
             EncryptClient tmpEncryptClient = new EncryptClient(ctx);
 
-            Log.e("LoginClientv4", "Updated xal tokens: " + data);
-            tmpEncryptClient.saveJSONObject("xalData", data);
+            JSONObject xalData = data.getJSONObject("xalData");
+            tmpEncryptClient.saveJSONObject("xalData", xalData);
 
-            JSONObject tokenData = data.getJSONObject("xalTokens");
-            tmpEncryptClient.saveJSONObject("xalTokens", tokenData);
+            JSONObject xalTokens = data.getJSONObject("xalTokens");
+            tmpEncryptClient.saveJSONObject("xalTokens", xalTokens);
         } catch (Exception e){
             e.printStackTrace();
             showError(listener, "Error saving token data.");
-        }
-
-    }
-
-    private void
-    handleRedirectUriResponse(JSONObject response){
-        appendLogs("handleRedirectUriResponse: " + response.toString());
-
-        // dont allow the login window opening flow to run more than 3 times without failing.
-        if (this.failDueToMaxRetries()){
-            return;
-        }
-
-        try {
-            String url = response.getString("redirectURI");
-            JSONObject redirectData = response.getJSONObject("data");
-            String headerLocation = redirectData.getString("headerRedirectUriLocation");
-
-            // TODO check values are not empty
-            appendLogs("Received valid redirect data");
-
-            this.headerTmpRedirectLocation = headerLocation;
-            this.redirectTmpData = redirectData;
-            this.redirectTmpUri = url;
-
-            openLoginWindow();
-        } catch (JSONException e) {
-            e.printStackTrace();
-            showError(listener, "Error Logging In. Try Clearing Cache. Invalid redirect url response from API.");
-        }
-    }
-
-    private boolean failDueToMaxRetries(){
-        if (this.retryAttempts >= 3){
-            Toast.makeText(this.context, "Failed. Max retries reached", Toast.LENGTH_LONG).show();
-            if(listener != null){
-                listener.errorMessage("Failed. Max retries reached. Try again later.");
-            }
-            return true;
-        }
-        this.retryAttempts++;
-        return false;
-    }
-
-    private void openLoginWindow(){
-        appendLogs("open login window called");
-        loginWebview.loadUrl(this.redirectTmpUri);
-        if(listener != null){
-            listener.hideDialog();
         }
     }
 
@@ -342,13 +258,21 @@ public class LoginClientV4 {
     }
 
     private void clearTokens() {
-        appendLogs( "clearTokens");
-
-        // Clear all the cookies
-//        CookieManager.getInstance().removeAllCookies(null);
-//        CookieManager.getInstance().flush();
-
+        appendLogs("clearTokens");
         encryptClient.deleteValue("xalData");
         encryptClient.deleteValue("xalTokens");
+        if (mSingleAccountApp != null) {
+            mSingleAccountApp.signOut(new ISingleAccountPublicClientApplication.SignOutCallback() {
+                @Override
+                public void onSignOut() {
+                    appendLogs("MSAL SignOut Complete");
+                }
+
+                @Override
+                public void onError(@NonNull MsalException exception) {
+                    appendLogs("MSAL SignOut Error");
+                }
+            });
+        }
     }
 }
