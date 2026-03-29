@@ -1,0 +1,26 @@
+# 🔒 Security Refactoring & Post-Isolation Functional challenges
+
+## Overview
+The application has been refactored to comply with modern Electron security standards. This involved a major transition from an insecure configuration to a secure, isolated architecture.
+
+## Security Improvements Implemented
+1.  **Disabled `nodeIntegration`**: Set `nodeIntegration: false` across all windows. Renderer processes no longer have direct access to Node.js APIs (`require`, `fs`, `process`, etc.), significantly reducing the impact of potential Cross-Site Scripting (XSS) attacks.
+2.  **Enabled `contextIsolation`**: Set `contextIsolation: true` for all windows. This ensures that the preload scripts and the web pages run in separate JavaScript contexts. This prevents the Main World (web page) from tampering with the preload script's environment or accessing Electron internal APIs.
+3.  **Secure IPC via `contextBridge`**: Established safe communication gateways using `contextBridge.exposeInMainWorld`. This provides a strictly allowlisted API to the renderer process, ensuring only specific, validated IPC messages can be sent to and received from the Main Process.
+4.  **Sandbox and GPU Security**: Enabled `sandbox: true` for auxiliary windows and ensured secure configurations for utility windows.
+
+## The "Blindness" Challenge (MUST BE FIXED)
+With `contextIsolation: true`, the preload script and the web page no longer share the same `window` or `document` objects. This introduces an "isolation boundary" that affects event-based communication:
+
+*   **DOM Event Blindness**: `window.dispatchEvent` called in the Main World (web page) is NOT visible to `window.addEventListener` in the Preload World, and vice versa.
+*   **Impact**: Features that rely on catching events from remote pages (e.g., Xbox login flow in `login_window.js`, token reception in `xal_login.js`, or PC Play host picker actions) will currently appear "broken" because the preload's event listeners are now "blind" to events fired by those pages.
+
+## Future Fix Requirements
+Future efforts to restore full functionality to these features **MUST NOT** invalidate the security improvements listed above.
+
+### Recommended Approaches for Fixing "Blindness":
+1.  **Refactor Frontend**: Update internal frontend components to call the exposed `window.electronAPI` directly instead of dispatching DOM events.
+2.  **Bridge via `executeJavaScript`**: For remote pages that cannot be modified (e.g., official Xbox login), use `webContents.executeJavaScript` to inject a bridge script into the Main World that catches the local events and forwards them using the exposed `contextBridge` API.
+3.  **Internal Preload DOM Access**: Preload scripts still have access to the same DOM as the web page. Use direct DOM manipulation or listen for low-level events (like `click` on specific IDs) directly in the preload if high-level custom events are inaccessible.
+
+**DO NOT RE-ENABLE nodeIntegration OR DISABLE contextIsolation TO FIX THESE ISSUES.**

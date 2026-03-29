@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-03-26T18:37:19.241523",
+  "investigation": "round_2",
+  "chat_block_active": true,
+  "processes": {
+    "132659": {
+      "cmdline": "/app/extra/msedge --enable-features=WebRTCPipeWireCapturer --disable-features=WebAssemblyTrapHandler,DesktopPWAsRunOnOsLogin --profile-directory=Profile 2 --app-id=kanajofaghckoijdglhndcjjlemljefb --app-url=https://play.xbox.com/?pwaVersion=1.0 ",
+      "cpu": " 9.1  2.3 327696\n",
+      "status": "State:\tS (sleeping)\nVmSize:\t51347152 kB\nVmRSS:\t  327696 kB\nThreads:\t53\n"
+    }
+  },
+  "network": {
+    "active_connections": "msedge    132736            deck  19u  IPv4 2484974      0t0  TCP 192.168.1.10:44974->20.59.87.225:443 (ESTABLISHED)\nmsedge    132736            deck  32u  IPv4 2345150      0t0  TCP 192.168.1.10:37590->52.96.33.82:443 (ESTABLISHED)\nmsedge    132736            deck  38u  IPv4 2337266      0t0  TCP 192.168.1.10:51114->135.234.174.40:443 (ESTABLISHED)\nmsedge    132736            deck  53u  IPv4 2328426      0t0  TCP 192.168.1.10:58878->20.189.173.4:443 (ESTABLISHED)\nmsedge    132736            deck  61u  IPv4 2423195      0t0  TCP 192.168.1.10:48194->199.46.35.121:443 (ESTABLISHED)\nmsedge    132736            deck 122u  IPv4 2432681      0t0  TCP 192.168.1.10:37320->44.224.45.117:443 (ESTABLISHED)\n",
+    "stuck_connections": ""
+  },
+  "endpoint_tests": {
+    "https://play.xbox.com": "200",
+    "https://browser.events.data.microsoft.com": "404",
+    "https://xboxlive.com": "000",
+    "https://achievements.xboxlive.com": "404",
+    "https://profile.xboxlive.com": "404"
+  },
+  "renderer_traces": {
+    "132874": "strace: Process 132874 attached\nstrace: Process 132874 detached\n% time     seconds  usecs/call     calls    errors syscall\n------ ----------- ----------- --------- --------- ----------------\n 63.28    0.033532        2794        12         2 futex\n 36.69    0.019442       19442         1         1 restart_syscall\n  0.02    0.000010           5         2           madvise\n  0.01    0.000006           6         1           sendto\n------ ----------- ----------- --------- --------- ----------------\n100.00    0.052990        3311        16         3 total\n",
+    "139348": "strace: Process 139348 attached\nstrace: Process 139348 detached\n% time     seconds  usecs/call     calls    errors syscall\n------ ----------- ----------- --------- --------- ----------------\n 92.81    0.000129           1        91        43 futex\n  4.32    0.000006           1         4           madvise\n  1.44    0.000002           2         1           sendto\n  1.44    0.000002           2         1         1 restart_syscall\n  0.00    0.000000           0         1           write\n------ ----------- ----------- --------- --------- ----------------\n100.00    0.000139           1        98        44 total\n"
+  },
+  "resources": {
+    "har_file": "fullloginstillstuck.har",
+    "pending_requests": [
+      {
+        "url": "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth",
+        "time_ms": 1.0629999960656278,
+        "status": 0
+      }
+    ]
+  },
+  "service_worker": {
+    "exists": false,
+    "files": [],
+    "logs": []
+  },
+  "devtools": "Screenshot saved: devtools_console_1774564699.png",
+  "window_title": "msedge\n"
+}

@@ -1,0 +1,72 @@
+app-id: net.studio08.xbplay
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+base: org.electronjs.Electron2.BaseApp
+base-version: '24.08'
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node22
+command: run.sh
+separate-locales: false
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --share=network
+  - --device=all
+  - --filesystem=/run/udev:ro
+  - --filesystem=~/.local/share/Steam
+  - --filesystem=~/.steam
+build-options:
+  append-path: /usr/lib/sdk/node22/bin
+  env:
+    NPM_CONFIG_LOGLEVEL: info
+modules:
+  - name: net.studio08.xbplay
+    buildsystem: simple
+    build-commands:
+      - cp -a extralib/extralib -t /app/
+      - gunzip /app/extralib/libLLVM-16.0.6.so.gz
+      - cp -a extralib/reduceSoFiles.sh -t /app/extralib
+      - pushd /app/extralib && ln -s libLLVM-16.0.6.so libLLVM-16.so && chmod +x reduceSoFiles.sh && ./reduceSoFiles.sh && popd
+      - rm -rf /app/extralib/.git /app/extralib/src /app/extralib/pkgconfig
+
+      # setup build files
+      - cp -a . /app/main
+      - pushd /app/main && npm install --offline && popd
+
+      # add icons
+      - install -Dm644 icon_512.png /app/share/icons/hicolor/512x512/apps/net.studio08.xbplay.png
+
+      # add desktop and metainfo files
+      - install -Dm644 net.studio08.xbplay.desktop -t /app/share/applications/
+      - install -Dm644 net.studio08.xbplay.metainfo.xml -t /app/share/metainfo/
+
+      # install the app runner
+      - install -Dm755 -t /app/bin/ run.sh
+    sources:
+      - generated-sources.json
+      - type: dir
+        path: .
+
+
+      - type: git
+        url: https://github.com/Originalimoc/amd-patched-mesa
+        dest: extralib
+        commit: "a70058baf35f1823613f2577c30a477e93cd106a"
+      - type: script
+        dest-filename: run.sh
+        commands:
+          - export LIBGL_DRIVERS_PATH=/app/extralib/dri:/usr/lib/x86_64-linux-gnu/dri/intel-vaapi-driver:/usr/lib/x86_64-linux-gnu/GL/default/lib/dri/:${LIBGL_DRIVERS_PATH}
+          - export LIBVA_DRIVERS_PATH=/app/extralib/dri:/usr/lib/x86_64-linux-gnu/dri/intel-vaapi-driver:/usr/lib/x86_64-linux-gnu/GL/default/lib/dri/:${LIBVA_DRIVERS_PATH}
+          - export VK_ICD_FILENAMES=/app/extralib/icd.d/intel_icd.x86_64.json:/app/extralib/icd.d/radeon_icd.x86_64.json:/app/extralib/icd.d/virtio_icd.x86_64.json:/app/extralib/icd.d/intel_hasvk_icd.x86_64.json:/app/extralib/icd.d/lvp_icd.x86_64.json:${VK_ICD_FILENAMES}
+          - export LD_LIBRARY_PATH=/app/extralib:${LD_LIBRARY_PATH}
+          - echo runtime LD_LIBRARY_PATH = $LD_LIBRARY_PATH
+          - zypak-wrapper.sh /app/main/node_modules/.bin/electron /app/main/main.js "$@"
+      - type: file
+        path: icon_512.png
+      - type: file
+        path: net.studio08.xbplay.desktop
+      - type: file
+        path: net.studio08.xbplay.metainfo.xml

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=XBPlay: Remote Play for Xbox
+Comment=Remote play from your console or xCloud.
+Icon=net.studio08.xbplay
+Exec=run.sh
+Terminal=false
+Categories=Game;
+Keywords=Game;Streaming;Xbox;Xcloud;Remote;
+StartupWMClass=net.studio08.xbplay

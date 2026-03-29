@@ -1,0 +1,21 @@
+Round 3 Source Extraction
+=========================
+Date: Thu Mar 26 07:51:07 PM EDT 2026
+Method: Direct filesystem extraction (no DevTools Protocol needed)
+
+Extracted from:
+- Edge profile: /home/deck/.var/app/com.microsoft.Edge/config/microsoft-edge
+- Service Worker caches
+- Browser cache directories  
+- IndexedDB stores
+
+Total files: 2
+
+Files are prefixed with their source:
+- sw_* : Service Worker cache
+- cache_* : Browser cache
+- idb_* : IndexedDB
+- Other: Direct .js files from profile
+
+Next: Open these files in a text editor to find the "unreadable.js" sources
+that are causing issues in the DevTools console.

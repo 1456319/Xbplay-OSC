@@ -1,0 +1,1 @@
+try{let e=typeof window<`u`?window:typeof global<`u`?global:typeof globalThis<`u`?globalThis:typeof self<`u`?self:{},t=new e.Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=`35782cb3-5ae2-4eac-8652-683baad9c12b`,e._sentryDebugIdIdentifier=`sentry-dbid-35782cb3-5ae2-4eac-8652-683baad9c12b`)}catch{}var e=`chatSocket`;export{e as t};

@@ -1,0 +1,2785 @@
+index.client-e7igduyh.js:4 browserTracingIntegration is not fully compatible with @sentry/react-router. Please use reactRouterTracingIntegration instead.
+(anonymous) @ index.client-e7igduyh.js:4
+l @ index.client-e7igduyh.js:1
+ed @ index.client-e7igduyh.js:4
+Oz @ entry.client-i16ydi33.js:11
+await in Oz
+(anonymous) @ entry.client-i16ydi33.js:11
+await in (anonymous)
+(anonymous) @ entry.client-i16ydi33.js:11
+dc-7e9864?ver=2.0&_cf=02242021_3231&iife=1:1 Uncaught ReferenceError: define is not defined
+(anonymous) @ dc-7e9864?ver=2.0&_cf=02242021_3231&iife=1:1
+(anonymous) @ dc-7e9864?ver=2.0&_cf=02242021_3231&iife=1:5
+PendingScript
+(anonymous) @ root-jqsjtgc1.js:16
+F @ root-jqsjtgc1.js:16
+Ec @ react-dom-biq6a8au.js:8
+Ll @ react-dom-biq6a8au.js:8
+Sl @ react-dom-biq6a8au.js:8
+Sa @ react-dom-biq6a8au.js:6
+Il @ react-dom-biq6a8au.js:8
+Fl @ react-dom-biq6a8au.js:8
+_l @ react-dom-biq6a8au.js:8
+te @ react-dom-biq6a8au.js:1
+se @ react-dom-biq6a8au.js:1
+entry.worker.js:42598 SW_FALLBACK worker received app message: SW_GET_VERSION.
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.
+entry.worker.js:42598 SW_FALLBACK worker received app message: SW_GET_INSTALLED_APP_VERSION.
+entry.worker.js:42598 SW_FALLBACK retrieved installed app version: none
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e @ reconnecting-websocket-mjs-hapi7gr3.js:1
+createSocket @ dist-ksw213rk.js:1
+connectAndReadSocket @ dist-69p2swm0.js:4
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+_ @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+t.cont @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+Je @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+F @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ createChannelBasedSagaMiddleware-eosa926p.js:1
+(anonymous) @ _ChatSocketPlugin-n6i586xb.js:1
+addPlugin @ _ChatSocketPlugin-n6i586xb.js:1
+addChatSocketSubscriber @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in addChatSocketSubscriber
+un @ _NotificationInboxPlugin-iahmj34b.js:4
+(anonymous) @ XboxReduxModulesAdaptor-f0rw404e.js:2
+Promise.then
+createOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+addOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+loadDefaultPlugins @ XboxReduxModulesAdaptor-f0rw404e.js:2
+updateUser @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in updateUser
+fetcher @ entry.client-i16ydi33.js:5
+await in fetcher
+fetcher @ entry.client-i16ydi33.js:2
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+#h @ react-devtools-fhhx5t8e.js:2
+onSubscribe @ react-devtools-fhhx5t8e.js:2
+subscribe @ react-devtools-fhhx5t8e.js:2
+initializeObserver @ src-kz6c0on2.js:1
+registerCallback @ src-kz6c0on2.js:1
+initializeObserverSubscription @ src-kz6c0on2.js:1
+registerSubscriber @ src-kz6c0on2.js:1
+registerRelationship @ src-kz6c0on2.js:1
+fetchQueryDependency @ src-kz6c0on2.js:1
+r @ src-kz6c0on2.js:1
+fetchDependency @ entry.client-i16ydi33.js:2
+fetcher @ entry.client-i16ydi33.js:2
+await in fetcher
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+fetchQuery @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ entry.client-i16ydi33.js:5
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#C @ react-devtools-fhhx5t8e.js:2
+updateResult @ react-devtools-fhhx5t8e.js:2
+onQueryUpdate @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#s @ react-devtools-fhhx5t8e.js:2
+setData @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+await in fetch
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+refetchQueries @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+invalidateQueries @ react-devtools-fhhx5t8e.js:2
+initialize @ entry.client-i16ydi33.js:2
+await in initialize
+initialize @ entry.client-i16ydi33.js:2
+initializeSystem @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+create @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e @ reconnecting-websocket-mjs-hapi7gr3.js:1
+createSocket @ dist-ksw213rk.js:1
+connectAndReadSocket @ dist-69p2swm0.js:4
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+_ @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+t.cont @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+Je @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+F @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ createChannelBasedSagaMiddleware-eosa926p.js:1
+(anonymous) @ _ChatSocketPlugin-n6i586xb.js:1
+addPlugin @ _ChatSocketPlugin-n6i586xb.js:1
+addChatSocketSubscriber @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in addChatSocketSubscriber
+un @ _NotificationInboxPlugin-iahmj34b.js:4
+(anonymous) @ XboxReduxModulesAdaptor-f0rw404e.js:2
+Promise.then
+createOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+addOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+loadDefaultPlugins @ XboxReduxModulesAdaptor-f0rw404e.js:2
+updateUser @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in updateUser
+fetcher @ entry.client-i16ydi33.js:5
+await in fetcher
+fetcher @ entry.client-i16ydi33.js:2
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+#h @ react-devtools-fhhx5t8e.js:2
+onSubscribe @ react-devtools-fhhx5t8e.js:2
+subscribe @ react-devtools-fhhx5t8e.js:2
+initializeObserver @ src-kz6c0on2.js:1
+registerCallback @ src-kz6c0on2.js:1
+initializeObserverSubscription @ src-kz6c0on2.js:1
+registerSubscriber @ src-kz6c0on2.js:1
+registerRelationship @ src-kz6c0on2.js:1
+fetchQueryDependency @ src-kz6c0on2.js:1
+r @ src-kz6c0on2.js:1
+fetchDependency @ entry.client-i16ydi33.js:2
+fetcher @ entry.client-i16ydi33.js:2
+await in fetcher
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+fetchQuery @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ entry.client-i16ydi33.js:5
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#C @ react-devtools-fhhx5t8e.js:2
+updateResult @ react-devtools-fhhx5t8e.js:2
+onQueryUpdate @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#s @ react-devtools-fhhx5t8e.js:2
+setData @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+await in fetch
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+refetchQueries @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+invalidateQueries @ react-devtools-fhhx5t8e.js:2
+initialize @ entry.client-i16ydi33.js:2
+await in initialize
+initialize @ entry.client-i16ydi33.js:2
+initializeSystem @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+create @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e @ reconnecting-websocket-mjs-hapi7gr3.js:1
+createSocket @ dist-ksw213rk.js:1
+connectAndReadSocket @ dist-69p2swm0.js:4
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+_ @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+t.cont @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+Je @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+F @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ createChannelBasedSagaMiddleware-eosa926p.js:1
+(anonymous) @ _ChatSocketPlugin-n6i586xb.js:1
+addPlugin @ _ChatSocketPlugin-n6i586xb.js:1
+addChatSocketSubscriber @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in addChatSocketSubscriber
+un @ _NotificationInboxPlugin-iahmj34b.js:4
+(anonymous) @ XboxReduxModulesAdaptor-f0rw404e.js:2
+Promise.then
+createOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+addOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+loadDefaultPlugins @ XboxReduxModulesAdaptor-f0rw404e.js:2
+updateUser @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in updateUser
+fetcher @ entry.client-i16ydi33.js:5
+await in fetcher
+fetcher @ entry.client-i16ydi33.js:2
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+#h @ react-devtools-fhhx5t8e.js:2
+onSubscribe @ react-devtools-fhhx5t8e.js:2
+subscribe @ react-devtools-fhhx5t8e.js:2
+initializeObserver @ src-kz6c0on2.js:1
+registerCallback @ src-kz6c0on2.js:1
+initializeObserverSubscription @ src-kz6c0on2.js:1
+registerSubscriber @ src-kz6c0on2.js:1
+registerRelationship @ src-kz6c0on2.js:1
+fetchQueryDependency @ src-kz6c0on2.js:1
+r @ src-kz6c0on2.js:1
+fetchDependency @ entry.client-i16ydi33.js:2
+fetcher @ entry.client-i16ydi33.js:2
+await in fetcher
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+fetchQuery @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ entry.client-i16ydi33.js:5
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#C @ react-devtools-fhhx5t8e.js:2
+updateResult @ react-devtools-fhhx5t8e.js:2
+onQueryUpdate @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#s @ react-devtools-fhhx5t8e.js:2
+setData @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+await in fetch
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+refetchQueries @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+invalidateQueries @ react-devtools-fhhx5t8e.js:2
+initialize @ entry.client-i16ydi33.js:2
+await in initialize
+initialize @ entry.client-i16ydi33.js:2
+initializeSystem @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+create @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e @ reconnecting-websocket-mjs-hapi7gr3.js:1
+createSocket @ dist-ksw213rk.js:1
+connectAndReadSocket @ dist-69p2swm0.js:4
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+_ @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+t.cont @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+Xe @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+Je @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+g @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+v @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+h @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+P @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+(anonymous) @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+ze @ redux-saga-core-npm-proxy.esm-lsb38txq.js:1
+F @ redux-saga-core-npm-proxy.esm-lsb38txq.js:2
+l @ createChannelBasedSagaMiddleware-eosa926p.js:1
+(anonymous) @ _ChatSocketPlugin-n6i586xb.js:1
+addPlugin @ _ChatSocketPlugin-n6i586xb.js:1
+addChatSocketSubscriber @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in addChatSocketSubscriber
+un @ _NotificationInboxPlugin-iahmj34b.js:4
+(anonymous) @ XboxReduxModulesAdaptor-f0rw404e.js:2
+Promise.then
+createOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+addOrGetPlugin @ XboxReduxModulesAdaptor-f0rw404e.js:2
+loadDefaultPlugins @ XboxReduxModulesAdaptor-f0rw404e.js:2
+updateUser @ XboxReduxModulesAdaptor-f0rw404e.js:2
+await in updateUser
+fetcher @ entry.client-i16ydi33.js:5
+await in fetcher
+fetcher @ entry.client-i16ydi33.js:2
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+#h @ react-devtools-fhhx5t8e.js:2
+onSubscribe @ react-devtools-fhhx5t8e.js:2
+subscribe @ react-devtools-fhhx5t8e.js:2
+initializeObserver @ src-kz6c0on2.js:1
+registerCallback @ src-kz6c0on2.js:1
+initializeObserverSubscription @ src-kz6c0on2.js:1
+registerSubscriber @ src-kz6c0on2.js:1
+registerRelationship @ src-kz6c0on2.js:1
+fetchQueryDependency @ src-kz6c0on2.js:1
+r @ src-kz6c0on2.js:1
+fetchDependency @ entry.client-i16ydi33.js:2
+fetcher @ entry.client-i16ydi33.js:2
+await in fetcher
+(anonymous) @ entry.client-i16ydi33.js:2
+await in (anonymous)
+(anonymous) @ src-kz6c0on2.js:1
+(anonymous) @ entry.client-i16ydi33.js:2
+queryFn @ react-devtools-fhhx5t8e.js:2
+i @ react-devtools-fhhx5t8e.js:2
+h @ react-devtools-fhhx5t8e.js:2
+start @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+fetchQuery @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ entry.client-i16ydi33.js:5
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#C @ react-devtools-fhhx5t8e.js:2
+updateResult @ react-devtools-fhhx5t8e.js:2
+onQueryUpdate @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+#s @ react-devtools-fhhx5t8e.js:2
+setData @ react-devtools-fhhx5t8e.js:2
+fetch @ react-devtools-fhhx5t8e.js:2
+await in fetch
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+refetchQueries @ react-devtools-fhhx5t8e.js:2
+(anonymous) @ react-devtools-fhhx5t8e.js:2
+batch @ react-devtools-fhhx5t8e.js:2
+invalidateQueries @ react-devtools-fhhx5t8e.js:2
+initialize @ entry.client-i16ydi33.js:2
+await in initialize
+initialize @ entry.client-i16ydi33.js:2
+initializeSystem @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+initialize @ entry.client-i16ydi33.js:11
+create @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+(anonymous) @ entry.client-i16ydi33.js:11
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+index.client-e7igduyh.js:4  GET https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth net::ERR_FAILED
+(anonymous) @ index.client-e7igduyh.js:4
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+Promise.then
+s @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+(anonymous) @ esm-k5x9wmq3.js:1
+await in (anonymous)
+(anonymous) @ esm-k5x9wmq3.js:1
+execute @ esm-k5x9wmq3.js:1
+generateAuthToken @ dist-69p2swm0.js:4
+_generateUrl @ dist-69p2swm0.js:4
+e._getNextUrl @ reconnecting-websocket-mjs-hapi7gr3.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1
+Promise.then
+e._connect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleClose @ reconnecting-websocket-mjs-hapi7gr3.js:1
+e._disconnect @ reconnecting-websocket-mjs-hapi7gr3.js:1
+_handleError @ reconnecting-websocket-mjs-hapi7gr3.js:1
+dist-ksw213rk.js:1 WebSocket connection to 'wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+r @ dist-ksw213rk.js:1
+(anonymous) @ reconnecting-websocket-mjs-hapi7gr3.js:1

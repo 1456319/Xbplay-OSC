@@ -1,0 +1,9 @@
+"lang"
+{
+	"Language"	"english"
+	"Tokens"
+	{
+		"#StatusCloudGame"	"Playing: %GAME%"
+        "#StatusRemotePlayGame"	"Remote Play"
+	}
+}

@@ -1,0 +1,161 @@
+================================================================================
+FILE INDEX - Round 3 Complete
+================================================================================
+
+Total Directory Size: ~130 MB
+Files Created This Round: 19 files + 345 source files
+
+MASTER DOCUMENTS (Read These First)
+------------------------------------
+README_ROUND3.txt               - This round overview (start here!)
+ROUND3_QUICK_REFERENCE.md       - Fast action guide
+ROUND3_ANALYSIS.md              - Complete analysis report  
+SERVICE_WORKER_ANALYSIS.md      - Service worker code review
+
+SCRIPTS (Reusable Tools)
+------------------------
+round3_extract_sources.py       - Extract JS from HAR files (Python)
+round3_troubleshoot.py          - Full diagnostic suite (Python)
+round3_extract_simple.sh        - Simple filesystem extraction (Bash)
+round3_download_sources.py      - DevTools CDP extraction (needs websocket)
+
+LOGS (Command Output)
+---------------------
+round3_extraction.log           - Source extraction output (23 KB)
+round3_troubleshoot.log         - Troubleshooting diagnostics (5.5 KB)
+
+DIRECTORIES
+-----------
+round3_sources/                 - 345 JavaScript files extracted from HAR
+  ├── Attempt3_*.js            - Main app sources (344 files)
+  ├── existing_entry.worker.js - Service worker (1.4 MB)
+  ├── existing_wcp-consent.js  - Consent manager (52 KB)
+  ├── INDEX.json               - File index
+  └── SOURCE_INDEX.json        - Source mapping
+
+round3_diagnostics/             - Diagnostic data
+  ├── round3_diagnosis.json    - Process state, endpoints, issues
+  ├── strace_pid_162593.txt    - High-CPU process trace
+  └── strace_pid_163211.txt    - High-CPU process trace
+
+PREVIOUS ROUNDS (Historical Data)
+----------------------------------
+FIX ATTEMPT 1/                  - Round 1 data (moved by user)
+FIX ATTEMPT 2/                  - Round 2 data (moved by user)
+
+WORKING FILES
+-------------
+Attempt3.har                    - Latest network capture (15 MB, 117 failures)
+entry.worker.js                 - Service worker source (1.4 MB)
+wcp-consent.js                  - Consent manager source (52 KB)
+dc-7e9864                       - Unknown cache artifact (23 KB)
+newhtml stage3.txt              - Empty placeholder (0 KB)
+
+ROUND 3 FILE BREAKDOWN
+----------------------
+
+Analysis Documents:     4 files   (~30 KB)
+Scripts:               4 files   (~30 KB)
+Logs:                  2 files   (~28 KB)
+Diagnostics:           3 files   (~15 KB)
+Sources:             348 files   (~10 MB)
+Previous Rounds:       2 dirs    (~86 MB)
+Working Files:         5 files   (~17 MB)
+                     --------
+TOTAL:               368 files  (~130 MB)
+
+KEY FILES BY PURPOSE
+--------------------
+
+Want to understand the issue?
+→ ROUND3_ANALYSIS.md
+→ SERVICE_WORKER_ANALYSIS.md
+
+Want to fix it quickly?
+→ ROUND3_QUICK_REFERENCE.md
+
+Want to see process diagnostics?
+→ round3_diagnostics/round3_diagnosis.json
+
+Want to analyze the service worker?
+→ round3_sources/existing_entry.worker.js
+
+Want to see network failures?
+→ Attempt3.har (open in Chrome DevTools or HAR viewer)
+
+Want to re-run diagnostics?
+→ python3 round3_troubleshoot.py
+
+Want to extract more sources?
+→ python3 round3_extract_sources.py
+
+LARGEST FILES
+-------------
+1. FIX ATTEMPT 1/ + FIX ATTEMPT 2/  ~86 MB  (historical data)
+2. Attempt3.har                      15 MB  (network capture)
+3. round3_sources/                  ~10 MB  (345 JS files)
+4. entry.worker.js                  1.4 MB  (service worker)
+5. existing_entry.worker.js         1.4 MB  (duplicate in sources/)
+
+MOST IMPORTANT FILES
+--------------------
+Priority 1 (Must Read):
+  - ROUND3_QUICK_REFERENCE.md  - Tells you what to do next
+  - README_ROUND3.txt          - This round summary
+
+Priority 2 (Deep Dive):
+  - ROUND3_ANALYSIS.md         - Why app is stuck
+  - SERVICE_WORKER_ANALYSIS.md - How retry logic works
+
+Priority 3 (Raw Data):
+  - round3_diagnosis.json      - Process state
+  - Attempt3.har               - Network traffic
+  - entry.worker.js            - Source code
+
+ROUND PROGRESSION
+-----------------
+
+Round 1 → round1_* files (moved to FIX ATTEMPT 1/)
+  Goal: Block chat.xboxlive.com
+  Result: Still stuck
+
+Round 2 → round2_* files (moved to FIX ATTEMPT 2/)
+  Goal: Clear caches
+  Result: Still stuck
+
+Round 3 → round3_* files (current directory)
+  Goal: Understand why blocking doesn't work
+  Result: Found retry logic in service worker
+  Status: Awaiting user to try recommended fixes
+
+NEXT FILES TO CREATE
+--------------------
+
+If Fix 1 (disable SW) tried:
+  → round3_fix1_attempt.log
+
+If Fix 2 (unregister SW) tried:
+  → round3_fix2_attempt.log
+
+If Fix 3 (switch to Brave) tried:
+  → round3_brave_comparison.md
+
+If console errors provided:
+  → round3_console_errors.txt
+  → round3_error_analysis.md
+
+STATUS: Awaiting User Input
+===========================
+
+Need from user:
+1. DevTools Console output
+2. Result of trying recommended fix
+
+Will create once received:
+- round3_console_analysis.md
+- round3_fix_results.txt
+
+================================================================================
+Rule: Nothing in this directory is ever deleted. Only additions.
+Last Updated: March 26, 2026 20:01
+================================================================================

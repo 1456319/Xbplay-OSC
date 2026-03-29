@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>XBPlay</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/glow.css">
+    <link rel="stylesheet" type="text/css" href="../css/loader.css">
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/AlertifyJS/build/css/alertify.min.css">
+
+</head>
+
+<body id="body" class="body">
+
+
+<!--class="fade-in-image"-->
+<div id="splash" >
+    <video autoplay muted id="video_splash">
+        <source id="splash_source" src="../assets/intro.mp4" type="video/mp4">
+</video>
+</div>
+
+<div id="main">
+
+    <button id="xhome-tag" class="center_btn custom_focusable glowing-button2"> REMOTE PLAY</button>
+    <button id="xCloudButton" class="center_btn custom_focusable glowing-button2"> CLOUD PLAY</button>
+    <button id="gamepadOnlyButton" class="center_btn custom_focusable glowing-button2"> GAMEPAD ONLY</button>
+    <button id="gamepadBuilder" class="center_btn custom_focusable glowing-button2" > TOUCH LAYOUT BUILDER</button>
+    <button id="login" class="center_btn custom_focusable glowing-button2"> LOGIN </button>
+
+    <button id="pcPlay" class="center_btn custom_focusable glowing-button2"> PC PLAY</button>
+
+    <!--    data-sn-up="#login"-->
+    <button id="settings_button" class="center_btn custom_focusable glowing-button2"> SETTINGS</button>
+    <button id="purchase" class="small_btn custom_focusable glowing-button2"> UNLOCK</button>
+
+    <input type="image" class="custom_focusable" id="close_btn" src="../assets/close3.png"></input>
+    <input type="image" id="move_btn" src="../assets/move3.png"></input>
+
+    <div id="steamcheck-div"></div>
+
+    <div id="version-div"></div>
+
+    <span class="loader login_loading_spinner" id="login_loading_spinner"></span>
+
+</div>
+
+<div class="modal" id="unlock_modal">
+    <div class="modal-content">
+        <span class="close-button" id="unlock_close_button">&times;</span>
+        <h3 class="settings_header">Full Version Unlocked</h3>
+        <p>This app is licensed under GPL. Enjoy the full version!</p>
+        <h3 class="settings_header">Buy On Mobile</h3>
+
+        <ol>
+            <li>On your phone, scan the QR code or search the iOS App Store or Google Play for the XBPlay app and download it.</li>
+            <li>Open the mobile app and sign-in to your Microsoft account.</li>
+            <li>Click the settings button, then click 'Unlock Full Version' to purchase the app.</li>
+            <li>That's it! After you log in and restart this app the full version will be available.</li>
+        </ol>
+
+        <input type="image" id="qr_code" src="../assets/qr_code_rebrand.png"></input>
+
+        <h3 class="settings_header">Or Buy on Steam</h3>
+        <ol>
+            <li>Uninstall this app.</li>
+            <li>Open the Steam store and search for the XBPlay app and install it.</li>
+            <li>Ensure you don't have the 'Steam Deck Verified' checkbox toggled when searching. While this app does support Steam Decks, its not Steam Deck verified yet.</li>
+            <li>If the app ever fails to open from Steam, ensure you do not have 'Proton Compatibility' enabled.</li>
+        </ol>
+
+        <img id="steamBuyImage" src="../assets/steam_buy.png">
+
+    </div>
+</div>
+
+<!--Order of these modals matter. The later the modal, the higher the close priority-->
+<div class="modal" id="settings_modal">
+    <div class="modal-content">
+        <span class="close-button" id="settings_close_button">&times;</span>
+
+<!--        GENERAL SETTINGS-->
+        <h4 class="settings_header">General Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Clear All Saved Data</div>
+
+            <button id="resetButton" class="settings_focusable">Reset All Data</button>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Select a UI Language</div>
+            <select name="language" id="settings_ui_language" selectTitle="Select a UI Language" class="settings-dropdown-menu settings_focusable">
+                <option value="en">English</option>
+                <option value="ar-SA">Arabic - العربية</option>
+                <option value="de-DE">German - Deutsch</option>
+                <option value="el-GR">Greek - Ελληνικά</option>
+                <option value="es-ES">Spanish (Spain) - Español (España)</option>
+                <option value="fr-FR">French - Français</option>
+                <option value="hi-IN">Hindi - हिन्दी</option>
+                <option value="id-ID">Indonesian - Bahasa Indonesia</option>
+                <option value="it-IT">Italian - Italiano</option>
+                <option value="ja-JP">Japanese - 日本語</option>
+                <option value="ko-KR">Korean - 한국어</option>
+                <option value="nl-NL">Dutch - Nederlands</option>
+                <option value="pl-PL">Polish - Polski</option>
+                <option value="pt-BR">Portuguese (Brazil) - Português (Brasil)</option>
+                <option value="ru-RU">Russian - Русский</option>
+                <option value="tr-TR">Turkish - Türkçe</option>
+                <option value="uk-UA">Ukrainian - Українська</option>
+                <option value="vi-VN">Vietnamese - Tiếng Việt</option>
+                <option value="zh-CN">Chinese (Simplified) - 简体中文</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div>Render Pipeline</div>
+                <span class="info-icon" data-tooltip="Must restart app to apply change. Only applies to linux.">ⓘ</span>
+            </div>
+            <select id="settings_render_pipeline" selectTitle="Select Render Setting (requires app restart)" class="settings-dropdown-menu settings_focusable">
+                <option value="auto" selected>Standard</option>
+                <option value="vulkan">Force Vulkan (Reduces latency by ~5ms but disables clarity boost)</option>
+            </select>
+        </div>
+        <!--        <div class="tooltip">Requires app restart</div>-->
+
+        <div class="settings_row">
+            <div class="settings_label">Select an Interface/Font Size</div>
+            <select id="settings_zoom" selectTitle="Select a zoom level" class="settings-dropdown-menu settings_focusable">
+                <option value="70"> Extra Small</option>
+                <option value="85"> Small</option>
+                <option value="100" selected> Medium (Default)</option>
+                <option value="130"> Large</option>
+                <option value="150"> Extra Large</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div>Select a GPU Mode </div>
+                <span class="info-icon" data-tooltip="Must restart app for GPU mode to change. Only applies if you have multiple GPUs.">ⓘ</span>
+            </div>
+            <select id="settings_gpu_mode" selectTitle="Select a GPU mode" class="settings-dropdown-menu settings_focusable">
+                <option value="auto" selected> Automatic</option>
+                <option value="discrete"> Discrete Graphics Card</option>
+                <option value="dedicated"> Dedicated Graphics Card</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Show GPU Status</div>
+
+            <button id="gpu_status_button" class="settings_focusable">Show GPU Status</button>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Show Tips</div>
+
+            <button id="info" class="settings_focusable">Show Tips</button>
+        </div>
+
+<!--        REMOTE PLAY SETTINGS-->
+        <h4 class="settings_header">Remote Play Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Select Console for Remote Play</div>
+            <select name="console" id="xhome-console" selectTitle="Select a Console" class="settings-dropdown-menu settings_focusable">
+            </select>
+        </div>
+
+<!--        CLOUD PLAY SETTINGS-->
+        <h4 class="settings_header">Cloud Play Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Select an xCloud Region</div>
+            <select name="region" id="xcloud-region" selectTitle="Select a Server Region" class="settings-dropdown-menu settings_focusable">
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Select an xCloud Language</div>
+            <select name="language" id="xcloud-language" selectTitle="Select a Language" class="settings-dropdown-menu settings_focusable">
+                <option value="en-US">United States (English)</option>
+                <option value="en-AE">United Arab Emirates (English)</option>
+                <option value="en-AU">Australia (English)</option>
+                <option value="en-CA">Canada (English)</option>
+                <option value="en-CZ">Czech Republic (English)</option>
+                <option value="en-GB">United Kingdom (English)</option>
+                <option value="en-GR">Greece (English)</option>
+                <option value="en-HK">Hong Kong (English)</option>
+                <option value="en-HU">Hungary (English)</option>
+                <option value="en-IE">Ireland (English)</option>
+                <option value="en-IL">Israel (English)</option>
+                <option value="en-IN">India (English)</option>
+                <option value="en-NZ">New Zealand (English)</option>
+                <option value="en-SA">Saudi Arabia (English)</option>
+                <option value="en-SG">Singapore (English)</option>
+                <option value="en-SK">Slovakia (English)</option>
+                <option value="en-ZA">South Africa (English)</option>
+                <option value="ar-AE">United Arab Emirates (العربية)</option>
+                <option value="ar-SA">Saudi Arabia (العربية)</option>
+                <option value="cs-CZ">Czech Republic (Čeština)</option>
+                <option value="da-DK">Denmark (Dansk)</option>
+                <option value="de-AT">Austria (Deutsch)</option>
+                <option value="de-CH">Switzerland (Deutsch)</option>
+                <option value="de-DE">Germany (Deutsch)</option>
+                <option value="el-GR">Greece (Ελληνικά)</option>
+                <option value="es-AR">Argentina (Español)</option>
+                <option value="es-CL">Chile (Español)</option>
+                <option value="es-CO">Colombia (Español)</option>
+                <option value="es-ES">Spain (Español)</option>
+                <option value="es-MX">Mexico (Español)</option>
+                <option value="fi-FI">Finland (Suomi)</option>
+                <option value="fr-BE">Belgium (Français)</option>
+                <option value="fr-CA">Canada (Français)</option>
+                <option value="fr-CH">Switzerland (Français)</option>
+                <option value="fr-FR">France (Français)</option>
+                <option value="he-IL">Israel (עברית)</option>
+                <option value="hu-HU">Hungary (Magyar)</option>
+                <option value="it-IT">Italy (Italiano)</option>
+                <option value="ja-JP">Japan (日本語)</option>
+                <option value="ko-KR">Korea (한국어)</option>
+                <option value="nb-NO">Norway (Norsk Bokmål)</option>
+                <option value="nl-BE">Belgium (Nederlands)</option>
+                <option value="nl-NL">Netherlands (Nederlands)</option>
+                <option value="pl-PL">Poland (Polski)</option>
+                <option value="pt-BR">Brazil (Português)</option>
+                <option value="pt-PT">Portugal (Português)</option>
+                <option value="ru-RU">Russia (Русский)</option>
+                <option value="sk-SK">Slovakia (Slovenčina)</option>
+                <option value="sv-SE">Sweden (Svenska)</option>
+                <option value="tr-TR">Turkey (Türkçe)</option>
+                <option value="zh-CN">China (中文)</option>
+                <option value="zh-HK">Hong Kong (繁體中文)</option>
+                <option value="zh-SG">Singapore (简体中文)</option>
+                <option value="zh-TW">Taiwan (繁體中文)</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div> Resync xCloud Shortcut Art </div>
+                <span class="info-icon" data-tooltip="Will re-download and override all xCloud shortcut artwork. A Steam restart is required to see new artwork."> ⓘ </span>
+            </div>
+
+            <button id="redownload_xcloud_artwork_button" class="settings_focusable">Sync Artwork</button>
+        </div>
+
+
+        <h4 class="settings_header">Login Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Auto Login on Startup</div>
+            <input type="checkbox" id="auto_login" value="0" class="settings_focusable">
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Login Screen Behavior</div>
+            <select id="settings_login_display" selectTitle="Show or hide the login screen. Not applicable if using oauth login method" class="settings-dropdown-menu settings_focusable">
+                <option value="top" selected> Always on Top</option>
+                <option value="background"> Always in Background</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div>Login Method Preference</div>
+                <span class="info-icon" data-tooltip="Login faster by exclusively using either xCloud or xHome. Or use the new Oauth based login method (beta)."> ⓘ </span>
+            </div>
+            <select id="settings_login_type" selectTitle="Login for XHome, XCloud, or both?" class="settings-dropdown-menu settings_focusable">
+                <option value="full_login"> Browser - Full Login</option>
+                <option value="xhome_only"> Browser - Remote Play Only (Disables XCloud)</option>
+                <option value="xcloud_only"> Browser - XCloud Only (Disables Remote Play)</option>
+                <option value="xal_token" selected> Oauth - Persistent Login</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Login Region
+                <span class="info-icon" data-tooltip="Only applicable for Oauth login method. Must press login button after changing to apply. May impact available languages for cloud games."> ⓘ </span>
+            </div>
+            <select id="settings_login_region" selectTitle="Select a login region" class="settings-dropdown-menu settings_focusable">
+                <option value="" selected>US</option>
+                <option value="203.41.44.20">Australia</option>
+                <option value="200.221.11.101">Brasil</option>
+                <option value="194.25.0.68">Europe</option>
+                <option value="122.1.0.154">日本 (Japan)</option>
+                <option value="121.125.60.151">한국 (Korea)</option>
+                <option value="200.33.146.193">México</option>
+            </select>
+        </div>
+
+        <h4 class="settings_header">Steam Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div>Artwork Source for Steam Shortcuts</div>
+                <span class="info-icon" data-tooltip="Cloud will download images from the xCloud servers, SteamGrid will download the first result from a SteamGrid search."> ⓘ </span>
+            </div>
+            <select id="setting_artwork_source" selectTitle="Select where to get artwork for custom steam shortcuts" class="settings-dropdown-menu settings_focusable">
+                <option value="xcloud" selected> Cloud Servers</option>
+                <option value="steamgrid" > SteamGrid</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div>Prompt for xCloud Shortcut Creation</div>
+                <span class="info-icon" data-tooltip="Choose whether to create an xCloud shortcut before launching each xCloud game. Disabling this will remove the option to create xCloud shortcuts."> ⓘ </span>
+            </div>
+            <input type="checkbox" id="settings_allow_xcloud_shortcut" class="settings_focusable" checked>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div>Maintain a Steam Library Shortcut</div>
+                <span class="info-icon" data-tooltip="Automatically maintains the main XBPlay app shortcut in your 'Non Steam Games' library upon each app startup."> ⓘ </span>
+            </div>
+            <input type="checkbox" id="settings_keep_shortcut" class="settings_focusable" checked>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">
+                <div> Allow Independent Cloud Shortcut Settings </div>
+                <span class="info-icon" data-tooltip="Customize individual shortcut settings; adjusting the resolution for one xCloud shortcut won't impact others, such as setting 720p for Halo without affecting Forza."> ⓘ </span>
+            </div>
+            <input type="checkbox" id="settings_partition_sessions"  class="settings_focusable">
+        </div>
+
+<!--        need this one ending div so the above tooltip works-->
+        <div class="settings_row"></div>
+
+    </div>
+</div>
+
+<div class="modal" id="info_modal">
+    <div class="modal-content">
+        <span class="close-button" id="info_close_button">&times;</span>
+        <h4>General Tips</h4>
+        <ul>
+            <li>Press the Guide button by holding the view button (top left) and the menu button (top right) at the same time.</li>
+            <li>Quit a game with the side menu or by stopping the stream within the Xbox. For example, Guide->Stop Remote Play.</li>
+            <li>Use F11 or F10 to toggle fullscreen and use the top left corner to drag the window.</li>
+            <li>Change the streaming resolution and bitrate in the in-game "<code>Options Side Menu->Settings->Advanced</code>".</li>
+            <li>Hide the touch controls in the in-game "<code>Options Side Menu->Settings->Display->Touch Control Behavior</code>".</li>
+        </ul>
+
+        <h4>xCloud Shortcuts [Steam App Required]</h4>
+        <ul>
+            <li>Add an xCloud shortcuts directly to Steam by clicking on an xCloud game and pressing 'Add to Steam'</li>
+            <li>If you don't see the 'Add to Steam' option, ensure the Steam app is running. The status of the Steam app is displayed on the bottom right of the main menu.</li>
+            <li>When an xCloud shortcut is added to Steam, it will appear in your 'Non Steam' game library after you <b>restart</b> your Steam Deck or the Steam app.</li>
+            <li>Artwork will automatically be added to your xCloud Steam shortcut.</li>
+            <li>If your xCloud artwork gets out of sync, press the sync button in the settings to redownload and override all xCloud title artwork.</li>
+        </ul>
+
+        <h4>Remote Play Setup</h4>
+        <ul>
+            <li>If you see a yellow popup after login, you do not have remote features enabled. To enable it, signed into your profile on your Xbox and go to 'Settings > Devices & connections > Remote features' and ensure its checked. If it is already checked, toggle it off/on and click 'Test Remote Play'.</li>
+            <li>If you have an IPv6 or DualStack router, remote play should work from outside of your home network. If you have an IPv4 only router, you must enable port forwarding for port 9002 for both UDP and TCP on your router for your consoles IP address.</li>
+        </ul>
+
+        <h4>Command Line Args</h4>
+        <ul>
+            <li><code><b>--xhome</b></code> Add the xhome launch param to automatically login and start an xhome stream for your default console.</li>
+            <li><code><b>--xcloud=titleId</b></code> Add the xcloud launch param to automatically login and start an xcloud stream on start.
+                The titleId should be the titleId of the game you want to play. A full list of all titleIds can be found online.</li>
+        </ul>
+
+        <p id="xcloud_list"></p>
+
+    </div>
+</div>
+
+<div class="modal" id="select_modal">
+    <div class="modal-content">
+         <h3 id="select_modal_header">Select Item</h3>
+        <div id="select_modal_body"></div>
+    </div>
+</div>
+</body>
+
+<script src="../bower_components/js-spatial-navigation/spatial_navigation.js"></script>
+<script src="../bower_components/AlertifyJS/build/alertify.min.js"></script>
+
+<script src="../js/frontend/xcloudTitles.js"></script>
+<script src="../js/frontend/settingsClient.js"></script>
+<script src="../js/frontend/GamepadToGenericEvent.js"></script>
+<script src="../js/frontend/TranslateClient.js"></script>
+
+<script src="../js/frontend/sharedMenuNavFunctions.js"></script>
+<script src="../js/frontend/index_js.js"></script>
+
+</html>

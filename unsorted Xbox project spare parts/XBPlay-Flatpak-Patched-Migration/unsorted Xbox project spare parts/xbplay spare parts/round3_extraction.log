@@ -1,0 +1,121 @@
+================================================================================
+ROUND 3: COMPREHENSIVE TROUBLESHOOTING
+================================================================================
+
+1. Current Process State
+--------------------------------------------------------------------------------
+  PID 154751: CPU=0.2% MEM=0.9% [/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-repor...]
+  PID 156610: CPU=0.7% MEM=0.7% [/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-repor...]
+  PID 162442: CPU=0.0% MEM=0.9% [/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-repor...]
+  PID 162593: CPU=22.5% MEM=2.5% [/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-repor...]
+  PID 163211: CPU=13.9% MEM=4.6% [/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-repor...]
+  PID 163318: CPU=0.0% MEM=0.4% [/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-repor...]
+
+2. Active Network Connections
+--------------------------------------------------------------------------------
+  ESTAB      0      0               192.168.1.10:37642         199.46.35.124:443   users:(("msedge",pid=154515,fd=62))         
+  ESTAB      0      0               192.168.1.10:33402        52.168.117.175:443   users:(("msedge",pid=154515,fd=49))         
+  ESTAB      0      0               192.168.1.10:41906        135.234.174.40:443   users:(("msedge",pid=154515,fd=59))         
+  ESTAB      0      0               192.168.1.10:55972        104.208.203.89:443   users:(("msedge",pid=154515,fd=19))         
+
+3. Testing Known Endpoints
+--------------------------------------------------------------------------------
+  ✓ https://play.xbox.com: HTTP 200
+  ✗ https://chat.xboxlive.com: HTTP 000
+  ✗ wss://chat.xboxlive.com: HTTP 000
+
+4. Checking /etc/hosts Blocks
+--------------------------------------------------------------------------------
+  ⚠️  Found Xbox-related blocks:
+    127.0.0.1 chat.xboxlive.com
+    # Xbox Play PWA fixes
+    127.0.0.1 chat.xboxlive.com
+
+5. Analyzing Console Error Logs
+--------------------------------------------------------------------------------
+  ⚠️  No console log files found
+
+6. Analyzing HAR Files for Failure Patterns
+--------------------------------------------------------------------------------
+
+  Attempt3.har: 117 failed requests
+  Top failing domains:
+    - chat.xboxlive.com: 117 failures
+
+7. Service Worker Status
+--------------------------------------------------------------------------------
+  Found: /home/deck/.var/app/com.microsoft.Edge/config/microsoft-edge/Profile 2/Service Worker
+    - 784 files
+    - 6 database files
+  Found: /home/deck/.var/app/com.microsoft.Edge/config/microsoft-edge/Profile 1/Service Worker
+    - 741 files
+    - 7 database files
+  Found: /home/deck/.var/app/com.microsoft.Edge/config/microsoft-edge/Default/Service Worker
+    - 551 files
+    - 6 database files
+
+8. Searching Sources for Error Patterns
+--------------------------------------------------------------------------------
+  'chat.xboxlive.com': not found
+  'SW_FALLBACK': not found
+  'FetchEvent': not found
+  'network error': not found
+  'retry': not found
+  'timeout': not found
+
+9. Current Performance Metrics
+--------------------------------------------------------------------------------
+
+  High CPU process PID 162593 (CPU: 22.5%)
+  Taking syscall sample...
+
+  High CPU process PID 163211 (CPU: 13.9%)
+  Taking syscall sample...
+    % time     seconds  usecs/call     calls    errors syscall
+    ------ ----------- ----------- --------- --------- ----------------
+     38.21    0.000047           1        46           write
+     27.64    0.000034           0        60           madvise
+     12.20    0.000015           0        39        13 futex
+     12.20    0.000015          15         1           restart_syscall
+      9.76    0.000012           1         9           getrandom
+      0.00    0.000000           0         3           close
+      0.00    0.000000           0         3           mmap
+      0.00    0.000000           0         2           mprotect
+      0.00    0.000000           0         3           munmap
+      0.00    0.000000           0         3           prctl
+    ------ ----------- ----------- --------- --------- ----------------
+    100.00    0.000123           0       169        13 total
+
+================================================================================
+DIAGNOSIS
+================================================================================
+
+🔍 IDENTIFIED ISSUES:
+  1. 2 renderer(s) with high CPU usage
+  2. Many renderer processes: 6
+
+✓ Full diagnosis saved to: /home/deck/dump/xbplay spare parts/round3_diagnostics/round3_diagnosis.json
+
+================================================================================
+NEXT: Manual Investigation Required
+================================================================================
+
+Please provide the following from DevTools:
+
+1. Current Console errors (screenshot or text)
+2. Network tab showing:
+   - Failed requests (red)
+   - Pending requests (stuck)
+   - Request timing
+3. Application tab → Service Workers:
+   - Status (activated/installing/waiting)
+   - Scope
+4. Application tab → Cache Storage:
+   - Size and entries
+
+This will help identify if the issue is:
+A) Service worker still retrying blocked endpoints
+B) New JavaScript errors preventing initialization  
+C) Missing resources or network issues
+D) Service worker in bad state
+

@@ -1,0 +1,7 @@
+{
+  "flatpak_list": "Microsoft Edge\tcom.microsoft.Edge\t146.0.3856.72-1\tstable\tsystem\n",
+  "flatpak_ps": "579420063\t119467\tcom.microsoft.Edge\torg.freedesktop.Platform\n873750010\t119511\tcom.microsoft.Edge\torg.freedesktop.Platform\n",
+  "devtools_port": "",
+  "edge_logs": "",
+  "crash_reports": ""
+}

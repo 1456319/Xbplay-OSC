@@ -1,0 +1,1 @@
+try{let e=typeof window<`u`?window:typeof global<`u`?global:typeof globalThis<`u`?globalThis:typeof self<`u`?self:{},t=new e.Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=`04ef241f-2ab0-4872-ab1b-c7ce88d377b3`,e._sentryDebugIdIdentifier=`sentry-dbid-04ef241f-2ab0-4872-ab1b-c7ce88d377b3`)}catch{}var e=`/assets/default-jqblwj52.css`;export{e as t};

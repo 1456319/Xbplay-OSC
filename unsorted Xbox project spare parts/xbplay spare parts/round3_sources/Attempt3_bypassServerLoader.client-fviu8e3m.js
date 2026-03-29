@@ -1,0 +1,1 @@
+try{let e=typeof window<`u`?window:typeof global<`u`?global:typeof globalThis<`u`?globalThis:typeof self<`u`?self:{},t=new e.Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=`bb5c8a74-ffbf-4d2e-8f82-7c837536b2a7`,e._sentryDebugIdIdentifier=`sentry-dbid-bb5c8a74-ffbf-4d2e-8f82-7c837536b2a7`)}catch{}var e=function(){return null};export{e as t};

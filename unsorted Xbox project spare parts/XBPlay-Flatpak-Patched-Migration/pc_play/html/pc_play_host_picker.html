@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>PCPlay</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/pc_play_host_picker.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../../css/glow.css">
+    <link rel="stylesheet" type="text/css" href="../../css/loader.css">
+
+    <link rel="stylesheet" type="text/css" href="../../bower_components/AlertifyJS/build/css/alertify.min.css">
+
+</head>
+
+<body id="body" class="body">
+
+<div id="container">
+
+    <div id="download_percent"></div>
+
+    <button id="pcPlayAddHost" class="center_btn custom_focusable glowing-button2"> ADD HOST</button>
+    <button id="pcPlaySettings" class="center_btn custom_focusable glowing-button2"> SETTINGS </button>
+
+    <div id="pcPlayHostContainer">
+        <div class="scroll-wrapper">
+
+        </div>
+
+    </div>
+
+    <input type="image" class="custom_focusable" id="close_btn" src="../../assets/back_3.png"></input>
+    <input type="image" id="move_btn" src="../../assets/move3.png"></input>
+
+    <span class="loader login_loading_spinner" id="loading_spinner"></span>
+
+</div>
+
+<div id="steamcheck-div"></div>
+
+<!--Order of these modals matter. The later the modal, the higher the close priority-->
+<div class="modal" id="add_host_modal">
+    <div class="modal-content">
+        <span class="close-button" id="pcPlayAddHostCloseButton">&times;</span>
+
+        <!--        GENERAL SETTINGS-->
+        <h4 class="settings_header">Auto</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Automatically search for hosts on your network</div>
+            <button id="pcPlayHostSearchButton" class="settings_focusable">Auto Discover</button>
+        </div>
+
+        <h4 class="settings_header">Manually</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Host computer name, UUID, or IP address</div>
+            <input type="text" id="pcPlayHostName" class="settings_focusable"/>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Display Name</div>
+            <input type="text" id="pcPlayHostDisplayName" class="settings_focusable" placeholder="Optional"/>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Save Host To Continue</div>
+            <button id="pcPlayHostSaveButton" class="settings_focusable">Save</button>
+        </div>
+
+        <!--        need this one ending div so the above tooltip works-->
+        <div class="settings_row"></div>
+
+    </div>
+</div>
+
+<!--setting ids are important here. If it starts with pcPlay it is a setting for the XBPlay app to read. -->
+<!--otherwise, it will be directly passed to the pc play client-->
+<div class="modal" id="settings_modal">
+    <div class="modal-content">
+        <span class="close-button" id="pcPlaySettingsCloseButton">&times;</span>
+
+        <!--        GENERAL SETTINGS-->
+        <h4 class="settings_header">PC Play Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Install PC Play Client</div>
+            <button id="pcPlayConfigureClient" class="settings_focusable">Re-Install Client</button>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Uninstall PC Play Client</div>
+
+            <button id="pcPlayUninstallClient" class="settings_focusable">Uninstall Client</button>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Open PC Play Client</div>
+            <button id="pcPlayOpenClient" class="settings_focusable">Open Client</button>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Artwork Source for Steam Shortcuts</div>
+            <select id="pcPlayArtworkSource" selectTitle="Select where to get artwork for custom steam shortcuts" class="settings-dropdown-menu settings_focusable">
+                <option value="steamgrid" selected> SteamGrid (1st Result)</option>
+                <option value="pc_play_client" selected> Host PC (Sunshine)</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Close XBPlay App on PC Play Start</div>
+            <input type="checkbox" id="pcPlayCloseOnStart" class="settings_focusable">
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Prompt for PC Play Shortcut Creation</div>
+            <input type="checkbox" id="pcPlayPromptForShortcutCreation" class="settings_focusable" checked>
+        </div>
+
+
+        <h4 class="settings_header">General Stream Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Resolution</div>
+            <select id="resolution" selectTitle="Select Desired PC Play Resolution" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected> Default</option>
+                <option value="720" > 720p</option>
+                <option value="1080"> 1080p</option>
+                <option value="1440"> 1440</option>
+                <option value="4K"> 4K</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">FPS</div>
+            <select id="fps" selectTitle="Select Desired FPS" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected> Default</option>
+                <option value="30"> 30</option>
+                <option value="60"> 60</option>
+                <option value="90"> 90</option>
+                <option value="120"> 120</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Bitrate</div>
+            <select id="bitrate" selectTitle="Select a Bitrate" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="512">0.5 MB/s</option>
+                <option value="1024">1 MB/s</option>
+                <option value="2048">2 MB/s</option>
+                <option value="3072">3 MB/s</option>
+                <option value="5120">5 MB/s</option>
+                <option value="10240">10 MB/s</option>
+                <option value="20480">20 MB/s</option>
+                <option value="25600">25 MB/s</option>
+                <option value="30720">30 MB/s</option>
+                <option value="35840">35 MB/s</option>
+                <option value="40960">40 MB/s</option>
+                <option value="46080">45 MB/s</option>
+                <option value="51200">50 MB/s</option>
+                <option value="56320">55 MB/s</option>
+                <option value="61440">60 MB/s</option>
+                <option value="66560">65 MB/s</option>
+                <option value="71680">70 MB/s</option>
+                <option value="76800">75 MB/s</option>
+                <option value="81920">80 MB/s</option>
+                <option value="87040">85 MB/s</option>
+                <option value="92160">90 MB/s</option>
+                <option value="97280">95 MB/s</option>
+                <option value="102400">100 MB/s</option>
+                <option value="107520">105 MB/s</option>
+                <option value="112640">110 MB/s</option>
+                <option value="117760">115 MB/s</option>
+                <option value="122880">120 MB/s</option>
+                <option value="128000">125 MB/s</option>
+                <option value="133120">130 MB/s</option>
+                <option value="138240">135 MB/s</option>
+                <option value="143360">140 MB/s</option>
+                <option value="148480">145 MB/s</option>
+                <option value="150000">150 MB/s</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Display Mode</div>
+            <select id="display-mode" selectTitle="Select Display Mode of Client" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="fullscreen"> Fullscreen</option>
+                <option value="borderless"> Borderless</option>
+                <option value="windowed"> Windowed</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Keep Display Awake While Streaming</div>
+            <select id="keep-awake" selectTitle="Select to Keep Display Awake While Streaming" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="keep-awake"> Yes</option>
+                <option value="no-keep-awake"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Enable VSync</div>
+            <select id="vsync" selectTitle="Enable VSync" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="vsync"> Yes</option>
+                <option value="no-vsync"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Enable Frame Pacing</div>
+            <select id="frame-pacing" selectTitle="Enable Frame Pacing" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="frame-pacing"> Yes</option>
+                <option value="no-frame-pacing"> No</option>
+            </select>
+        </div>
+
+        <h4 class="settings_header">Audio Stream Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Audio Mode</div>
+            <select id="audio-config" selectTitle="Select Audio Mode" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="stereo">Stereo</option>
+                <option value="5.1-surround"> 5.1 Surround Sound</option>
+                <option value="7.1-surround"> 7.1 Surround Sound</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Mute Host Speakers While Streaming</div>
+            <select id="audio-on-host" selectTitle="Select to Mute Host Speakers while Streaming" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="audio-on-host"> Yes</option>
+                <option value="no-audio-on-host"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Mute Audio when Streaming Window Looses Focus</div>
+            <select id="mute-on-focus-loss" selectTitle="Select to Mute Audio when Streaming Window Looses Focus" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="mute-on-focus-loss"> Yes</option>
+                <option value="no-mute-on-focus-loss"> No</option>
+            </select>
+        </div>
+
+        <h4 class="settings_header">Input Stream Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Optimize Mouse for Remote Desktop</div>
+            <select id="absolute-mouse" selectTitle="Select to Optimize Mouse for Remote Desktop" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="absolute-mouse"> Yes</option>
+                <option value="no-absolute-mouse"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Swap Left and Right Mouse Buttons</div>
+            <select id="mouse-buttons-swap" selectTitle="Select to Swap Left and Right Mouse Buttons" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="mouse-buttons-swap"> Yes</option>
+                <option value="no-mouse-buttons-swap"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Use Touchscreen as Virtual Trackpad</div>
+            <select id="touchscreen-trackpad" selectTitle="Select to Use Touchscreen as Virtual Trackpad" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="touchscreen-trackpad"> Yes</option>
+                <option value="no-touchscreen-trackpad"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Reverse Mouse Scroll Direction</div>
+            <select id="reverse-scroll-direction" selectTitle="Select to Reverse Mouse Scroll Direction" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="reverse-scroll-direction"> Yes</option>
+                <option value="no-reverse-scroll-direction"> No</option>
+            </select>
+        </div>
+
+        <h4 class="settings_header">Gamepad Stream Settings</h4>
+
+
+        <div class="settings_row">
+            <div class="settings_label">Swap A/B and X/Y Gamepad Buttons</div>
+            <select id="swap-gamepad-buttons" selectTitle="Select to Swap A/B and X/Y Gamepad Buttons" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="swap-gamepad-buttons"> Yes</option>
+                <option value="no-swap-gamepad-buttons"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Receive Gamepad Input While in Background</div>
+            <select id="background-gamepad" selectTitle="Select to Receive Gamepad Input While in Background" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="background-gamepad"> Yes</option>
+                <option value="no-background-gamepad"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Allow Multiple Players</div>
+            <select id="multi-controller" selectTitle="Select to Allow Multiple Players" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="multi-controller"> Yes</option>
+                <option value="no-multi-controller"> No</option>
+            </select>
+        </div>
+
+        <h4 class="settings_header">Host Stream Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Optimize Game Settings for Streaming</div>
+            <select id="game-optimization" selectTitle="Select to Optimize Game Settings for Streaming" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="game-optimization"> Yes</option>
+                <option value="no-game-optimization"> No</option>
+            </select>
+        </div>
+
+        <div class="settings_row">
+            <div class="settings_label">Quit App on Host PC After Ending Stream</div>
+            <select id="quit-after" selectTitle="Select to Quit App on Host PC After Ending Stream" class="settings-dropdown-menu settings_focusable">
+                <option value="default" selected>Default</option>
+                <option value="quit-after"> Yes</option>
+                <option value="no-quit-after"> No</option>
+            </select>
+        </div>
+
+        <h4 class="settings_header">Advanced Stream Settings</h4>
+
+        <div class="settings_row">
+            <div class="settings_label">Video Decoder</div>
+            <select id="video-decoder" selectTitle="Select a Video Decoder" class="settings-dropdown-menu settings_focusable">
+                <option value="auto" selected>Auto</option>
+                <option value="hardware"> Force Hardware Decoding</option>
+                <option value="software"> Force Software Decoding</option>
+            </select>
+        </div>
+
+
+        <div class="settings_row">
+            <div class="settings_label">Video Codec</div>
+            <select id="video-codec" selectTitle="Select a Video Codec" class="settings-dropdown-menu settings_focusable">
+                <option value="auto" selected>Auto</option>
+                <option value="H.264"> H.264</option>
+                <option value="HEVC"> HEVC</option>
+            </select>
+        </div>
+
+
+        <!--        need this one ending div so the above tooltip works-->
+        <div class="settings_row"></div>
+
+    </div>
+</div>
+
+
+<div class="modal" id="select_modal">
+    <div class="modal-content">
+        <h3 id="select_modal_header">Select Item</h3>
+        <div id="select_modal_body"></div>
+    </div>
+</div>
+</body>
+
+<script src="../../bower_components/js-spatial-navigation/spatial_navigation.js"></script>
+<script src="../../bower_components/AlertifyJS/build/alertify.min.js"></script>
+
+<script src="../../js/frontend/SteamOSKeyboardFix.js"></script>
+
+<script src="../../js/frontend/settingsClient.js"></script>
+<script src="../../js/frontend/GamepadToGenericEvent.js"></script>
+
+<script src="../js/frontend/licenseText.js"></script>
+
+<script src="../../js/frontend/sharedMenuNavFunctions.js"></script>
+<script src="../js/frontend/pc_play_host_picker.js"></script>
+
+
+
+</html>

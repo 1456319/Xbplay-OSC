@@ -1,0 +1,143 @@
+#pcPlaySettings{
+    bottom:15%;
+    right: 10%;
+}
+#pcPlayAddHost{
+    bottom:15%;
+    left: 10%;
+}
+
+#pcPlayHostContainer{
+    top:15%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    text-align: center; /* Center the content */
+    position: absolute;
+}
+
+/*#pcPlayHostContainer{*/
+/*    !*display: flex;*!*/
+/*    position: absolute;*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*}*/
+
+#download_percent{
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: white;
+}
+
+.pcPlayHost {
+    top:7.5%;
+    display: inline-block; /* Make items inline */
+    /*width: 30%;*/
+    height: 85%;
+    min-width: calc(45% - 15px);
+    /*outline: 2px solid #95ea2e; !* Remove the default outline *!*/
+    box-shadow: 0 0 15px #95ea2e;
+    /*border: 2px solid #95ea2e; !* Remove the default outline *!*/
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.scroll-wrapper {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.hostDivLayout{
+    border-radius: 0px 0px 0px 0px;
+    font-size: 12px;
+    font-family:helvetica, sans-serif;
+    box-sizing: border-box;
+    color: #000000;
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    text-wrap: balance;
+    /*padding: 15px;*/
+}
+
+.pcPlayHostTitle{
+    top: 0;
+    left:0;
+    font-size: 18px;
+    font-family:helvetica, sans-serif;
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 26.6%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 8px 8px 0 0;
+    padding: 15px;
+    font-weight: 900;
+}
+
+.hostListAppsButton{
+    top: 26.6%;
+    left: 0;
+    width: 100%;
+    height: 26.6%;
+    position: absolute;
+    border-top: 0!important;
+    border-bottom: 0!important;
+}
+
+.hostOpenClientButton{
+    top: 53.2%;
+    left: 0;
+    width: 100%;
+    height: 26.6%;
+    position: absolute;
+    border-top: 0!important;
+    border-bottom: 0!important;
+}
+
+.hostConnectButton{
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    border-radius: 0 0 8px 0;
+    border-left: 0!important;
+    border-top: 0!important;
+}
+
+.hostDeleteButton{
+    border-radius: 0 0 0 8px;
+    border-top: 0!important;
+    border-right: 0!important;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 20%;
+    position: absolute;
+}
+
+.custom_focusable:focus {
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+}
+@keyframes color {
+    to {
+        background-color: rgb(0, 0, 0);
+    }
+}

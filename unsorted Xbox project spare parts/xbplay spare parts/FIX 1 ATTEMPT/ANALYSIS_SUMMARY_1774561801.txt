@@ -1,0 +1,115 @@
+================================================================================
+XBOX PLAY PWA SPLASH SCREEN HANG - ANALYSIS SUMMARY
+================================================================================
+
+{
+  "timestamp": 1774561818.76148,
+  "problem": "Xbox Play PWA stuck on splash screen in Edge but works in Brave",
+  "edge_renderer_pid": "119639",
+  "edge_cpu_usage": "34.4%",
+  "strace_summary": "strace: Process 119639 attached\nstrace: Process 119639 detached\n% time     seconds  usecs/call     calls    errors syscall\n------ ----------- ----------- --------- --------- ----------------\n 84.64    0.032314          16      1961        43 futex\n  5.57    0.002127           2       966           getrandom\n  5.09    0.001943           1      1015           write\n  2.45    0.000935           5       180           madvise\n  1.30    0.000498           3       133           mprotect\n  0.66    0.000",
+  "key_syscalls": "Mostly futex (84%), write (5%), getrandom (5%)",
+  "likely_cause": "JavaScript infinite loop or tight polling loop based on high CPU and futex pattern",
+  "comparison": "Brave instance shows \"Play Xbox - Play Xbox\" title, Edge shows only \"msedge\" (splash)",
+  "recommendations": [
+    "Page is stuck in initialization/authentication loop",
+    "Check service worker registration",
+    "Inspect entry.worker.js for infinite loops",
+    "May be related to PWA cache or storage permissions",
+    "Edge and Brave handle PWA differently - possibly manifest or feature detection issue"
+  ]
+}
+
+================================================================================
+LOOP ANALYSIS
+================================================================================
+{
+  "trace_sample": "AKE_PRIVATE, 1) = 1\nfutex(0x7f302effa338, FUTEX_WAKE_PRIVATE, 2147483647) = 1\nfutex(0xbb401f18268, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY) = -1 EAGAIN (Resource temporarily unavailable)\nfutex(0xbb401f18218, FUTEX_WAKE_PRIVATE, 1) = 0\nfutex(0xbb401f18218, FUTEX_WAKE_PRIVATE, 1) = 0\nfutex(0x7f302fffc338, FUTEX_WAKE_PRIVATE, 2147483647) = 1\nfutex(0x7f302fffc2f0, FUTEX_WAKE_PRIVATE, 1) = 1\nfutex(0xbb400019508, FUTEX_WAKE_PRIVATE, 1) = 1\nfutex(0x7f302fffc338, FUTEX_WAKE_PRIVATE, 2147483647) = 1\nfutex(0x7f302fffc2f0, FUTEX_WAKE_PRIVATE, 1) = 1\nfutex(0xbb400019508, FUTEX_WAKE_PRIVATE, 1) = 1\nfutex(0x7f302effa338, FUTEX_WAKE_PRIVATE, 2147483647) = 1\nfutex(0x7f302effa2f0, FUTEX_WAKE_PRIVATE, 1) = 1\nfutex(0x7f2f29513338, FUTEX_WAKE_PRIVATE, 2147483647) = 1\nfutex(0x7f2f295132f0, FUTEX_WAKE_PRIVATE, 1) = 1\nfutex(0xbb400b0e828, FUTEX_WAKE_PRIVATE, 1) = 1\nwrite(25, \"\\1\\0\\0\\0\\0\\0\\0\\0\", 8)        = 8\nwrite(25, \"\\1\\0\\0\\0\\0\\0\\0\\0\", 8)        = 8\nfutex(0x5557be61fb00, FUTEX_WAKE_PRIVATE, 1) = 1\nfutex(0x5557be61fb00, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)\nfutex(0x5557be61fb00, FUTEX_WAKE_PRIVATE, 1) = 0\nwrite(25, \"\\1\\0\\0\\0\\0\\0\\0\\0\", 8)        = 8\nfutex(0x7fffdc5c20b8, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=37434, tv_nsec=15162764}, FUTEX_BITSET_MATCH_ANY) = 0\nfutex(0x7fffdc5c2070, FUTEX_WAKE_PRIVATE, 1) = 0\nwrite(25, \"\\1\\0\\0\\0\\0\\0\\0\\0\", 8)        = 8\nfutex(0x7fffdc5c20b8, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=37434, tv_nsec=15164108}, FUTEX_BITSET_MATCH_ANY) = 0\nfutex(0x7fffdc5c2070, FUTEX_WAKE_PRIVATE, 1) = 0\nwrite(25, \"\\1\\0\\0\\0\\0\\0\\0\\0\", 8)        = 8\nfutex(0x7fffdc5c20b8, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=37434, tv_nsec=15163685}, FUTEX_BITSET_MATCH_ANY) = 0\nfutex(0x7fffdc5c2070, FUTEX_WAKE_PRIVATE, 1) = 0\nwrite(25, \"\\1\\0\\0\\0\\0\\0\\0\\0\", 8)        = 8\nfutex(0x7fffdc5c20b8, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=37434, tv_nsec=15163946}, FUTEX_BITSET_MATCH_ANYstrace: Process 119639 detached\n <detached ...>\n",
+  "futex_calls": 689,
+  "write_calls": 310,
+  "poll_calls": 0,
+  "total_lines": 1001
+}
+
+================================================================================
+HAR FILE ANALYSIS
+================================================================================
+{
+  "spare parts.har": {
+    "total_requests": 1095,
+    "failed_requests": [
+      {
+        "url": "wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=82a907c9-44a3-4b7a-9272-823feefe274c",
+        "status": 0
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&client-id=NO_AUTH&client-version=1DS-Web-JS-3.2.15&apikey=69adc3c768bd4dc08c19416121249fcc-66f1668a-797b-4249-95e3-6c6651768c28-7293&upload-time=1774538543628&time-delta-to-apply-millis=use-collector-delta&w=2&NoResponseBody=true",
+        "status": 0
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=2",
+        "status": 0
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=2",
+        "status": 0
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=2",
+        "status": 0
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=2",
+        "status": 0
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&client-id=NO_AUTH&client-version=1DS-Web-JS-3.2.15&apikey=69adc3c768bd4dc08c19416121249fcc-66f1668a-797b-4249-95e3-6c6651768c28-7293&upload-time=1774538559945&w=2&NoResponseBody=true",
+        "status": 0
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0",
+        "status": 503
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0",
+        "status": 503
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0",
+        "status": 503
+      }
+    ],
+    "slow_requests": [
+      {
+        "url": "wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=82a907c9-44a3-4b7a-9272-823feefe274c",
+        "time": 14188368.692
+      },
+      {
+        "url": "wss://chat.xboxlive.com/users/xuid(2535421847897820)/chat/connect?AuthKey=b31924ff-0487-4c43-b3f8-735b8399eefd",
+        "time": 3775865.7889999975
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0",
+        "time": 16715.046000000264
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0",
+        "time": 13259.795000001759
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0",
+        "time": 7250.0660000005155
+      },
+      {
+        "url": "https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0",
+        "time": 6644.197999998141
+      }
+    ]
+  },
+  "spare parts2.har": "Error: Invalid control character at: line 70818 column 9998 (char 2328030)",
+  "Richig logi scree.har": {
+    "total_requests": 12,
+    "failed_requests": [],
+    "slow_requests": []
+  }
+}

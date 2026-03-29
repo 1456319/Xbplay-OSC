@@ -1,0 +1,2 @@
+try{let e=typeof window<`u`?window:typeof global<`u`?global:typeof globalThis<`u`?globalThis:typeof self<`u`?self:{},t=new e.Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=`a47bf39e-b531-4f3d-a409-9e01c7756f16`,e._sentryDebugIdIdentifier=`sentry-dbid-a47bf39e-b531-4f3d-a409-9e01c7756f16`)}catch{}function e(e,t){let n=e[t];if(!n)throw Error(`Attempted to access state for an unregistered namespace at key ${t}. Please make sure
+            a reducer for this state was registered via a plugin.`);return n}export{e as t};

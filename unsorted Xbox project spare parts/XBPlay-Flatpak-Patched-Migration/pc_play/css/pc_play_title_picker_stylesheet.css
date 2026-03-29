@@ -1,0 +1,83 @@
+/*old title picker*/
+/** {*/
+/*    color: black;*/
+/*}*/
+/*!*#form1:focus{*!*/
+/*    border-color: #ffd336;*/
+/*}*/
+/*#form1 {*/
+/*    border: 3px solid transparent;*/
+/*}*/
+/*#inputGroup {*/
+/*    padding: 10px;*/
+/*    z-index: 5*/
+/*}*/
+
+/*new*/
+.row {
+    --bs-gutter-x: 1rem;
+}
+.nav-item:focus, #search_box:focus, .nav-link:focus, .card:focus, .nav-link.active:focus {
+    outline: 2px solid #95ea2e; /* Remove the default outline */
+    box-shadow: 0 0 15px #95ea2e;
+}
+
+.card {
+    background-color: #3b3b3b;
+    border: 1px solid #3b3b3b;
+    margin: 2px;
+}
+.cards-container {
+    height: 100%;
+    width: 98%;
+    overflow-x: hidden;
+    margin-left: 1%;
+}
+#tab-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 2px;
+}
+.card-title {
+    height: 1rem;
+    overflow-y: hidden;
+    line-height: 1rem;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+}
+.card-body {
+    padding: 1rem 1rem
+}
+.custom-col {
+    width: 20%;
+}
+.searchbar-container {
+    width: 100%;
+}
+/* Styles for horizontal orientation */
+@media (orientation: landscape) {
+    .custom-col {
+        width: 20%;
+    }
+    .searchbar-container {
+        flex-direction: row;
+    }
+}
+
+/* Styles for vertical orientation */
+@media (orientation: portrait) {
+    .custom-col {
+        width: 50%;
+    }
+    .searchbar-container {
+        flex-direction: column;
+    }
+}
+
+.card-img-top {
+    height: 40vh;
+    object-fit: cover;
+}

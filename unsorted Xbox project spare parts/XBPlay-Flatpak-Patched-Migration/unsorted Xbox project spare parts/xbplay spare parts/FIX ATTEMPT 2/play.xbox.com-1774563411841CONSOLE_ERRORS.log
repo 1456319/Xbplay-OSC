@@ -1,0 +1,34 @@
+index.client-e7igduyh.js:4 browserTracingIntegration is not fully compatible with @sentry/react-router. Please use reactRouterTracingIntegration instead.
+(anonymous) @ index.client-e7igduyh.js:4
+l @ index.client-e7igduyh.js:1
+ed @ index.client-e7igduyh.js:4
+Oz @ entry.client-i16ydi33.js:11
+await in Oz
+(anonymous) @ entry.client-i16ydi33.js:11
+await in (anonymous)
+(anonymous) @ entry.client-i16ydi33.js:11
+dc-7e9864?ver=2.0&_cf=02242021_3231&iife=1:1 Uncaught ReferenceError: define is not defined
+(anonymous) @ dc-7e9864?ver=2.0&_cf=02242021_3231&iife=1:1
+(anonymous) @ dc-7e9864?ver=2.0&_cf=02242021_3231&iife=1:5
+PendingScript
+(anonymous) @ root-jqsjtgc1.js:16
+F @ root-jqsjtgc1.js:16
+Ec @ react-dom-biq6a8au.js:8
+Ll @ react-dom-biq6a8au.js:8
+Sl @ react-dom-biq6a8au.js:8
+Sa @ react-dom-biq6a8au.js:6
+Il @ react-dom-biq6a8au.js:8
+Fl @ react-dom-biq6a8au.js:8
+_l @ react-dom-biq6a8au.js:8
+te @ react-dom-biq6a8au.js:1
+se @ react-dom-biq6a8au.js:1
+entry.worker.js:42598 SW_FALLBACK worker received app message: SW_GET_VERSION.
+entry.worker.js:42622 SW_FALLBACK request failed: https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth, request.mode: cors
+error @ entry.worker.js:42622
+(anonymous) @ entry.worker.js:44148
+(anonymous) @ entry.worker.js:41359
+Promise.catch
+handleRequest @ entry.worker.js:41348
+(anonymous) @ entry.worker.js:41264
+The FetchEvent for "<URL>" resulted in a network error response: the promise was resolved with an error response object.
+The FetchEvent for "https://chat.xboxlive.com/users/xuid(2535421847897820)/chat/auth" resulted in a network error response: the promise was resolved with an error response object.

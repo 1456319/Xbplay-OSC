@@ -1,0 +1,148 @@
+
+
+/* glowing button 2 */
+.glowing-button2 {
+    position: absolute;
+    box-shadow: 0 0 10px 0 #49e819;
+    border: 2px solid #49e819;
+    background-color: #000;
+    transition: .4s;
+    font-size: 20px;
+    cursor: pointer;
+    color: #49e819;
+    z-index: 0;
+}
+
+.glowing-button2::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #49e819;
+    transition: .4s;
+    box-shadow: 0 0 5px 0 #49e819;
+    z-index: -1;
+    width: 30px;
+    height: 10px;
+    top: -5px;
+    left: -5px;
+    transform: skewX(30deg);
+    background-color: #000;
+}
+
+.glowing-button2::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #49e819;
+    transition: .4s;
+    box-shadow: 0 0 5px 0 #49e819;
+    z-index: -1;
+    width: 30px;
+    height: 10px;
+    bottom: -5px;
+    right: -5px;
+    transform: skewX(-30deg);
+    background-color: #000;
+}
+
+.glowing-button2:focus {
+    color: #000;
+    outline: 4px solid #49e819;
+}
+
+.glowing-button2:focus::before {
+    width: 100%;
+    height: calc(50% + 1px);
+    left: 0;
+    top: 0;
+    transform: skewX(0deg);
+    background-color: #49e819;
+}
+
+.glowing-button2:focus::after {
+    width: 100%;
+    height: calc(50% + 1px);
+    right: 0;
+    bottom: 0;
+    background-color: #49e819;
+    transform: skewX(0deg);
+}
+
+
+/* glowing button 9 */
+.glowing-button9 {
+    outline: none;
+    background-color: #49e819;
+    box-shadow: 0 0 20px 0 #49e819;
+    border: 2px solid #49e819;
+    background-color: #000;
+    transition: .4s;
+    font-size: 20px;
+    cursor: pointer;
+    color: #49e819;
+    z-index: 0;
+
+    text-shadow: -1px -1px 1px rgba(0,0,0,.75), 1px -1px 1px rgba(0,0,0,.75), -1px 1px 1px rgba(0,0,0,.75), 1px 1px 1px rgba(0,0,0,.75);
+}
+
+.glowing-button9::before {
+    content: '';
+    width: 100%;
+    background-color: #49e819;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 2px solid #49e819;
+    transition: .4s;
+    box-shadow: 0 0 20px 0 #49e819;
+    z-index: -1;
+    width: 10px;
+    height: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2px;
+    background-color: #000;
+    color: black;
+}
+
+.glowing-button9::after {
+    content: '';
+    width: 100%;
+    background-color: #49e819;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #49e819;
+    transition: .4s;
+    box-shadow: 0 0 20px 0 #49e819;
+    z-index: -1;
+    width: 10px;
+    height: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -2px;
+    background-color: #000;
+    color: white;
+
+}
+
+.glowing-button9:focus::before {
+    height: 100%;
+}
+
+.glowing-button9:focus::after {
+    height: 100%;
+}
+
+/* glowing button 9 */
+.glowing-button10 {
+    outline: none;
+    background-color: #49e819;
+    box-shadow: 0 0 5px 0 #49e819;
+    border: 2px solid #49e819;
+    background-color: #000;
+    transition: .4s;
+    font-size: 20px;
+    cursor: pointer;
+    color: #49e819;
+    z-index: 0;
+    text-shadow: -1px -1px 1px rgba(0,0,0,.75), 1px -1px 1px rgba(0,0,0,.75), -1px 1px 1px rgba(0,0,0,.75), 1px 1px 1px rgba(0,0,0,.75);
+}

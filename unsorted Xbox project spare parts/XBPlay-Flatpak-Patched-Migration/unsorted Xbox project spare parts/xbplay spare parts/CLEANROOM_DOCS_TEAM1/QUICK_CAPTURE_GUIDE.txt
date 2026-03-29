@@ -1,0 +1,288 @@
+═══════════════════════════════════════════════════════════════════════════════
+  QUICK CAPTURE GUIDE - Fill Critical Gaps
+═══════════════════════════════════════════════════════════════════════════════
+
+📋 CHECKLIST - What You Need to Capture:
+
+  ☐ 1. Console Discovery API         [CRITICAL - 10 min]
+  ☐ 2. Console Wake/Power API         [CRITICAL - 10 min]  
+  ☐ 3. WebRTC DataChannel Messages    [CRITICAL - 30 min]
+  ☐ 4. Input Protocol Details         [CRITICAL - 30 min]
+  ☐ 5. Codec Negotiation Results      [MEDIUM  - 15 min]
+  ☐ 6. Error Scenarios (5 tests)      [MEDIUM  - 30 min]
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔴 CAPTURE #1: Console Discovery API (10 minutes)
+═══════════════════════════════════════════════════════════════════════════════
+
+GOAL: Find the API endpoint that lists user's consoles
+
+STEPS:
+  1. Open Edge/Brave with play.xbox.com
+  2. Press F12 → Network tab
+  3. Check "Preserve log"
+  4. Navigate to: https://www.xbox.com/en-US/play/consoles
+  5. Wait for console list to appear
+  6. Look for XHR/Fetch requests containing:
+     - "consoles" in URL
+     - "devices" in URL
+     - "smartglass" in URL
+  7. Click the request → Preview tab → Note the response structure
+  8. Right-click request → Copy → Copy as cURL → Paste to file
+  9. Save HAR: Network tab → Right-click → Save all as HAR
+
+SAVE TO: /home/deck/dump/xbplay spare parts/CONSOLE_DISCOVERY_API.har
+ALSO SAVE: curl command to CONSOLE_DISCOVERY_CURL.txt
+
+WHAT TO LOOK FOR:
+  - Console IDs (16-char hex)
+  - Console names (user-assigned names)
+  - Console status (Online, Standby, Offline)
+  - Console type (Xbox One, Series X, Series S)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔴 CAPTURE #2: Console Wake/Power (10 minutes)
+═══════════════════════════════════════════════════════════════════════════════
+
+GOAL: Capture the API call that wakes console from standby
+
+PREREQUISITES:
+  1. Enable "Instant-On" on Xbox console
+  2. Put console in Standby (hold Xbox button → Turn off console)
+  3. Wait 1 minute for console to enter standby fully
+
+STEPS:
+  1. Open Edge/Brave with DevTools (F12) → Network tab
+  2. Check "Preserve log"
+  3. Navigate to: https://www.xbox.com/en-US/play/consoles/launch/<CONSOLE_ID>
+     (Replace <CONSOLE_ID> with your console's ID from Capture #1)
+  4. Watch for API calls BEFORE the /sessions/home/play call
+  5. Look for requests containing:
+     - "power" in URL
+     - "wake" in URL
+     - POST to console-specific endpoint
+  6. Save HAR file
+
+SAVE TO: /home/deck/dump/xbplay spare parts/CONSOLE_WAKE_API.har
+
+WHAT TO LOOK FOR:
+  - Wake API endpoint
+  - Request body (if any)
+  - Response status (202? 204?)
+  - Polling behavior (does it check console status?)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔴 CAPTURE #3: WebRTC DataChannel Messages (30 minutes)
+═══════════════════════════════════════════════════════════════════════════════
+
+GOAL: Capture input messages and DataChannel protocol
+
+TOOLS NEEDED:
+  - Chrome/Edge (WebRTC internals)
+  - Gamepad connected
+
+STEPS:
+  1. Open TWO tabs:
+     Tab 1: chrome://webrtc-internals
+     Tab 2: https://www.xbox.com/en-US/play
+  
+  2. In Tab 2, start Remote Play session
+  
+  3. Once streaming, switch to Tab 1 (webrtc-internals)
+  
+  4. Look for:
+     - PeerConnection (should show "connected")
+     - DataChannels section (may show channel names like "input", "control")
+     - Stats graphs
+  
+  5. In Tab 2, press gamepad buttons slowly:
+     - A button (press and release)
+     - B button (press and release)
+     - Left stick (move in circle slowly)
+     - Right trigger (press halfway, then fully)
+  
+  6. Switch back to Tab 1 → Look for DataChannel activity
+  
+  7. Save WebRTC Internals dump:
+     - Click "Download the PeerConnection updates and stats data"
+     - Save file
+  
+  8. Also open Console tab in Tab 2 (F12 → Console)
+     - Type: localStorage
+     - Screenshot any relevant data
+  
+  9. Extract JavaScript source:
+     - F12 → Sources tab → find files named:
+       - web-rtc-stream.*.chunk.js
+       - game-stream.*.chunk.js
+       - input*.js
+     - Right-click → Save as...
+
+SAVE TO:
+  - /home/deck/dump/xbplay spare parts/WEBRTC_INTERNALS_DUMP.txt
+  - /home/deck/dump/xbplay spare parts/JAVASCRIPT_SOURCES/*.js
+
+WHAT TO LOOK FOR:
+  - DataChannel names ("input", "control", "chat", etc.)
+  - Message frequency (per frame? batched?)
+  - Binary vs. text messages
+  - Message size (bytes)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔴 CAPTURE #4: Input Protocol (30 minutes)
+═══════════════════════════════════════════════════════════════════════════════
+
+GOAL: Document input message structure
+
+PREREQUISITES: Complete Capture #3 first
+
+STEPS:
+  1. Open the JavaScript source files from Capture #3
+  
+  2. Search for keywords:
+     - "gamepad"
+     - "button"
+     - "axis"
+     - "send" (with DataChannel context)
+     - "input"
+     - "controller"
+  
+  3. Find the function that encodes gamepad state into binary/JSON
+  
+  4. Document (CLEANROOM STYLE):
+     - What fields are included?
+     - What data types? (uint8, uint16, float32?)
+     - Button mapping (which bit = which button?)
+     - Stick encoding (range? normalized?)
+     - Message header (timestamp? sequence number?)
+  
+  5. Create sanitized example messages:
+     Example: {"type":"input","buttons":0x0001,"lx":0,"ly":0,"rx":0,"ry":0}
+  
+  6. Compare against xbox-xcloud-player open source implementation:
+     - Check if they use similar structure
+     - Document differences
+
+SAVE TO:
+  - /home/deck/dump/xbplay spare parts/INPUT_PROTOCOL_ANALYSIS.md
+
+DO NOT INCLUDE:
+  ❌ Actual Microsoft code
+  ❌ Variable names from their code
+  ❌ Algorithm implementations
+
+DO INCLUDE:
+  ✅ Protocol structure documentation
+  ✅ Sanitized examples
+  ✅ Comparison with open-source implementation
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🟡 CAPTURE #5: Codec Negotiation Results (15 minutes)
+═══════════════════════════════════════════════════════════════════════════════
+
+GOAL: Determine which codecs are actually used
+
+STEPS:
+  1. Open chrome://webrtc-internals while streaming (see Capture #3)
+  
+  2. Find "Stats graphs for RTCInboundRTPVideoStream"
+  
+  3. Look for fields:
+     - codecId
+     - Video codec name (H264? VP8? VP9? H265?)
+     - Resolution (frameWidth, frameHeight)
+     - Frame rate (framesPerSecond)
+     - Bitrate (bytesReceived over time)
+  
+  4. Take screenshot or copy values
+  
+  5. Test with different scenarios:
+     a) Default (no changes)
+     b) Throttle network (DevTools → Network → Slow 3G)
+     c) Observe if codec/quality changes
+
+SAVE TO:
+  - /home/deck/dump/xbplay spare parts/CODEC_RESULTS.txt
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🟡 CAPTURE #6: Error Scenarios (30 minutes)
+═══════════════════════════════════════════════════════════════════════════════
+
+GOAL: Document all error states
+
+TEST 1: Expired Token
+  1. Get an auth token from HAR file
+  2. Wait 24 hours (or modify token to make invalid)
+  3. Try to start session with expired token
+  4. Capture error response
+  SAVE: ERROR_EXPIRED_TOKEN.har
+
+TEST 2: Offline Console
+  1. Fully power off Xbox (not standby)
+  2. Try to launch stream
+  3. Capture timeout/error behavior
+  SAVE: ERROR_OFFLINE_CONSOLE.har
+
+TEST 3: Mid-Stream Disconnect
+  1. Start streaming session
+  2. Power off Xbox console
+  3. Observe client behavior (reconnect attempts? error message?)
+  4. Capture HAR
+  SAVE: ERROR_MIDSTREAM_DISCONNECT.har
+
+TEST 4: Network Drop
+  1. Start streaming session
+  2. Disconnect network (unplug ethernet / disable WiFi)
+  3. Wait 30 seconds
+  4. Reconnect network
+  5. Observe: Does it reconnect? Show error? Retry logic?
+  SAVE: ERROR_NETWORK_DROP.har
+
+TEST 5: Concurrent Session
+  1. Start stream on Device A
+  2. While streaming, start stream on Device B (same account, same console)
+  3. Observe: Does Device A disconnect? Error message?
+  SAVE: ERROR_CONCURRENT_SESSION.har
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📁 FINAL FILE STRUCTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+/home/deck/dump/xbplay spare parts/
+  │
+  ├── CONSOLE_DISCOVERY_API.har           ← Capture #1
+  ├── CONSOLE_DISCOVERY_CURL.txt
+  │
+  ├── CONSOLE_WAKE_API.har                ← Capture #2
+  │
+  ├── WEBRTC_INTERNALS_DUMP.txt           ← Capture #3
+  ├── JAVASCRIPT_SOURCES/
+  │   ├── web-rtc-stream.chunk.js
+  │   ├── game-stream.chunk.js
+  │   └── input.chunk.js
+  │
+  ├── INPUT_PROTOCOL_ANALYSIS.md          ← Capture #4
+  │
+  ├── CODEC_RESULTS.txt                   ← Capture #5
+  │
+  └── ERROR_SCENARIOS/                     ← Capture #6
+      ├── ERROR_EXPIRED_TOKEN.har
+      ├── ERROR_OFFLINE_CONSOLE.har
+      ├── ERROR_MIDSTREAM_DISCONNECT.har
+      ├── ERROR_NETWORK_DROP.har
+      └── ERROR_CONCURRENT_SESSION.har
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⏱️ TOTAL ESTIMATED TIME: 2-3 hours
+
+Once complete → Team 1 can analyze and document → Team 2 can implement
+
+═══════════════════════════════════════════════════════════════════════════════

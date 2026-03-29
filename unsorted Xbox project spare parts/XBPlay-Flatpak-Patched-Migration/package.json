@@ -1,0 +1,35 @@
+{
+  "name": "net.studio08.xbplay",
+  "version": "2.2.56",
+  "description": "XBPlay: Remote play for Xbox One and Series X/S consoles.",
+  "productName": "XBPlay Remote Play for Xbox",
+  "main": "main.js",
+  "config": {
+    "pcplayversion": "5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexwarddev1230/xbPlayElectron.git"
+  },
+  "author": "award",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.6",
+    "decompress": "^4.2.1",
+    "dotenv": "^16.3.1",
+    "electron-store": "^8.1.0",
+    "fs-extra": "^11.1.1",
+    "is-online": "^10.0.0",
+    "micromodal": "^0.4.10",
+    "opensuse-compat-steamworks.js": "^0.0.6",
+    "semver": "^7.6.0",
+    "spatial-navigation-js": "^1.0.0",
+    "steam-binary-vdf": "^0.1.0",
+    "tar": "^7.0.1",
+    "xbox-xcloud-player": "^0.2.11"
+  },
+  "scripts": {
+    "package-flatpak": "flatpak-builder --force-clean archives/build net.studio08.xbplay.yml",
+    "build:generate-sources": "flatpak-node-generator npm package-lock.json -o generated-sources.json"
+  }
+}

@@ -1,0 +1,497 @@
+Create a WebRTC-Internals dump
+Download the "webrtc-internals dump"  Compress result
+The "webrtc-internals" dump is a JSON file containing API calls, events and getStats data about RTCPeerConnection objects as well as getUsermedia/getDisplayMedia API calls.
+
+Download the "rtcstats dump"
+The "rtcstats dump" is an alternative file format containing API calls, events and getStats data about RTCPeerConnection objects as well as getUsermedia/getDisplayMedia API calls.
+
+Create diagnostic audio recordings
+ Enable diagnostic audio recordings
+
+A diagnostic audio recording is used for analyzing audio problems. It consists of several files and contains the audio played out to the speaker (output) and captured from the microphone (input). The data is saved locally. Checking this box will enable recordings of all ongoing input and output audio streams (including non-WebRTC streams) and for future audio streams. When the box is unchecked or this page is closed, all ongoing recordings will be stopped and this recording functionality disabled. Recording audio from multiple tabs is supported as well as multiple recordings from the same tab.
+
+When enabling, select a base filename to which the following suffixes will be added:
+
+<base filename>.<render process ID>.aec_dump.<AEC dump recording ID>
+<base filename>.input.<stream recording ID>.wav
+<base filename>.output.<stream recording ID>.wav
+It is recommended to choose a new base filename each time the feature is enabled to avoid ending up with partially overwritten or unusable audio files.
+
+Create diagnostic packet recordings
+ Enable diagnostic packet and event recording
+
+A diagnostic packet and event recording can be used for analyzing various issues related to thread starvation, jitter buffers or bandwidth estimation. Two types of data are logged. First, incoming and outgoing RTP headers and RTCP packets are logged. These do not include any audio or video information, nor any other types of personally identifiable information (so no IP addresses or URLs). Checking this box will enable the recording for ongoing WebRTC calls and for future WebRTC calls. When the box is unchecked or this page is closed, all ongoing recordings will be stopped and this recording functionality will be disabled for future WebRTC calls. Recording in multiple tabs or multiple recordings in the same tab will cause multiple log files to be created. When enabling, a filename for the recording can be entered. The entered filename is used as a base, to which the following suffixes will be appended.
+
+<base filename>_<date>_<timestamp>_<render process ID>_<recording ID>
+
+If a file with the same name already exists, it will be overwritten. No more than 5 logfiles will be created, and each of them is limited to 60MB of storage. On Android these limits are 3 files of at most 10MB each. When the limit is reached, the checkbox must be unchecked and rechecked to resume logging.
+
+Create DataChannel message recordings
+ Enable DataChannel message recordings
+
+NOTE: DataChannel messages will also be recorded in incognito mode!
+
+A DataChannel message recording records all text and binary message sent over a PeerConnection. Text messages are recorded in plain text, and binary messages are recorded using base64 encoding. One file is created per PeerConnection. Checking this box will enable recording for ongoing and future PeerConnections. When the box is unchecked all ongoing recordings will be stopped and this recording functionality will be disabled for future PeerConnections. DataChannel message recording use the following file format:
+
+<base filename>_<date>_<timestamp>_<render process ID>_<recording ID>
+
+If a file with the same name already exists, it will be overwritten. No more than 5 logfiles will be created, and each of them is limited to 100MB of storage. On Android these limits are 3 files of at most 10MB each. When the limit is reached, the checkbox must be unchecked and rechecked to resume logging.
+
+https://www.xbox.com/en-US/play/consoles/launch/F4000F644EF581F9 [ rid: 26, lid: 5, pid: 135 ]
+https://www.xbox.com/en-US/play/consoles/launch/F4000F644EF581F9, {"iceServers":[{"urls":["stun:relay.communication.microsoft.com:3478"]}]},
+
+ICE connection state: new => "completed"
+Connection state: new => "connected"
+Signaling state: new => "stable"
+ICE Candidate pair: (not set):50157 <=>192.168.1.14:9002
+ICE candidate grid
+Candidate (pair) id	State / Candidate type	Network type / address	Port	Protocol / candidate type	(Pair) Priority	Bytes sent / received	STUN requests sent / responses received	STUN requests received / responses sent	RTT	Last data sent / received	Last update
+CPy4GOAHPd_IqfNv0dx	succeeded	unknown		udp	0x7e001efffcfc3c00	2888994 / 298630202	299 / 283	305 / 305	0.007s	9:01:07 PM / 9:01:07 PM	9:01:07 PM
+Iy4GOAHPd	local-candidate	(not set)	50157	host	0x7e001eff
+126 | 30 | 255
+IIqfNv0dx	remote-candidate	192.168.1.14	9002	host	0x7e7e1eff
+Time	Event
+3/28/2026, 8:59:14 PM
+setLocalDescription (type: "offer", 4 sections)
+Copy description to clipboard
+v=0 (6 more lines)
+o=- 1902184804080039658 2 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE 0 1 2
+a=extmap-allow-mixed
+a=msid-semantic: WMS
+m=audio 58690 UDP/TLS/RTP/SAVPF 111 63 9 0 8 13 110 126 (31 more lines) direction=sendrecv mid=0
+c=IN IP4 172.59.117.84
+a=rtcp:9 IN IP4 0.0.0.0
+a=candidate:2871281435 1 udp 2113937151 eb6c2ef2-fb4d-4ac4-a2fc-ec82577e42ba.local 50157 typ host generation 0 network-cost 999
+a=candidate:2015014309 1 udp 1677729535 172.59.117.84 58690 typ srflx raddr 0.0.0.0 rport 0 generation 0 network-cost 999
+a=ice-ufrag:bR6b
+a=ice-pwd:p71rA3FGOfydxCFaeT+uiHmF
+a=ice-options:trickle
+a=fingerprint:sha-256 D0:9C:5A:3B:9F:11:B0:F8:8C:49:80:2F:D5:D4:0F:DB:86:BB:52:6B:A8:40:B7:8A:62:85:67:65:E0:34:0C:54
+a=setup:actpass
+a=mid:0
+a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid
+a=sendrecv
+a=msid:- 18c618c7-5979-41b2-926a-3a1b044785b5
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:111 opus/48000/2
+a=rtcp-fb:111 transport-cc
+a=fmtp:111 minptime=10;stereo=1;useinbandfec=1
+a=rtpmap:63 red/48000/2
+a=fmtp:63 111/111
+a=rtpmap:9 G722/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:13 CN/8000
+a=rtpmap:110 telephone-event/48000
+a=rtpmap:126 telephone-event/8000
+a=ssrc:1249556938 cname:elhlwr6rszM1xcAM
+a=ssrc:1249556938 msid:- 18c618c7-5979-41b2-926a-3a1b044785b5
+m=video 21599 UDP/TLS/RTP/SAVPF 103 107 109 115 96 97 98 99 100 101 35 36 37 38 104 108 114 116 117 118 39 40 41 42 43 44 45 46 47 48 119 120 121 122 49 50 51 52 123 124 125 53 (202 more lines) direction=recvonly mid=1
+c=IN IP4 172.59.117.84
+a=rtcp:9 IN IP4 0.0.0.0
+a=candidate:2871281435 1 udp 2113937151 eb6c2ef2-fb4d-4ac4-a2fc-ec82577e42ba.local 37340 typ host generation 0 network-cost 999
+a=candidate:2015014309 1 udp 1677729535 172.59.117.84 21599 typ srflx raddr 0.0.0.0 rport 0 generation 0 network-cost 999
+a=ice-ufrag:bR6b
+a=ice-pwd:p71rA3FGOfydxCFaeT+uiHmF
+a=ice-options:trickle
+a=fingerprint:sha-256 D0:9C:5A:3B:9F:11:B0:F8:8C:49:80:2F:D5:D4:0F:DB:86:BB:52:6B:A8:40:B7:8A:62:85:67:65:E0:34:0C:54
+a=setup:actpass
+a=mid:1
+a=extmap:14 urn:ietf:params:rtp-hdrext:toffset
+a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+a=extmap:13 urn:3gpp:video-orientation
+a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay
+a=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type
+a=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing
+a=extmap:8 http://www.webrtc.org/experiments/rtp-hdrext/color-space
+a=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid
+a=extmap:10 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id
+a=extmap:11 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id
+a=recvonly
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:103 H264/90000
+a=rtcp-fb:103 goog-remb
+a=rtcp-fb:103 transport-cc
+a=rtcp-fb:103 ccm fir
+a=rtcp-fb:103 nack
+a=rtcp-fb:103 nack pli
+a=fmtp:103 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42001f
+a=rtpmap:107 H264/90000
+a=rtcp-fb:107 goog-remb
+a=rtcp-fb:107 transport-cc
+a=rtcp-fb:107 ccm fir
+a=rtcp-fb:107 nack
+a=rtcp-fb:107 nack pli
+a=fmtp:107 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=42001f
+a=rtpmap:109 H264/90000
+a=rtcp-fb:109 goog-remb
+a=rtcp-fb:109 transport-cc
+a=rtcp-fb:109 ccm fir
+a=rtcp-fb:109 nack
+a=rtcp-fb:109 nack pli
+a=fmtp:109 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f
+a=rtpmap:115 H264/90000
+a=rtcp-fb:115 goog-remb
+a=rtcp-fb:115 transport-cc
+a=rtcp-fb:115 ccm fir
+a=rtcp-fb:115 nack
+a=rtcp-fb:115 nack pli
+a=fmtp:115 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=42e01f
+a=rtpmap:96 VP8/90000
+a=rtcp-fb:96 goog-remb
+a=rtcp-fb:96 transport-cc
+a=rtcp-fb:96 ccm fir
+a=rtcp-fb:96 nack
+a=rtcp-fb:96 nack pli
+a=rtpmap:97 rtx/90000
+a=fmtp:97 apt=96
+a=rtpmap:98 VP9/90000
+a=rtcp-fb:98 goog-remb
+a=rtcp-fb:98 transport-cc
+a=rtcp-fb:98 ccm fir
+a=rtcp-fb:98 nack
+a=rtcp-fb:98 nack pli
+a=fmtp:98 profile-id=0
+a=rtpmap:99 rtx/90000
+a=fmtp:99 apt=98
+a=rtpmap:100 VP9/90000
+a=rtcp-fb:100 goog-remb
+a=rtcp-fb:100 transport-cc
+a=rtcp-fb:100 ccm fir
+a=rtcp-fb:100 nack
+a=rtcp-fb:100 nack pli
+a=fmtp:100 profile-id=2
+a=rtpmap:101 rtx/90000
+a=fmtp:101 apt=100
+a=rtpmap:35 VP9/90000
+a=rtcp-fb:35 goog-remb
+a=rtcp-fb:35 transport-cc
+a=rtcp-fb:35 ccm fir
+a=rtcp-fb:35 nack
+a=rtcp-fb:35 nack pli
+a=fmtp:35 profile-id=1
+a=rtpmap:36 rtx/90000
+a=fmtp:36 apt=35
+a=rtpmap:37 VP9/90000
+a=rtcp-fb:37 goog-remb
+a=rtcp-fb:37 transport-cc
+a=rtcp-fb:37 ccm fir
+a=rtcp-fb:37 nack
+a=rtcp-fb:37 nack pli
+a=fmtp:37 profile-id=3
+a=rtpmap:38 rtx/90000
+a=fmtp:38 apt=37
+a=rtpmap:104 rtx/90000
+a=fmtp:104 apt=103
+a=rtpmap:108 rtx/90000
+a=fmtp:108 apt=107
+a=rtpmap:114 rtx/90000
+a=fmtp:114 apt=109
+a=rtpmap:116 rtx/90000
+a=fmtp:116 apt=115
+a=rtpmap:117 H264/90000
+a=rtcp-fb:117 goog-remb
+a=rtcp-fb:117 transport-cc
+a=rtcp-fb:117 ccm fir
+a=rtcp-fb:117 nack
+a=rtcp-fb:117 nack pli
+a=fmtp:117 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=4d001f
+a=rtpmap:118 rtx/90000
+a=fmtp:118 apt=117
+a=rtpmap:39 H264/90000
+a=rtcp-fb:39 goog-remb
+a=rtcp-fb:39 transport-cc
+a=rtcp-fb:39 ccm fir
+a=rtcp-fb:39 nack
+a=rtcp-fb:39 nack pli
+a=fmtp:39 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=4d001f
+a=rtpmap:40 rtx/90000
+a=fmtp:40 apt=39
+a=rtpmap:41 H264/90000
+a=rtcp-fb:41 goog-remb
+a=rtcp-fb:41 transport-cc
+a=rtcp-fb:41 ccm fir
+a=rtcp-fb:41 nack
+a=rtcp-fb:41 nack pli
+a=fmtp:41 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=f4001f
+a=rtpmap:42 rtx/90000
+a=fmtp:42 apt=41
+a=rtpmap:43 H264/90000
+a=rtcp-fb:43 goog-remb
+a=rtcp-fb:43 transport-cc
+a=rtcp-fb:43 ccm fir
+a=rtcp-fb:43 nack
+a=rtcp-fb:43 nack pli
+a=fmtp:43 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=f4001f
+a=rtpmap:44 rtx/90000
+a=fmtp:44 apt=43
+a=rtpmap:45 AV1/90000
+a=rtcp-fb:45 goog-remb
+a=rtcp-fb:45 transport-cc
+a=rtcp-fb:45 ccm fir
+a=rtcp-fb:45 nack
+a=rtcp-fb:45 nack pli
+a=fmtp:45 level-idx=5;profile=0;tier=0
+a=rtpmap:46 rtx/90000
+a=fmtp:46 apt=45
+a=rtpmap:47 AV1/90000
+a=rtcp-fb:47 goog-remb
+a=rtcp-fb:47 transport-cc
+a=rtcp-fb:47 ccm fir
+a=rtcp-fb:47 nack
+a=rtcp-fb:47 nack pli
+a=fmtp:47 level-idx=5;profile=1;tier=0
+a=rtpmap:48 rtx/90000
+a=fmtp:48 apt=47
+a=rtpmap:119 H264/90000
+a=rtcp-fb:119 goog-remb
+a=rtcp-fb:119 transport-cc
+a=rtcp-fb:119 ccm fir
+a=rtcp-fb:119 nack
+a=rtcp-fb:119 nack pli
+a=fmtp:119 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=64001f
+a=rtpmap:120 rtx/90000
+a=fmtp:120 apt=119
+a=rtpmap:121 H264/90000
+a=rtcp-fb:121 goog-remb
+a=rtcp-fb:121 transport-cc
+a=rtcp-fb:121 ccm fir
+a=rtcp-fb:121 nack
+a=rtcp-fb:121 nack pli
+a=fmtp:121 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=64001f
+a=rtpmap:122 rtx/90000
+a=fmtp:122 apt=121
+a=rtpmap:49 H265/90000
+a=rtcp-fb:49 goog-remb
+a=rtcp-fb:49 transport-cc
+a=rtcp-fb:49 ccm fir
+a=rtcp-fb:49 nack
+a=rtcp-fb:49 nack pli
+a=fmtp:49 level-id=180;profile-id=1;tier-flag=0;tx-mode=SRST
+a=rtpmap:50 rtx/90000
+a=fmtp:50 apt=49
+a=rtpmap:51 H265/90000
+a=rtcp-fb:51 goog-remb
+a=rtcp-fb:51 transport-cc
+a=rtcp-fb:51 ccm fir
+a=rtcp-fb:51 nack
+a=rtcp-fb:51 nack pli
+a=fmtp:51 level-id=180;profile-id=2;tier-flag=0;tx-mode=SRST
+a=rtpmap:52 rtx/90000
+a=fmtp:52 apt=51
+a=rtpmap:123 red/90000
+a=rtpmap:124 rtx/90000
+a=fmtp:124 apt=123
+a=rtpmap:125 ulpfec/90000
+a=rtpmap:53 flexfec-03/90000
+a=rtcp-fb:53 goog-remb
+a=rtcp-fb:53 transport-cc
+a=fmtp:53 repair-window=10000000
+m=application 24800 UDP/DTLS/SCTP webrtc-datachannel (11 more lines) direction=sendrecv mid=2
+c=IN IP4 172.59.117.84
+a=candidate:2871281435 1 udp 2113937151 eb6c2ef2-fb4d-4ac4-a2fc-ec82577e42ba.local 45258 typ host generation 0 network-cost 999
+a=candidate:2015014309 1 udp 1677729535 172.59.117.84 24800 typ srflx raddr 0.0.0.0 rport 0 generation 0 network-cost 999
+a=ice-ufrag:bR6b
+a=ice-pwd:p71rA3FGOfydxCFaeT+uiHmF
+a=ice-options:trickle
+a=fingerprint:sha-256 D0:9C:5A:3B:9F:11:B0:F8:8C:49:80:2F:D5:D4:0F:DB:86:BB:52:6B:A8:40:B7:8A:62:85:67:65:E0:34:0C:54
+a=setup:actpass
+a=mid:2
+a=sctp-port:5000
+a=max-message-size:262144
+3/28/2026, 8:59:14 PM
+setRemoteDescription (type: "answer", 4 sections)
+Copy description to clipboard
+v=0 (6 more lines)
+o=- 5522859722102820549 2 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE 0 1 2
+a=extmap-allow-mixed
+a=msid-semantic: WMS 0 1
+m=audio 1158 UDP/TLS/RTP/SAVPF 111 63 110 (27 more lines) direction=sendrecv mid=0
+c=IN IP4 172.59.117.84
+a=rtcp:9 IN IP4 0.0.0.0
+a=candidate:4167923266 1 udp 2122194687 192.168.1.14 9002 typ host generation 0 network-id 1
+a=candidate:2706383101 1 udp 2122255103 2001:0:14c9:c84e:249b:b9a2:53c4:8aab 9002 typ host generation 0 network-id 4 network-cost 50
+a=candidate:1462212476 1 udp 1685987071 172.59.117.84 1158 typ srflx raddr 192.168.1.14 rport 9002 generation 0 network-id 1
+a=candidate:1 1 udp 100 192.168.1.14 9002 typ host generation 0
+a=candidate:2 1 udp 1 2001:0:14c9:c84e:249b:b9a2:53c4:8aab 9002 typ host generation 0
+a=ice-ufrag:rpfo
+a=ice-pwd:5yzrMwBxojNfoQii3xaXnxYw
+a=ice-options:trickle renomination
+a=fingerprint:sha-256 7B:C6:4A:96:F8:5A:A3:51:5E:51:9C:A0:8D:07:94:B4:9F:00:2A:B3:14:69:F9:52:9E:0E:88:15:F9:7C:F2:10
+a=setup:passive
+a=mid:0
+a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid
+a=sendrecv
+a=msid:0 d5761b45-8421-40d0-8fd7-7d6b77533886
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:111 opus/48000/2
+a=fmtp:111 minptime=10;useinbandfec=1
+a=rtpmap:63 red/48000/2
+a=fmtp:63 111/111
+a=rtpmap:110 telephone-event/48000
+a=ssrc:704335966 cname:V6/YzU+dVYs8W81I
+m=video 9 UDP/TLS/RTP/SAVPF 103 107 109 115 104 108 114 116 117 118 39 40 123 124 125 53 (90 more lines) direction=sendonly mid=1
+c=IN IP4 0.0.0.0
+a=rtcp:9 IN IP4 0.0.0.0
+a=ice-ufrag:rpfo
+a=ice-pwd:5yzrMwBxojNfoQii3xaXnxYw
+a=ice-options:trickle renomination
+a=fingerprint:sha-256 7B:C6:4A:96:F8:5A:A3:51:5E:51:9C:A0:8D:07:94:B4:9F:00:2A:B3:14:69:F9:52:9E:0E:88:15:F9:7C:F2:10
+a=setup:passive
+a=mid:1
+a=extmap:14 urn:ietf:params:rtp-hdrext:toffset
+a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+a=extmap:13 urn:3gpp:video-orientation
+a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay
+a=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type
+a=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing
+a=extmap:8 http://www.webrtc.org/experiments/rtp-hdrext/color-space
+a=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid
+a=extmap:10 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id
+a=extmap:11 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id
+a=sendonly
+a=msid:1 5f081dc0-3ec5-4c64-9b6b-ea1221475e85
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:103 H264/90000
+a=rtcp-fb:103 goog-remb
+a=rtcp-fb:103 transport-cc
+a=rtcp-fb:103 ccm fir
+a=rtcp-fb:103 nack
+a=rtcp-fb:103 nack pli
+a=fmtp:103 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42002a
+a=rtpmap:107 H264/90000
+a=rtcp-fb:107 goog-remb
+a=rtcp-fb:107 transport-cc
+a=rtcp-fb:107 ccm fir
+a=rtcp-fb:107 nack
+a=rtcp-fb:107 nack pli
+a=fmtp:107 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=42002a
+a=rtpmap:109 H264/90000
+a=rtcp-fb:109 goog-remb
+a=rtcp-fb:109 transport-cc
+a=rtcp-fb:109 ccm fir
+a=rtcp-fb:109 nack
+a=rtcp-fb:109 nack pli
+a=fmtp:109 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e02a
+a=rtpmap:115 H264/90000
+a=rtcp-fb:115 goog-remb
+a=rtcp-fb:115 transport-cc
+a=rtcp-fb:115 ccm fir
+a=rtcp-fb:115 nack
+a=rtcp-fb:115 nack pli
+a=fmtp:115 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=42e02a
+a=rtpmap:104 rtx/90000
+a=fmtp:104 apt=103
+a=rtpmap:108 rtx/90000
+a=fmtp:108 apt=107
+a=rtpmap:114 rtx/90000
+a=fmtp:114 apt=109
+a=rtpmap:116 rtx/90000
+a=fmtp:116 apt=115
+a=rtpmap:117 H264/90000
+a=rtcp-fb:117 goog-remb
+a=rtcp-fb:117 transport-cc
+a=rtcp-fb:117 ccm fir
+a=rtcp-fb:117 nack
+a=rtcp-fb:117 nack pli
+a=fmtp:117 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=4d002a
+a=rtpmap:118 rtx/90000
+a=fmtp:118 apt=117
+a=rtpmap:39 H264/90000
+a=rtcp-fb:39 goog-remb
+a=rtcp-fb:39 transport-cc
+a=rtcp-fb:39 ccm fir
+a=rtcp-fb:39 nack
+a=rtcp-fb:39 nack pli
+a=fmtp:39 level-asymmetry-allowed=1;packetization-mode=0;profile-level-id=4d002a
+a=rtpmap:40 rtx/90000
+a=fmtp:40 apt=39
+a=rtpmap:123 red/90000
+a=rtpmap:124 rtx/90000
+a=fmtp:124 apt=123
+a=rtpmap:125 ulpfec/90000
+a=rtpmap:53 flexfec-03/90000
+a=rtcp-fb:53 goog-remb
+a=rtcp-fb:53 transport-cc
+a=fmtp:53 repair-window=10000000
+a=ssrc-group:FID 3255421220 2798224001
+a=ssrc-group:FEC-FR 3255421220 1691235377
+a=ssrc:3255421220 cname:V6/YzU+dVYs8W81I
+a=ssrc:2798224001 cname:V6/YzU+dVYs8W81I
+a=ssrc:1691235377 cname:V6/YzU+dVYs8W81I
+m=application 9 UDP/DTLS/SCTP webrtc-datachannel (9 more lines) direction=sendrecv mid=2
+c=IN IP4 0.0.0.0
+a=ice-ufrag:rpfo
+a=ice-pwd:5yzrMwBxojNfoQii3xaXnxYw
+a=ice-options:trickle renomination
+a=fingerprint:sha-256 7B:C6:4A:96:F8:5A:A3:51:5E:51:9C:A0:8D:07:94:B4:9F:00:2A:B3:14:69:F9:52:9E:0E:88:15:F9:7C:F2:10
+a=setup:passive
+a=mid:2
+a=sctp-port:5000
+a=max-message-size:262144
+3/28/2026, 8:59:14 PM
+onsignalingstatechange
+"stable"
+3/28/2026, 8:59:14 PM
+oniceconnectionstatechange
+"completed"
+3/28/2026, 8:59:14 PM
+onconnectionstatechange
+"connected"
+Stats Tables
+Filter statistics by type including
+separate multiple values by `,`
+outbound-rtp (kind=audio, mid=0, ssrc=1249556938, active=true, [codec]=opus (111, minptime=10;useinbandfec=1), id=OT01A1249556938)
+inbound-rtp (kind=audio, mid=0, ssrc=704335966, [codec]=opus (111, minptime=10;stereo=1;useinbandfec=1), id=IT01A704335966)
+inbound-rtp (kind=video, mid=1, ssrc=3255421220, rtxSsrc=2798224001, fecSsrc=1691235377, frameHeight=720, decoderImplementation=ExternalDecoder (VaapiVideoDecoder), powerEfficientDecoder=true, [codec]=H264 (103, level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42001f), id=IT01V3255421220)
+media-playout (kind=audio, id=AP)
+certificate (id=CF7B:C6:4A:96:F8:5A:A3:51:5E:51:9C:A0:8D:07:94:B4:9F:00:2A:B3:14:69:F9:52:9E:0E:88:15:F9:7C:F2:10)
+certificate (id=CFD0:9C:5A:3B:9F:11:B0:F8:8C:49:80:2F:D5:D4:0F:DB:86:BB:52:6B:A8:40:B7:8A:62:85:67:65:E0:34:0C:54)
+codec (mimeType=video/H264, payloadType=103, id=CIT01_103_level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42001f)
+codec (mimeType=audio/opus, payloadType=111, id=CIT01_111_minptime=10;stereo=1;useinbandfec=1)
+codec (mimeType=audio/opus, payloadType=111, id=COT01_111_minptime=10;useinbandfec=1)
+candidate-pair (state=succeeded, id=CPy4GOAHPd_IqfNv0dx)
+data-channel (label=control, state=open, id=D11)
+data-channel (label=message, state=open, id=D12)
+data-channel (label=input, state=open, id=D9)
+local-candidate (candidateType=srflx, id=ICBxORc7o)
+remote-candidate (candidateType=host, id=IIqfNv0dx)
+local-candidate (candidateType=host, tcpType=active, id=IbusA03v2)
+local-candidate (candidateType=host, id=IfyiSSC/z)
+local-candidate (candidateType=host, tcpType=active, id=IvPsOWW9P)
+local-candidate (candidateType=host, id=Iy4GOAHPd)
+peer-connection (id=P)
+remote-outbound-rtp (kind=audio, ssrc=704335966, id=ROA704335966)
+remote-outbound-rtp (kind=video, ssrc=3255421220, id=ROV3255421220)
+transport (iceState=connected, dtlsState=connected, id=T01)
+Filter statistics graphs by type including
+separate multiple values by `,`
+Stats graphs for outbound-rtp (kind=audio, mid=0, ssrc=1249556938, active=true, [codec]=opus (111, minptime=10;useinbandfec=1), id=OT01A1249556938)
+Stats graphs for inbound-rtp (kind=audio, mid=0, ssrc=704335966, [codec]=opus (111, minptime=10;stereo=1;useinbandfec=1), id=IT01A704335966)
+Stats graphs for inbound-rtp (kind=video, mid=1, ssrc=3255421220, rtxSsrc=2798224001, fecSsrc=1691235377, frameHeight=720, decoderImplementation=ExternalDecoder (VaapiVideoDecoder), powerEfficientDecoder=true, [codec]=H264 (103, level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42001f), id=IT01V3255421220)
+Stats graphs for media-playout (kind=audio, id=AP)
+Stats graphs for candidate-pair (state=succeeded, id=CPy4GOAHPd_IqfNv0dx)
+Stats graphs for data-channel (label=control, state=open, id=D11)
+Stats graphs for data-channel (label=message, state=open, id=D12)
+Stats graphs for data-channel (label=input, state=open, id=D9)
+Stats graphs for peer-connection (id=P)
+Stats graphs for remote-outbound-rtp (kind=audio, ssrc=704335966, id=ROA704335966)
+Stats graphs for remote-outbound-rtp (kind=video, ssrc=3255421220, id=ROV3255421220)

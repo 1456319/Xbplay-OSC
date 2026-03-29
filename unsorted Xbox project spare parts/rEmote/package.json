@@ -1,0 +1,115 @@
+{
+  "name": "remote",
+  "version": "0.1.0",
+  "description": "Xbox Remote Play client for Linux - cleanroom implementation",
+  "main": "dist/main/main.js",
+  "author": "rEmote Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1456319/rEmote.git"
+  },
+  "scripts": {
+    "dev": "electron-forge start",
+    "build": "tsc && electron-forge make",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "jest"
+  },
+  "keywords": [
+    "xbox",
+    "remote-play",
+    "streaming",
+    "gaming",
+    "linux",
+    "steamdeck",
+    "webrtc"
+  ],
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.0.0",
+    "@electron-forge/maker-deb": "^7.0.0",
+    "@electron-forge/maker-rpm": "^7.0.0",
+    "@electron-forge/maker-squirrel": "^7.0.0",
+    "@electron-forge/maker-zip": "^7.0.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.0.0",
+    "@electron-forge/plugin-webpack": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "css-loader": "^6.8.1",
+    "electron": "^28.0.0",
+    "eslint": "^8.50.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.0",
+    "jest": "^29.7.0",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "name": "rEmote",
+        "executableName": "remote",
+        "icon": "./assets/icons/icon"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "remote"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": ["darwin"]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "options": {
+              "maintainer": "rEmote Contributors",
+              "homepage": "https://github.com/1456319/rEmote"
+            }
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {
+            "options": {
+              "homepage": "https://github.com/1456319/rEmote"
+            }
+          }
+        }
+      ],
+      "plugins": [
+        {
+          "name": "@electron-forge/plugin-webpack",
+          "config": {
+            "mainConfig": "./webpack.main.config.js",
+            "renderer": {
+              "config": "./webpack.renderer.config.js",
+              "entryPoints": [
+                {
+                  "html": "./src/renderer/index.html",
+                  "js": "./src/renderer/renderer.ts",
+                  "name": "main_window",
+                  "preload": {
+                    "js": "./src/renderer/preload.ts"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

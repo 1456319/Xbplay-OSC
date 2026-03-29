@@ -1,0 +1,4 @@
+{
+  "connections": "msedge    119560            deck  24u  IPv4 2197658      0t0  UDP 192.168.1.10:48332->142.251.153.119:443 \nmsedge    119560            deck  48u  IPv4 2126538      0t0  TCP 192.168.1.10:35512->40.90.8.19:443 (ESTABLISHED)\nmsedge    119560            deck  50u  IPv4 2122352      0t0  TCP 192.168.1.10:50736->199.46.35.126:443 (ESTABLISHED)\n",
+  "dns_cache": "nscd not available\n"
+}

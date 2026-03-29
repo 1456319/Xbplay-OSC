@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PCPlay Game Picker</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../bower_components/AlertifyJS/build/css/alertify.min.css">
+
+    <!--    lazy load images-->
+<!--    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>-->
+
+    <!--    compress setLocalStorage-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>-->
+
+<!--    <link rel="stylesheet" href="styles/popup-stylesheet.css">-->
+
+</head>
+
+<link rel="stylesheet" href="../css/pc_play_title_picker_stylesheet.css">
+
+<body ondragstart="return false;" ondrop="return false;" style="height: 100%; background-color: black; overflow:hidden">
+
+<div style="position: absolute; height: 100%; width: 100%; z-index: -1;">
+    <img class="image" id="bk_image" style="position: absolute; height: 100%; width: 100%; filter: blur(15px); z-index: -1;">
+</div>
+
+<nav id="navbar_id" class="navbar navbar-expand" style="background-color: #000000a3">
+    <div class="container searchbar-container" >
+
+        <!-- Navbar Links -->
+        <ul class="nav nav-pills nav-justified" style="justify-content: center; width: 100%; padding: 5px; gap: 10px">
+
+<!--            <li class="nav-item" tabindex="0" onclick="toggleActiveTab(1)">-->
+<!--                <a class="nav-link" href="#tab2">Popular</a>-->
+<!--            </li>-->
+            <li id="firstTab" class="nav-item" tabindex="0" onclick="toggleActiveTab(0)">
+                <a class="nav-link active" href="#tab3">All</a>
+            </li>
+
+            <li class="nav-item" tabindex="0" onclick="toggleActiveTab(1)">
+                <a class="nav-link" href="#tab1">Recent</a>
+            </li>
+        </ul>
+
+        <!-- Search Box -->
+        <form id="search_form" class="d-flex" style="width: 100%; padding: 5px">
+            <input id="search_box" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit" tabindex="0">Search</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Tab Content -->
+<div id="tab-container">
+    <div class="tab-content">
+
+        <div class="tab-pane active" id="tab3">
+            <div id="loading_all" class="loader" style="visibility: visible"></div>
+
+            <div class="cards-container">
+                <div class="row" id="cards-content-all" style=" height: 100vh; overflow: auto;">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="tab1">
+            <div id="loading_recent" class="loader" style="visibility: visible"></div>
+
+            <div class="cards-container">
+                <div class="row" id="cards-content-recent" style=" height: 100vh; overflow: auto;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../../bower_components/AlertifyJS/build/alertify.min.js"></script>
+
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/frontend/GamepadToGenericEvent.js"></script>
+<script src="../../js/frontend/SteamOSKeyboardFix.js"></script>
+
+<script type="text/javascript" src="../js/frontend/pc_play_title_picker.js"></script>
+<script src="../../js/frontend/sharedMenuNavFunctions.js"></script>
+
+<script>
+
+    // manually handle toggling tabs because bs-data-toggle breaks arrow nav
+    function toggleActiveTab(tabIndex) {
+        // Get the tab links and tab content elements
+        const tabLinks = document.querySelectorAll('.nav-link');
+        const tabContents = document.querySelectorAll('.tab-pane');
+
+        // Remove the "active" class from all tab links and tab contents
+        tabLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        tabContents.forEach(function (content) {
+            content.classList.remove('active');
+        });
+
+        // Add the "active" class to the selected tab link and tab content
+        tabLinks[tabIndex].classList.add('active');
+        tabContents[tabIndex].classList.add('active');
+    }
+
+    function setControls(enable){
+        console.log('setControls', enable)
+        if (enable){ // dont re-enable controls for a bit to prevent accidental clicks
+            setTimeout(() => {
+                PCPlayTitlePicker.controlsAreEnabled = enable
+            }, 500)
+        } else {
+            PCPlayTitlePicker.controlsAreEnabled = enable
+        }
+    }
+
+    function refocus(){
+        console.log('refocusing')
+        if (!document.activeElement){
+            focusFirstElement()
+        }
+    }
+
+</script>
+
+</body>
+</html>

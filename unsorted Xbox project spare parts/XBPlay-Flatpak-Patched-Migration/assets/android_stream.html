@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>xCloud Player</title>
+    <script src="./dist/xCloudPlayer.js"></script>
+    <style>
+      body { margin: 0; padding: 0; background-color: #000; overflow: hidden; }
+      #videoHolder { width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1; }
+    </style>
+  </head>
+  <body>
+    <div id="videoHolder"></div>
+    <script>
+        // Capture logs
+        console.log = function(...args) {
+            if (window.electronAPI) {
+                window.electronAPI.send('custom_log', args);
+            }
+        };
+        console.error = function(...args) {
+            if (window.electronAPI) {
+                window.electronAPI.send('custom_log', args);
+            }
+        };
+
+        // Initialize xCloudPlayer
+        let client;
+        let apiClient;
+
+        let configData = {};
+
+        window.setConfigData = function(data) {
+            console.log("setConfigData called", data);
+            configData = JSON.parse(data);
+        };
+
+        window.connectButtonAction = function() {
+            console.log('connectButtonAction called from main.js inject');
+
+            client = new xCloudPlayer.default('videoHolder', {
+                ui_systemui: [],
+                ui_touchenabled: false,
+                input_legacykeyboard: false
+            });
+            client.bind();
+            apiClient = new xCloudPlayer.xCloudPlayerBackend();
+
+            let sessionType = configData.xcloudTitle ? 'xcloud' : 'xhome';
+
+            if(sessionType === 'xhome') {
+                apiClient.startSession('home', configData.serverId).then((configuration) => {
+                    console.log('Stream started:', configuration);
+                    client.createOffer().then((offer) => {
+                        apiClient.sendSDPOffer(offer).then((sdpResponse) => {
+                            var sdpDetails = JSON.parse(sdpResponse.exchangeResponse);
+                            client.setRemoteOffer(sdpDetails.sdp);
+                            apiClient.sendICECandidates(client.getIceCandidates()).then((iceResponse) => {
+                                var iceDetails = JSON.parse(iceResponse.exchangeResponse);
+                                client.setIceCandidates(iceDetails);
+                            });
+                        });
+                    });
+                }).catch(e => {
+                    console.error('Failed to start xhome stream:', e);
+                });
+            } else {
+                 apiClient.startSession('cloud', configData.xcloudTitle).then((configuration) => {
+                    console.log('Stream started:', configuration);
+                    client.createOffer().then((offer) => {
+                        apiClient.sendSDPOffer(offer).then((sdpResponse) => {
+                            var sdpDetails = JSON.parse(sdpResponse.exchangeResponse);
+                            client.setRemoteOffer(sdpDetails.sdp);
+                            apiClient.sendICECandidates(client.getIceCandidates()).then((iceResponse) => {
+                                var iceDetails = JSON.parse(iceResponse.exchangeResponse);
+                                client.setIceCandidates(iceDetails);
+                            });
+                        });
+                    });
+                }).catch(e => {
+                    console.error('Failed to start cloud stream:', e);
+                });
+            }
+        };
+
+        window.linuxBus = {};
+        window.addEventListener('gamepad', (event) => {
+            if (client && client.getChannelProcessor('input')) {
+                client.getChannelProcessor('input').queueGamepadStates([event.detail]);
+            }
+        });
+
+        window.addEventListener('gamepad_rumble', (event) => {
+             // Future extension if needed
+        });
+
+        window.addEventListener('quitGame', () => {
+            if (window.electronAPI) {
+                window.electronAPI.send('quitGame');
+            }
+        });
+
+    </script>
+  </body>
+</html>

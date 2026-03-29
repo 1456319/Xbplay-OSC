@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-03-26 19:57:05",
+  "edge_processes": [
+    {
+      "pid": "154751",
+      "cpu": "0.2",
+      "mem": "0.9",
+      "command": "/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-US --js-flags --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=15 --time-ticks-at-unix-epoch=-1774524384139477 --launch-time-ticks=42124895409 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,15107450242786093907,13147385268814463803,2097152 --field-trial-handle=3,i,16505211028059708480,5129963424906726412,262144 --enable-features=WebRTCPipeWireCapturer --disable-features=DesktopPWAsRunOnOsLogin,WebAssemblyTrapHandler --variations-seed-version --pseudonymization-salt-handle=7,i,17024032005283147224,14134193426473664397,4 --trace-process-track-uuid=3190709000367499229"
+    },
+    {
+      "pid": "156610",
+      "cpu": "0.7",
+      "mem": "0.7",
+      "command": "/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-US --js-flags --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=39 --time-ticks-at-unix-epoch=-1774524384139477 --launch-time-ticks=42345900073 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,1759240242512560230,1737698551860641096,2097152 --field-trial-handle=3,i,16505211028059708480,5129963424906726412,262144 --enable-features=WebRTCPipeWireCapturer --disable-features=DesktopPWAsRunOnOsLogin,WebAssemblyTrapHandler --variations-seed-version --pseudonymization-salt-handle=7,i,17024032005283147224,14134193426473664397,4 --trace-process-track-uuid=3190709022856503605"
+    },
+    {
+      "pid": "162442",
+      "cpu": "0.0",
+      "mem": "0.9",
+      "command": "/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-US --js-flags --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=73 --time-ticks-at-unix-epoch=-1774524384139477 --launch-time-ticks=43377207505 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,10383136682959228000,10451846369825523583,2097152 --field-trial-handle=3,i,16505211028059708480,5129963424906726412,262144 --enable-features=WebRTCPipeWireCapturer --disable-features=DesktopPWAsRunOnOsLogin,WebAssemblyTrapHandler --variations-seed-version --pseudonymization-salt-handle=7,i,17024032005283147224,14134193426473664397,4 --trace-process-track-uuid=3190709054715926471"
+    },
+    {
+      "pid": "162593",
+      "cpu": "22.5",
+      "mem": "2.5",
+      "command": "/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-US --js-flags --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=75 --time-ticks-at-unix-epoch=-1774524384139477 --launch-time-ticks=43397728257 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,18210213475116131508,14284019705631034646,2097152 --field-trial-handle=3,i,16505211028059708480,5129963424906726412,262144 --enable-features=WebRTCPipeWireCapturer --disable-features=DesktopPWAsRunOnOsLogin,WebAssemblyTrapHandler --variations-seed-version --pseudonymization-salt-handle=7,i,17024032005283147224,14134193426473664397,4 --trace-process-track-uuid=3190709056590010169"
+    },
+    {
+      "pid": "163211",
+      "cpu": "13.9",
+      "mem": "4.6",
+      "command": "/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-US --js-flags --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=78 --time-ticks-at-unix-epoch=-1774524384139477 --launch-time-ticks=43517993148 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13636705105104533213,1414267692923101779,2097152 --field-trial-handle=3,i,16505211028059708480,5129963424906726412,262144 --enable-features=WebRTCPipeWireCapturer --disable-features=DesktopPWAsRunOnOsLogin,WebAssemblyTrapHandler --variations-seed-version --pseudonymization-salt-handle=7,i,17024032005283147224,14134193426473664397,4 --trace-process-track-uuid=3190709059401135716"
+    },
+    {
+      "pid": "163318",
+      "cpu": "0.0",
+      "mem": "0.4",
+      "command": "/app/extra/msedge --type=renderer --crashpad-handler-pid=17 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --ozone-platform=x11 --lang=en-US --js-flags --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=79 --time-ticks-at-unix-epoch=-1774524384139477 --launch-time-ticks=43534429345 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,8209766031490289822,8016187321940611894,2097152 --field-trial-handle=3,i,16505211028059708480,5129963424906726412,262144 --enable-features=WebRTCPipeWireCapturer --disable-features=DesktopPWAsRunOnOsLogin,WebAssemblyTrapHandler --variations-seed-version --pseudonymization-salt-handle=7,i,17024032005283147224,14134193426473664397,4 --trace-process-track-uuid=3190709060338177565"
+    }
+  ],
+  "endpoint_status": {
+    "https://play.xbox.com": "200",
+    "https://chat.xboxlive.com": "000",
+    "wss://chat.xboxlive.com": "000"
+  },
+  "active_connections": [
+    "ESTAB      0      0               192.168.1.10:37642         199.46.35.124:443   users:((\"msedge\",pid=154515,fd=62))         ",
+    "ESTAB      0      0               192.168.1.10:33402        52.168.117.175:443   users:((\"msedge\",pid=154515,fd=49))         ",
+    "ESTAB      0      0               192.168.1.10:41906        135.234.174.40:443   users:((\"msedge\",pid=154515,fd=59))         ",
+    "ESTAB      0      0               192.168.1.10:55972        104.208.203.89:443   users:((\"msedge\",pid=154515,fd=19))         "
+  ],
+  "sources_extracted": 345,
+  "issues": [
+    "2 renderer(s) with high CPU usage",
+    "Many renderer processes: 6"
+  ]
+}
